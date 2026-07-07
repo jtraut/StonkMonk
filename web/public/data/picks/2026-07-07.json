@@ -1,0 +1,132 @@
+{
+  "date": "2026-07-07",
+  "generated_at": "2026-07-07T13:05:00+00:00",
+  "universe_size": 1855,
+  "universe_coverage": 0.96,
+  "buys": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "sector": "Technology",
+      "action": "buy",
+      "price_at_pick": 312.66,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.24,
+        "volume_surge": 0.0,
+        "range_position": 0.96,
+        "earnings_surprise": 0.5
+      },
+      "composite_score": 78.8,
+      "reasoning": "AAPL is trading above its short- and long-term moving averages, a bullish trend configuration. Composite score: 78.8/100."
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase & Co.",
+      "sector": "Financial Services",
+      "action": "buy",
+      "price_at_pick": 246.9,
+      "signals": {
+        "trend": 0.4,
+        "momentum": 0.3,
+        "volume_surge": 0.1,
+        "range_position": 0.4,
+        "earnings_surprise": null
+      },
+      "composite_score": 61.3,
+      "reasoning": "JPM is trading above its short- and long-term moving averages, a bullish trend configuration. Composite score: 61.3/100."
+    },
+    {
+      "ticker": "TICK",
+      "name": "Ticker With Missing Fundamentals Co.",
+      "sector": null,
+      "action": "buy",
+      "price_at_pick": 45.2,
+      "signals": {
+        "trend": 0.35,
+        "momentum": 0.2,
+        "volume_surge": 0.05,
+        "range_position": 0.3,
+        "earnings_surprise": null
+      },
+      "composite_score": 57.0,
+      "reasoning": "TICK is trading above its short- and long-term moving averages, a bullish trend configuration. Composite score: 57.0/100."
+    }
+  ],
+  "cautions": [
+    {
+      "ticker": "KO",
+      "name": "The Coca-Cola Company",
+      "sector": "Consumer Defensive",
+      "action": "caution",
+      "price_at_pick": 61.3,
+      "signals": {
+        "trend": -0.6,
+        "momentum": -0.5,
+        "volume_surge": -0.2,
+        "range_position": -0.6,
+        "earnings_surprise": -0.3
+      },
+      "composite_score": 29.1,
+      "reasoning": "KO is trading below its short- and long-term moving averages, a bearish trend configuration. Composite score: 29.1/100."
+    }
+  ],
+  "shortlist": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "sector": "Technology",
+      "price_at_pick": 312.66,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.24,
+        "volume_surge": 0.0,
+        "range_position": 0.96,
+        "earnings_surprise": 0.5
+      },
+      "composite_score": 78.8
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase & Co.",
+      "sector": "Financial Services",
+      "price_at_pick": 246.9,
+      "signals": {
+        "trend": 0.4,
+        "momentum": 0.3,
+        "volume_surge": 0.1,
+        "range_position": 0.4,
+        "earnings_surprise": null
+      },
+      "composite_score": 61.3
+    },
+    {
+      "ticker": "TICK",
+      "name": "Ticker With Missing Fundamentals Co.",
+      "sector": null,
+      "price_at_pick": 45.2,
+      "signals": {
+        "trend": 0.35,
+        "momentum": 0.2,
+        "volume_surge": 0.05,
+        "range_position": 0.3,
+        "earnings_surprise": null
+      },
+      "composite_score": 57.0
+    },
+    {
+      "ticker": "KO",
+      "name": "The Coca-Cola Company",
+      "sector": "Consumer Defensive",
+      "price_at_pick": 61.3,
+      "signals": {
+        "trend": -0.6,
+        "momentum": -0.5,
+        "volume_surge": -0.2,
+        "range_position": -0.6,
+        "earnings_surprise": -0.3
+      },
+      "composite_score": 29.1
+    }
+  ]
+}

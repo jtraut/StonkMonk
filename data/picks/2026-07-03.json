@@ -1,0 +1,132 @@
+{
+  "date": "2026-07-03",
+  "generated_at": "2026-07-03T13:05:00+00:00",
+  "universe_size": 1842,
+  "universe_coverage": 0.93,
+  "buys": [
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "sector": "Technology",
+      "action": "buy",
+      "price_at_pick": 612.3,
+      "signals": {
+        "trend": 0.9,
+        "momentum": 0.55,
+        "volume_surge": 0.4,
+        "range_position": 0.85,
+        "earnings_surprise": 0.3
+      },
+      "composite_score": 81.2,
+      "reasoning": "NVDA is trading above its short- and long-term moving averages, a bullish trend configuration. Composite score: 81.2/100."
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices, Inc.",
+      "sector": "Technology",
+      "action": "buy",
+      "price_at_pick": 178.4,
+      "signals": {
+        "trend": 0.6,
+        "momentum": 0.3,
+        "volume_surge": 0.2,
+        "range_position": 0.5,
+        "earnings_surprise": null
+      },
+      "composite_score": 68.9,
+      "reasoning": "AMD is trading above its short- and long-term moving averages, a bullish trend configuration. Composite score: 68.9/100."
+    }
+  ],
+  "cautions": [
+    {
+      "ticker": "XOM",
+      "name": "Exxon Mobil Corporation",
+      "sector": "Energy",
+      "action": "caution",
+      "price_at_pick": 102.15,
+      "signals": {
+        "trend": -0.8,
+        "momentum": -0.6,
+        "volume_surge": -0.1,
+        "range_position": -0.7,
+        "earnings_surprise": -0.4
+      },
+      "composite_score": 21.4,
+      "reasoning": "XOM is trading below its short- and long-term moving averages, a bearish trend configuration. Composite score: 21.4/100."
+    },
+    {
+      "ticker": "PFE",
+      "name": "Pfizer Inc.",
+      "sector": "Healthcare",
+      "action": "caution",
+      "price_at_pick": 24.8,
+      "signals": {
+        "trend": -0.4,
+        "momentum": -0.3,
+        "volume_surge": 0.0,
+        "range_position": -0.5,
+        "earnings_surprise": null
+      },
+      "composite_score": 33.6,
+      "reasoning": "The stock is trading near its 52-week low, showing relative weakness. Composite score: 33.6/100."
+    }
+  ],
+  "shortlist": [
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "sector": "Technology",
+      "price_at_pick": 612.3,
+      "signals": {
+        "trend": 0.9,
+        "momentum": 0.55,
+        "volume_surge": 0.4,
+        "range_position": 0.85,
+        "earnings_surprise": 0.3
+      },
+      "composite_score": 81.2
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices, Inc.",
+      "sector": "Technology",
+      "price_at_pick": 178.4,
+      "signals": {
+        "trend": 0.6,
+        "momentum": 0.3,
+        "volume_surge": 0.2,
+        "range_position": 0.5,
+        "earnings_surprise": null
+      },
+      "composite_score": 68.9
+    },
+    {
+      "ticker": "PFE",
+      "name": "Pfizer Inc.",
+      "sector": "Healthcare",
+      "price_at_pick": 24.8,
+      "signals": {
+        "trend": -0.4,
+        "momentum": -0.3,
+        "volume_surge": 0.0,
+        "range_position": -0.5,
+        "earnings_surprise": null
+      },
+      "composite_score": 33.6
+    },
+    {
+      "ticker": "XOM",
+      "name": "Exxon Mobil Corporation",
+      "sector": "Energy",
+      "price_at_pick": 102.15,
+      "signals": {
+        "trend": -0.8,
+        "momentum": -0.6,
+        "volume_surge": -0.1,
+        "range_position": -0.7,
+        "earnings_surprise": -0.4
+      },
+      "composite_score": 21.4
+    }
+  ]
+}

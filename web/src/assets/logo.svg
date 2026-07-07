@@ -1,0 +1,38 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<title>StonkMonk icon</title>
+<desc>A coin-shaped icon of a serene bald monk in a green robe wearing gold prayer beads with a dollar-sign coin pendant.</desc>
+<defs>
+<radialGradient id="coin" cx="35%" cy="28%" r="80%">
+<stop offset="0%" stop-color="#4ADE80"/>
+<stop offset="55%" stop-color="#16A34A"/>
+<stop offset="100%" stop-color="#065F46"/>
+</radialGradient>
+<linearGradient id="robe" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" stop-color="#0D9488"/>
+<stop offset="100%" stop-color="#065F46"/>
+</linearGradient>
+</defs>
+<circle cx="100" cy="100" r="96" fill="url(#coin)" stroke="#064E3B" stroke-width="4"/>
+<circle cx="100" cy="100" r="86" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.25"/>
+<path d="M 58 188 L 63 118 C 63 118 100 98 137 118 L 142 188 Z" fill="url(#robe)" stroke="#064E3B" stroke-width="1.5"/>
+<path d="M 92 118 L 100 150 L 108 118 Z" fill="#F5D9A8"/>
+<circle cx="100" cy="78" r="33" fill="#EAC08C" stroke="#C68B54" stroke-width="1.5"/>
+<path d="M 86 80 Q 90 84 94 80" stroke="#7A4A24" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+<path d="M 106 80 Q 110 84 114 80" stroke="#7A4A24" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+<path d="M 92 96 Q 100 101 108 96" stroke="#7A4A24" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+<circle cx="100" cy="45" r="3" fill="#4B2E14"/>
+<circle cx="90" cy="49" r="3" fill="#4B2E14"/>
+<circle cx="110" cy="49" r="3" fill="#4B2E14"/>
+<g fill="#F6C453" stroke="#B8860B" stroke-width="1">
+<circle cx="68" cy="122" r="4"/>
+<circle cx="72" cy="134" r="4"/>
+<circle cx="80" cy="146" r="4"/>
+<circle cx="90" cy="153" r="4"/>
+<circle cx="110" cy="153" r="4"/>
+<circle cx="120" cy="146" r="4"/>
+<circle cx="128" cy="134" r="4"/>
+<circle cx="132" cy="122" r="4"/>
+</g>
+<circle cx="100" cy="160" r="10" fill="#F6C453" stroke="#B8860B" stroke-width="1.5"/>
+<text x="100" y="165" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#065F46" text-anchor="middle">$</text>
+</svg>
