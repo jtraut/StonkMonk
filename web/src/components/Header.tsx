@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import logo from "../assets/logo.svg";
+import { getWatchlist, subscribeToWatchlist } from "../lib/storage";
 
 type Tab = "today" | "history";
 
@@ -6,6 +8,7 @@ interface HeaderProps {
   activeTab: Tab;
   onTabChange: (tab: Tab) => void;
   generatedAt: string | null;
+  onToggleWatchlist: () => void;
 }
 
 function formatGeneratedAt(iso: string | null): string {
@@ -17,7 +20,11 @@ function formatGeneratedAt(iso: string | null): string {
 
 const TABS: Tab[] = ["today", "history"];
 
-export function Header({ activeTab, onTabChange, generatedAt }: HeaderProps) {
+export function Header({ activeTab, onTabChange, generatedAt, onToggleWatchlist }: HeaderProps) {
+  const [watchlistCount, setWatchlistCount] = useState(() => getWatchlist().length);
+
+  useEffect(() => subscribeToWatchlist(() => setWatchlistCount(getWatchlist().length)), []);
+
   return (
     <header className="border-b border-gray-200 dark:border-gray-700">
       <div className="max-w-5xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-3">
@@ -30,22 +37,36 @@ export function Header({ activeTab, onTabChange, generatedAt }: HeaderProps) {
             </div>
           </div>
         </div>
-        <nav className="flex gap-2">
-          {TABS.map((tab) => (
-            <button
-              key={tab}
-              type="button"
-              onClick={() => onTabChange(tab)}
-              className={`px-3 py-1.5 rounded-md text-sm font-medium capitalize ${
-                activeTab === tab
-                  ? "bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900"
-                  : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
-        </nav>
+        <div className="flex items-center gap-2">
+          <nav className="flex gap-2">
+            {TABS.map((tab) => (
+              <button
+                key={tab}
+                type="button"
+                onClick={() => onTabChange(tab)}
+                className={`px-3 py-1.5 rounded-md text-sm font-medium capitalize ${
+                  activeTab === tab
+                    ? "bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900"
+                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
+          </nav>
+          <button
+            type="button"
+            onClick={onToggleWatchlist}
+            className="px-3 py-1.5 rounded-md text-sm font-medium border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center gap-1.5"
+          >
+            Watchlist
+            {watchlistCount > 0 && (
+              <span className="inline-flex items-center justify-center min-w-[1.25rem] h-5 px-1 rounded-full bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900 text-[11px] font-semibold">
+                {watchlistCount}
+              </span>
+            )}
+          </button>
+        </div>
       </div>
     </header>
   );

@@ -1,57 +1,7 @@
 {
   "directed": false,
   "multigraph": false,
-  "graph": {
-    "hyperedges": [
-      {
-        "id": "pick_generation_pipeline_steps",
-        "label": "Steps forming the daily pick generation pipeline",
-        "nodes": [
-          "universe_build_step",
-          "data_fetch_step",
-          "signal_computation_step",
-          "selection_step",
-          "llm_reasoning_pass_step",
-          "persist_step",
-          "outcome_tracking_step"
-        ],
-        "relation": "form",
-        "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": "stonkmonk-spec.md"
-      },
-      {
-        "id": "frontend_views_group",
-        "label": "Frontend views composing the static site",
-        "nodes": [
-          "today_view",
-          "history_view",
-          "watchlist_view",
-          "preferences_panel"
-        ],
-        "relation": "participate_in",
-        "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": "stonkmonk-spec.md"
-      },
-      {
-        "id": "scanner_modules_group",
-        "label": "Planned scanner/ modules implementing the pick pipeline",
-        "nodes": [
-          "stonkmonk_spec_universe_py",
-          "stonkmonk_spec_data_py",
-          "stonkmonk_spec_signals_py",
-          "stonkmonk_spec_score_py",
-          "stonkmonk_spec_llm_py",
-          "stonkmonk_spec_main_py"
-        ],
-        "relation": "implement",
-        "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": "stonkmonk-spec.md"
-      }
-    ]
-  },
+  "graph": {},
   "nodes": [
     {
       "label": "config.py",
@@ -314,6 +264,196 @@
       "norm_label": "persist a tiny run manifest for debugging cache/coverage issues."
     },
     {
+      "label": "llm.py",
+      "file_type": "code",
+      "source_file": "scanner/llm.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scanner_llm",
+      "community": 4,
+      "norm_label": "llm.py"
+    },
+    {
+      "label": "generate_reasoning()",
+      "file_type": "code",
+      "source_file": "scanner/llm.py",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "scanner_llm_generate_reasoning",
+      "community": 4,
+      "norm_label": "generate_reasoning()"
+    },
+    {
+      "label": "generate_all()",
+      "file_type": "code",
+      "source_file": "scanner/llm.py",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "scanner_llm_generate_all",
+      "community": 4,
+      "norm_label": "generate_all()"
+    },
+    {
+      "label": "_llm_reasoning()",
+      "file_type": "code",
+      "source_file": "scanner/llm.py",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "scanner_llm_llm_reasoning",
+      "community": 4,
+      "norm_label": "_llm_reasoning()"
+    },
+    {
+      "label": "_build_prompt()",
+      "file_type": "code",
+      "source_file": "scanner/llm.py",
+      "source_location": "L99",
+      "_origin": "ast",
+      "id": "scanner_llm_build_prompt",
+      "community": 4,
+      "norm_label": "_build_prompt()"
+    },
+    {
+      "label": "_fallback_reasoning()",
+      "file_type": "code",
+      "source_file": "scanner/llm.py",
+      "source_location": "L120",
+      "_origin": "ast",
+      "id": "scanner_llm_fallback_reasoning",
+      "community": 4,
+      "norm_label": "_fallback_reasoning()"
+    },
+    {
+      "label": "_generic_fallback()",
+      "file_type": "code",
+      "source_file": "scanner/llm.py",
+      "source_location": "L139",
+      "_origin": "ast",
+      "id": "scanner_llm_generic_fallback",
+      "community": 4,
+      "norm_label": "_generic_fallback()"
+    },
+    {
+      "label": "LLM reasoning-blurb generation \u2014 the only place AI touches the pipeline.  Turns",
+      "file_type": "rationale",
+      "source_file": "scanner/llm.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scanner_llm_rationale_1",
+      "community": 4,
+      "norm_label": "llm reasoning-blurb generation \u2014 the only place ai touches the pipeline.  turns"
+    },
+    {
+      "label": "Return a 1-3 sentence reasoning blurb for one finalist.      ``action`` is \"buy\"",
+      "file_type": "rationale",
+      "source_file": "scanner/llm.py",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "scanner_llm_rationale_59",
+      "community": 4,
+      "norm_label": "return a 1-3 sentence reasoning blurb for one finalist.      ``action`` is \"buy\""
+    },
+    {
+      "label": "Generate reasoning blurbs for every finalist, keyed by ticker.",
+      "file_type": "rationale",
+      "source_file": "scanner/llm.py",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "scanner_llm_rationale_74",
+      "community": 4,
+      "norm_label": "generate reasoning blurbs for every finalist, keyed by ticker."
+    },
+    {
+      "label": "Deterministic template used when the LLM path is unavailable or fails.      Narr",
+      "file_type": "rationale",
+      "source_file": "scanner/llm.py",
+      "source_location": "L121",
+      "_origin": "ast",
+      "id": "scanner_llm_rationale_121",
+      "community": 4,
+      "norm_label": "deterministic template used when the llm path is unavailable or fails.      narr"
+    },
+    {
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "scanner/main.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scanner_main",
+      "community": 4,
+      "norm_label": "main.py"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "scanner/main.py",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "scanner_main_run",
+      "community": 4,
+      "norm_label": "run()"
+    },
+    {
+      "label": "_pick()",
+      "file_type": "code",
+      "source_file": "scanner/main.py",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "scanner_main_pick",
+      "community": 4,
+      "norm_label": "_pick()"
+    },
+    {
+      "label": "_shortlist_entry()",
+      "file_type": "code",
+      "source_file": "scanner/main.py",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "scanner_main_shortlist_entry",
+      "community": 4,
+      "norm_label": "_shortlist_entry()"
+    },
+    {
+      "label": "_persist()",
+      "file_type": "code",
+      "source_file": "scanner/main.py",
+      "source_location": "L101",
+      "_origin": "ast",
+      "id": "scanner_main_persist",
+      "community": 4,
+      "norm_label": "_persist()"
+    },
+    {
+      "label": "_update_index()",
+      "file_type": "code",
+      "source_file": "scanner/main.py",
+      "source_location": "L109",
+      "_origin": "ast",
+      "id": "scanner_main_update_index",
+      "community": 4,
+      "norm_label": "_update_index()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scanner/main.py",
+      "source_location": "L120",
+      "_origin": "ast",
+      "id": "scanner_main_main",
+      "community": 4,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Orchestrates the daily pick-generation pipeline end-to-end.  Universe build -> d",
+      "file_type": "rationale",
+      "source_file": "scanner/main.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scanner_main_rationale_1",
+      "community": 4,
+      "norm_label": "orchestrates the daily pick-generation pipeline end-to-end.  universe build -> d"
+    },
+    {
       "label": "score.py",
       "file_type": "code",
       "source_file": "scanner/score.py",
@@ -342,6 +482,16 @@
       "id": "scanner_score_composite",
       "community": 4,
       "norm_label": "composite()"
+    },
+    {
+      "label": "Signals",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "signals",
+      "community": 4,
+      "norm_label": "signals"
     },
     {
       "label": "score_all()",
@@ -420,7 +570,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "scanner_signals_signals",
-      "community": 4,
+      "community": 0,
       "norm_label": "signals"
     },
     {
@@ -430,7 +580,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "scanner_signals_signals_as_dict",
-      "community": 4,
+      "community": 0,
       "norm_label": ".as_dict()"
     },
     {
@@ -570,7 +720,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "scanner_signals_rationale_23",
-      "community": 4,
+      "community": 0,
       "norm_label": "normalized signal set for one ticker. each value is ~[-1, 1]."
     },
     {
@@ -754,6 +904,1546 @@
       "norm_label": "parse the pipe-delimited nasdaqlisted.txt content.      columns: symbol | securi"
     },
     {
+      "label": ".oxlintrc.json",
+      "file_type": "code",
+      "source_file": "web/.oxlintrc.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_oxlintrc",
+      "community": 19,
+      "norm_label": ".oxlintrc.json"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "web/.oxlintrc.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "web_oxlintrc_schema",
+      "community": 19,
+      "norm_label": "$schema"
+    },
+    {
+      "label": "plugins",
+      "file_type": "code",
+      "source_file": "web/.oxlintrc.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "web_oxlintrc_plugins",
+      "community": 19,
+      "norm_label": "plugins"
+    },
+    {
+      "label": "rules",
+      "file_type": "code",
+      "source_file": "web/.oxlintrc.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "web_oxlintrc_rules",
+      "community": 19,
+      "norm_label": "rules"
+    },
+    {
+      "label": "react/rules-of-hooks",
+      "file_type": "code",
+      "source_file": "web/.oxlintrc.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "web_oxlintrc_rules_react_rules_of_hooks",
+      "community": 19,
+      "norm_label": "react/rules-of-hooks"
+    },
+    {
+      "label": "react/only-export-components",
+      "file_type": "code",
+      "source_file": "web/.oxlintrc.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "web_oxlintrc_rules_react_only_export_components",
+      "community": 19,
+      "norm_label": "react/only-export-components"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_package",
+      "community": 13,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "web_package_name",
+      "community": 13,
+      "norm_label": "name"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "web_package_private",
+      "community": 13,
+      "norm_label": "private"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "web_package_version",
+      "community": 13,
+      "norm_label": "version"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "web_package_type",
+      "community": 13,
+      "norm_label": "type"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "web_package_scripts",
+      "community": 13,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "web_package_scripts_dev",
+      "community": 13,
+      "norm_label": "dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "web_package_scripts_build",
+      "community": 13,
+      "norm_label": "build"
+    },
+    {
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "web_package_scripts_lint",
+      "community": 13,
+      "norm_label": "lint"
+    },
+    {
+      "label": "preview",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "web_package_scripts_preview",
+      "community": 13,
+      "norm_label": "preview"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "web_package_dependencies",
+      "community": 13,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "@tailwindcss/vite",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "web_package_dependencies_tailwindcss_vite",
+      "community": 13,
+      "norm_label": "@tailwindcss/vite"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "web_package_dependencies_react",
+      "community": 13,
+      "norm_label": "react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "web_package_dependencies_react_dom",
+      "community": 13,
+      "norm_label": "react-dom"
+    },
+    {
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "web_package_dependencies_tailwindcss",
+      "community": 13,
+      "norm_label": "tailwindcss"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "web_package_devdependencies",
+      "community": 13,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "web_package_devdependencies_types_node",
+      "community": 13,
+      "norm_label": "@types/node"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "web_package_devdependencies_types_react",
+      "community": 13,
+      "norm_label": "@types/react"
+    },
+    {
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "web_package_devdependencies_types_react_dom",
+      "community": 13,
+      "norm_label": "@types/react-dom"
+    },
+    {
+      "label": "@vitejs/plugin-react",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "web_package_devdependencies_vitejs_plugin_react",
+      "community": 13,
+      "norm_label": "@vitejs/plugin-react"
+    },
+    {
+      "label": "oxlint",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "web_package_devdependencies_oxlint",
+      "community": 13,
+      "norm_label": "oxlint"
+    },
+    {
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "web_package_devdependencies_typescript",
+      "community": 13,
+      "norm_label": "typescript"
+    },
+    {
+      "label": "vite",
+      "file_type": "code",
+      "source_file": "web/package.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "web_package_devdependencies_vite",
+      "community": 13,
+      "norm_label": "vite"
+    },
+    {
+      "label": "App.tsx",
+      "file_type": "code",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_src_app",
+      "community": 12,
+      "norm_label": "app.tsx"
+    },
+    {
+      "label": "Tab",
+      "file_type": "code",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "web_src_app_tab",
+      "community": 12,
+      "norm_label": "tab"
+    },
+    {
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "web_src_app_app",
+      "community": 12,
+      "norm_label": "app()"
+    },
+    {
+      "label": "ComplianceFooter.tsx",
+      "file_type": "code",
+      "source_file": "web/src/components/ComplianceFooter.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_src_components_compliancefooter",
+      "community": 12,
+      "norm_label": "compliancefooter.tsx"
+    },
+    {
+      "label": "ComplianceFooter()",
+      "file_type": "code",
+      "source_file": "web/src/components/ComplianceFooter.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_src_components_compliancefooter_compliancefooter",
+      "community": 12,
+      "norm_label": "compliancefooter()"
+    },
+    {
+      "label": "Header.tsx",
+      "file_type": "code",
+      "source_file": "web/src/components/Header.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_src_components_header",
+      "community": 12,
+      "norm_label": "header.tsx"
+    },
+    {
+      "label": "Tab",
+      "file_type": "code",
+      "source_file": "web/src/components/Header.tsx",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "web_src_components_header_tab",
+      "community": 12,
+      "norm_label": "tab"
+    },
+    {
+      "label": "HeaderProps",
+      "file_type": "code",
+      "source_file": "web/src/components/Header.tsx",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "web_src_components_header_headerprops",
+      "community": 12,
+      "norm_label": "headerprops"
+    },
+    {
+      "label": "formatGeneratedAt()",
+      "file_type": "code",
+      "source_file": "web/src/components/Header.tsx",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "web_src_components_header_formatgeneratedat",
+      "community": 12,
+      "norm_label": "formatgeneratedat()"
+    },
+    {
+      "label": "TABS",
+      "file_type": "code",
+      "source_file": "web/src/components/Header.tsx",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "web_src_components_header_tabs",
+      "community": 12,
+      "norm_label": "tabs"
+    },
+    {
+      "label": "Header()",
+      "file_type": "code",
+      "source_file": "web/src/components/Header.tsx",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "web_src_components_header_header",
+      "community": 12,
+      "norm_label": "header()"
+    },
+    {
+      "label": "HistoryView.tsx",
+      "file_type": "code",
+      "source_file": "web/src/components/HistoryView.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_src_components_historyview",
+      "community": 12,
+      "norm_label": "historyview.tsx"
+    },
+    {
+      "label": "HistoryView()",
+      "file_type": "code",
+      "source_file": "web/src/components/HistoryView.tsx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "web_src_components_historyview_historyview",
+      "community": 12,
+      "norm_label": "historyview()"
+    },
+    {
+      "label": "PickCard.tsx",
+      "file_type": "code",
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_src_components_pickcard",
+      "community": 12,
+      "norm_label": "pickcard.tsx"
+    },
+    {
+      "label": "SIGNAL_LABELS",
+      "file_type": "code",
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "web_src_components_pickcard_signal_labels",
+      "community": 12,
+      "norm_label": "signal_labels"
+    },
+    {
+      "label": "fmt()",
+      "file_type": "code",
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "web_src_components_pickcard_fmt",
+      "community": 12,
+      "norm_label": "fmt()"
+    },
+    {
+      "label": "PickCard()",
+      "file_type": "code",
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "web_src_components_pickcard_pickcard",
+      "community": 12,
+      "norm_label": "pickcard()"
+    },
+    {
+      "label": "PicksList.tsx",
+      "file_type": "code",
+      "source_file": "web/src/components/PicksList.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_src_components_pickslist",
+      "community": 12,
+      "norm_label": "pickslist.tsx"
+    },
+    {
+      "label": "PicksList()",
+      "file_type": "code",
+      "source_file": "web/src/components/PicksList.tsx",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "web_src_components_pickslist_pickslist",
+      "community": 12,
+      "norm_label": "pickslist()"
+    },
+    {
+      "label": "TodayView.tsx",
+      "file_type": "code",
+      "source_file": "web/src/components/TodayView.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_src_components_todayview",
+      "community": 12,
+      "norm_label": "todayview.tsx"
+    },
+    {
+      "label": "TodayViewProps",
+      "file_type": "code",
+      "source_file": "web/src/components/TodayView.tsx",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "web_src_components_todayview_todayviewprops",
+      "community": 12,
+      "norm_label": "todayviewprops"
+    },
+    {
+      "label": "TodayView()",
+      "file_type": "code",
+      "source_file": "web/src/components/TodayView.tsx",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "web_src_components_todayview_todayview",
+      "community": 12,
+      "norm_label": "todayview()"
+    },
+    {
+      "label": "WatchlistSidebar.tsx",
+      "file_type": "code",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_src_components_watchlistsidebar",
+      "community": 12,
+      "norm_label": "watchlistsidebar.tsx"
+    },
+    {
+      "label": "WatchlistSidebarProps",
+      "file_type": "code",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "web_src_components_watchlistsidebar_watchlistsidebarprops",
+      "community": 12,
+      "norm_label": "watchlistsidebarprops"
+    },
+    {
+      "label": "ResolvedEntry",
+      "file_type": "code",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "web_src_components_watchlistsidebar_resolvedentry",
+      "community": 12,
+      "norm_label": "resolvedentry"
+    },
+    {
+      "label": "resolveTicker()",
+      "file_type": "code",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "web_src_components_watchlistsidebar_resolveticker",
+      "community": 12,
+      "norm_label": "resolveticker()"
+    },
+    {
+      "label": "WatchlistSidebar()",
+      "file_type": "code",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "web_src_components_watchlistsidebar_watchlistsidebar",
+      "community": 12,
+      "norm_label": "watchlistsidebar()"
+    },
+    {
+      "label": "api.ts",
+      "file_type": "code",
+      "source_file": "web/src/lib/api.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_src_lib_api",
+      "community": 12,
+      "norm_label": "api.ts"
+    },
+    {
+      "label": "fetchJson()",
+      "file_type": "code",
+      "source_file": "web/src/lib/api.ts",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "web_src_lib_api_fetchjson",
+      "community": 12,
+      "norm_label": "fetchjson()"
+    },
+    {
+      "label": "fetchLatest()",
+      "file_type": "code",
+      "source_file": "web/src/lib/api.ts",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "web_src_lib_api_fetchlatest",
+      "community": 12,
+      "norm_label": "fetchlatest()"
+    },
+    {
+      "label": "fetchIndex()",
+      "file_type": "code",
+      "source_file": "web/src/lib/api.ts",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "web_src_lib_api_fetchindex",
+      "community": 12,
+      "norm_label": "fetchindex()"
+    },
+    {
+      "label": "fetchPicksForDate()",
+      "file_type": "code",
+      "source_file": "web/src/lib/api.ts",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "web_src_lib_api_fetchpicksfordate",
+      "community": 12,
+      "norm_label": "fetchpicksfordate()"
+    },
+    {
+      "label": "storage.ts",
+      "file_type": "code",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_src_lib_storage",
+      "community": 12,
+      "norm_label": "storage.ts"
+    },
+    {
+      "label": "readWatchlist()",
+      "file_type": "code",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "web_src_lib_storage_readwatchlist",
+      "community": 12,
+      "norm_label": "readwatchlist()"
+    },
+    {
+      "label": "writeWatchlist()",
+      "file_type": "code",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "web_src_lib_storage_writewatchlist",
+      "community": 12,
+      "norm_label": "writewatchlist()"
+    },
+    {
+      "label": "getWatchlist()",
+      "file_type": "code",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "web_src_lib_storage_getwatchlist",
+      "community": 12,
+      "norm_label": "getwatchlist()"
+    },
+    {
+      "label": "subscribeToWatchlist()",
+      "file_type": "code",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "web_src_lib_storage_subscribetowatchlist",
+      "community": 12,
+      "norm_label": "subscribetowatchlist()"
+    },
+    {
+      "label": "isWatchlisted()",
+      "file_type": "code",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "web_src_lib_storage_iswatchlisted",
+      "community": 12,
+      "norm_label": "iswatchlisted()"
+    },
+    {
+      "label": "addToWatchlist()",
+      "file_type": "code",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "web_src_lib_storage_addtowatchlist",
+      "community": 12,
+      "norm_label": "addtowatchlist()"
+    },
+    {
+      "label": "removeFromWatchlist()",
+      "file_type": "code",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "web_src_lib_storage_removefromwatchlist",
+      "community": 12,
+      "norm_label": "removefromwatchlist()"
+    },
+    {
+      "label": "types.ts",
+      "file_type": "code",
+      "source_file": "web/src/lib/types.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_src_lib_types",
+      "community": 12,
+      "norm_label": "types.ts"
+    },
+    {
+      "label": "Signals",
+      "file_type": "code",
+      "source_file": "web/src/lib/types.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "web_src_lib_types_signals",
+      "community": 12,
+      "norm_label": "signals"
+    },
+    {
+      "label": "PickAction",
+      "file_type": "code",
+      "source_file": "web/src/lib/types.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "web_src_lib_types_pickaction",
+      "community": 12,
+      "norm_label": "pickaction"
+    },
+    {
+      "label": "Pick",
+      "file_type": "code",
+      "source_file": "web/src/lib/types.ts",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "web_src_lib_types_pick",
+      "community": 12,
+      "norm_label": "pick"
+    },
+    {
+      "label": "ShortlistEntry",
+      "file_type": "code",
+      "source_file": "web/src/lib/types.ts",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "web_src_lib_types_shortlistentry",
+      "community": 12,
+      "norm_label": "shortlistentry"
+    },
+    {
+      "label": "DailyRun",
+      "file_type": "code",
+      "source_file": "web/src/lib/types.ts",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "web_src_lib_types_dailyrun",
+      "community": 12,
+      "norm_label": "dailyrun"
+    },
+    {
+      "label": "WatchlistItem",
+      "file_type": "code",
+      "source_file": "web/src/lib/types.ts",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "web_src_lib_types_watchlistitem",
+      "community": 12,
+      "norm_label": "watchlistitem"
+    },
+    {
+      "label": "main.tsx",
+      "file_type": "code",
+      "source_file": "web/src/main.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_src_main",
+      "community": 12,
+      "norm_label": "main.tsx"
+    },
+    {
+      "label": "tsconfig.app.json",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_tsconfig_app",
+      "community": 14,
+      "norm_label": "tsconfig.app.json"
+    },
+    {
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions",
+      "community": 14,
+      "norm_label": "compileroptions"
+    },
+    {
+      "label": "tsBuildInfoFile",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions_tsbuildinfofile",
+      "community": 14,
+      "norm_label": "tsbuildinfofile"
+    },
+    {
+      "label": "target",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions_target",
+      "community": 14,
+      "norm_label": "target"
+    },
+    {
+      "label": "lib",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions_lib",
+      "community": 14,
+      "norm_label": "lib"
+    },
+    {
+      "label": "module",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions_module",
+      "community": 14,
+      "norm_label": "module"
+    },
+    {
+      "label": "types",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions_types",
+      "community": 14,
+      "norm_label": "types"
+    },
+    {
+      "label": "allowArbitraryExtensions",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions_allowarbitraryextensions",
+      "community": 14,
+      "norm_label": "allowarbitraryextensions"
+    },
+    {
+      "label": "skipLibCheck",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions_skiplibcheck",
+      "community": 14,
+      "norm_label": "skiplibcheck"
+    },
+    {
+      "label": "moduleResolution",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions_moduleresolution",
+      "community": 14,
+      "norm_label": "moduleresolution"
+    },
+    {
+      "label": "allowImportingTsExtensions",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions_allowimportingtsextensions",
+      "community": 14,
+      "norm_label": "allowimportingtsextensions"
+    },
+    {
+      "label": "verbatimModuleSyntax",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions_verbatimmodulesyntax",
+      "community": 14,
+      "norm_label": "verbatimmodulesyntax"
+    },
+    {
+      "label": "moduleDetection",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions_moduledetection",
+      "community": 14,
+      "norm_label": "moduledetection"
+    },
+    {
+      "label": "noEmit",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions_noemit",
+      "community": 14,
+      "norm_label": "noemit"
+    },
+    {
+      "label": "jsx",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions_jsx",
+      "community": 14,
+      "norm_label": "jsx"
+    },
+    {
+      "label": "noUnusedLocals",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions_nounusedlocals",
+      "community": 14,
+      "norm_label": "nounusedlocals"
+    },
+    {
+      "label": "noUnusedParameters",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions_nounusedparameters",
+      "community": 14,
+      "norm_label": "nounusedparameters"
+    },
+    {
+      "label": "erasableSyntaxOnly",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions_erasablesyntaxonly",
+      "community": 14,
+      "norm_label": "erasablesyntaxonly"
+    },
+    {
+      "label": "noFallthroughCasesInSwitch",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_compileroptions_nofallthroughcasesinswitch",
+      "community": 14,
+      "norm_label": "nofallthroughcasesinswitch"
+    },
+    {
+      "label": "include",
+      "file_type": "code",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "web_tsconfig_app_include",
+      "community": 14,
+      "norm_label": "include"
+    },
+    {
+      "label": "tsconfig.json",
+      "file_type": "code",
+      "source_file": "web/tsconfig.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_tsconfig",
+      "community": 21,
+      "norm_label": "tsconfig.json"
+    },
+    {
+      "label": "files",
+      "file_type": "code",
+      "source_file": "web/tsconfig.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "web_tsconfig_files",
+      "community": 21,
+      "norm_label": "files"
+    },
+    {
+      "label": "references",
+      "file_type": "code",
+      "source_file": "web/tsconfig.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "web_tsconfig_references",
+      "community": 21,
+      "norm_label": "references"
+    },
+    {
+      "label": "tsconfig.node.json",
+      "file_type": "code",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_tsconfig_node",
+      "community": 15,
+      "norm_label": "tsconfig.node.json"
+    },
+    {
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "web_tsconfig_node_compileroptions",
+      "community": 15,
+      "norm_label": "compileroptions"
+    },
+    {
+      "label": "tsBuildInfoFile",
+      "file_type": "code",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "web_tsconfig_node_compileroptions_tsbuildinfofile",
+      "community": 15,
+      "norm_label": "tsbuildinfofile"
+    },
+    {
+      "label": "target",
+      "file_type": "code",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "web_tsconfig_node_compileroptions_target",
+      "community": 15,
+      "norm_label": "target"
+    },
+    {
+      "label": "lib",
+      "file_type": "code",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "web_tsconfig_node_compileroptions_lib",
+      "community": 15,
+      "norm_label": "lib"
+    },
+    {
+      "label": "types",
+      "file_type": "code",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "web_tsconfig_node_compileroptions_types",
+      "community": 15,
+      "norm_label": "types"
+    },
+    {
+      "label": "skipLibCheck",
+      "file_type": "code",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "web_tsconfig_node_compileroptions_skiplibcheck",
+      "community": 15,
+      "norm_label": "skiplibcheck"
+    },
+    {
+      "label": "module",
+      "file_type": "code",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "web_tsconfig_node_compileroptions_module",
+      "community": 15,
+      "norm_label": "module"
+    },
+    {
+      "label": "allowImportingTsExtensions",
+      "file_type": "code",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "web_tsconfig_node_compileroptions_allowimportingtsextensions",
+      "community": 15,
+      "norm_label": "allowimportingtsextensions"
+    },
+    {
+      "label": "verbatimModuleSyntax",
+      "file_type": "code",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "web_tsconfig_node_compileroptions_verbatimmodulesyntax",
+      "community": 15,
+      "norm_label": "verbatimmodulesyntax"
+    },
+    {
+      "label": "moduleDetection",
+      "file_type": "code",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "web_tsconfig_node_compileroptions_moduledetection",
+      "community": 15,
+      "norm_label": "moduledetection"
+    },
+    {
+      "label": "noEmit",
+      "file_type": "code",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "web_tsconfig_node_compileroptions_noemit",
+      "community": 15,
+      "norm_label": "noemit"
+    },
+    {
+      "label": "noUnusedLocals",
+      "file_type": "code",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "web_tsconfig_node_compileroptions_nounusedlocals",
+      "community": 15,
+      "norm_label": "nounusedlocals"
+    },
+    {
+      "label": "noUnusedParameters",
+      "file_type": "code",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "web_tsconfig_node_compileroptions_nounusedparameters",
+      "community": 15,
+      "norm_label": "nounusedparameters"
+    },
+    {
+      "label": "erasableSyntaxOnly",
+      "file_type": "code",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "web_tsconfig_node_compileroptions_erasablesyntaxonly",
+      "community": 15,
+      "norm_label": "erasablesyntaxonly"
+    },
+    {
+      "label": "noFallthroughCasesInSwitch",
+      "file_type": "code",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "web_tsconfig_node_compileroptions_nofallthroughcasesinswitch",
+      "community": 15,
+      "norm_label": "nofallthroughcasesinswitch"
+    },
+    {
+      "label": "include",
+      "file_type": "code",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "web_tsconfig_node_include",
+      "community": 15,
+      "norm_label": "include"
+    },
+    {
+      "label": "vite.config.ts",
+      "file_type": "code",
+      "source_file": "web/vite.config.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_vite_config",
+      "community": 65,
+      "norm_label": "vite.config.ts"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude",
+      "community": 17,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "StonkMonk \u2014 Project Context",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude_stonkmonk_project_context",
+      "community": 17,
+      "norm_label": "stonkmonk \u2014 project context"
+    },
+    {
+      "label": "What it is",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "claude_what_it_is",
+      "community": 17,
+      "norm_label": "what it is"
+    },
+    {
+      "label": "Decisions already made",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "claude_decisions_already_made",
+      "community": 17,
+      "norm_label": "decisions already made"
+    },
+    {
+      "label": "Key technical notes",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "claude_key_technical_notes",
+      "community": 17,
+      "norm_label": "key technical notes"
+    },
+    {
+      "label": "Pick generation pipeline (per trading day)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "claude_pick_generation_pipeline_per_trading_day",
+      "community": 17,
+      "norm_label": "pick generation pipeline (per trading day)"
+    },
+    {
+      "label": "Current status",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "claude_current_status",
+      "community": 17,
+      "norm_label": "current status"
+    },
+    {
+      "label": "Layout (proposed, not yet built)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "claude_layout_proposed_not_yet_built",
+      "community": 17,
+      "norm_label": "layout (proposed, not yet built)"
+    },
+    {
+      "label": "Status: Not started \u2014 Phase 1 is the next milestone",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L111",
+      "_origin": "ast",
+      "id": "claude_status_not_started_phase_1_is_the_next_milestone",
+      "community": 17,
+      "norm_label": "status: not started \u2014 phase 1 is the next milestone"
+    },
+    {
+      "label": "Open decisions to revisit",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L121",
+      "_origin": "ast",
+      "id": "claude_open_decisions_to_revisit",
+      "community": 17,
+      "norm_label": "open decisions to revisit"
+    },
+    {
+      "label": "graphify",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L130",
+      "_origin": "ast",
+      "id": "claude_graphify",
+      "community": 17,
+      "norm_label": "graphify"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 18,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "StonkMonk",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_stonkmonk",
+      "community": 18,
+      "norm_label": "stonkmonk"
+    },
+    {
+      "label": "Live demo",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "readme_live_demo",
+      "community": 18,
+      "norm_label": "live demo"
+    },
+    {
+      "label": "Tech stack",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "readme_tech_stack",
+      "community": 18,
+      "norm_label": "tech stack"
+    },
+    {
+      "label": "Repo layout",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "readme_repo_layout",
+      "community": 18,
+      "norm_label": "repo layout"
+    },
+    {
+      "label": "Running locally",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "readme_running_locally",
+      "community": 18,
+      "norm_label": "running locally"
+    },
+    {
+      "label": "Scanner (Python)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "readme_scanner_python",
+      "community": 18,
+      "norm_label": "scanner (python)"
+    },
+    {
+      "label": "Frontend (Vite + React)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "readme_frontend_vite_react",
+      "community": 18,
+      "norm_label": "frontend (vite + react)"
+    },
+    {
+      "label": "Compliance",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L106",
+      "_origin": "ast",
+      "id": "readme_compliance",
+      "community": 18,
+      "norm_label": "compliance"
+    },
+    {
+      "label": "stonkmonk-spec.md",
+      "file_type": "document",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "stonkmonk_spec",
+      "community": 16,
+      "norm_label": "stonkmonk-spec.md"
+    },
+    {
+      "label": "StonkMonk \u2014 Full Spec",
+      "file_type": "document",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "stonkmonk_spec_stonkmonk_full_spec",
+      "community": 16,
+      "norm_label": "stonkmonk \u2014 full spec"
+    },
+    {
+      "label": "What it is",
+      "file_type": "document",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "stonkmonk_spec_what_it_is",
+      "community": 16,
+      "norm_label": "what it is"
+    },
+    {
+      "label": "Decisions already made",
+      "file_type": "document",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "stonkmonk_spec_decisions_already_made",
+      "community": 16,
+      "norm_label": "decisions already made"
+    },
+    {
+      "label": "Key technical notes",
+      "file_type": "document",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L85",
+      "_origin": "ast",
+      "id": "stonkmonk_spec_key_technical_notes",
+      "community": 16,
+      "norm_label": "key technical notes"
+    },
+    {
+      "label": "Pick generation pipeline (runs once per trading day, in Actions)",
+      "file_type": "document",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L118",
+      "_origin": "ast",
+      "id": "stonkmonk_spec_pick_generation_pipeline_runs_once_per_trading_day_in_actions",
+      "community": 16,
+      "norm_label": "pick generation pipeline (runs once per trading day, in actions)"
+    },
+    {
+      "label": "Frontend (React + Vite + TS + Tailwind, static)",
+      "file_type": "document",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L151",
+      "_origin": "ast",
+      "id": "stonkmonk_spec_frontend_react_vite_ts_tailwind_static",
+      "community": 16,
+      "norm_label": "frontend (react + vite + ts + tailwind, static)"
+    },
+    {
+      "label": "Data model (illustrative shapes, not final types)",
+      "file_type": "document",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L171",
+      "_origin": "ast",
+      "id": "stonkmonk_spec_data_model_illustrative_shapes_not_final_types",
+      "community": 16,
+      "norm_label": "data model (illustrative shapes, not final types)"
+    },
+    {
+      "label": "Repo layout (proposed)",
+      "file_type": "document",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L210",
+      "_origin": "ast",
+      "id": "stonkmonk_spec_repo_layout_proposed",
+      "community": 16,
+      "norm_label": "repo layout (proposed)"
+    },
+    {
+      "label": "Phased roadmap",
+      "file_type": "document",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L234",
+      "_origin": "ast",
+      "id": "stonkmonk_spec_phased_roadmap",
+      "community": 16,
+      "norm_label": "phased roadmap"
+    },
+    {
+      "label": "Compliance (permanent, not a phase)",
+      "file_type": "document",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L259",
+      "_origin": "ast",
+      "id": "stonkmonk_spec_compliance_permanent_not_a_phase",
+      "community": 16,
+      "norm_label": "compliance (permanent, not a phase)"
+    },
+    {
+      "label": "Open decisions to revisit",
+      "file_type": "document",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L269",
+      "_origin": "ast",
+      "id": "stonkmonk_spec_open_decisions_to_revisit",
+      "community": 16,
+      "norm_label": "open decisions to revisit"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "web/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_readme",
+      "community": 20,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "React + TypeScript + Vite",
+      "file_type": "document",
+      "source_file": "web/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_readme_react_typescript_vite",
+      "community": 20,
+      "norm_label": "react + typescript + vite"
+    },
+    {
+      "label": "React Compiler",
+      "file_type": "document",
+      "source_file": "web/README.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "web_readme_react_compiler",
+      "community": 20,
+      "norm_label": "react compiler"
+    },
+    {
+      "label": "Expanding the Oxlint configuration",
+      "file_type": "document",
+      "source_file": "web/README.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "web_readme_expanding_the_oxlint_configuration",
+      "community": 20,
+      "norm_label": "expanding the oxlint configuration"
+    },
+    {
       "label": "CLAUDE.md \u2014 StonkMonk Project Context",
       "file_type": "document",
       "source_file": "CLAUDE.md",
@@ -762,9 +2452,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "claude_stonkmonk",
       "community": 9,
-      "norm_label": "claude.md \u2014 stonkmonk project context"
+      "norm_label": "claude.md \u2014 stonkmonk project context",
+      "id": "claude_stonkmonk"
     },
     {
       "label": "stonkmonk-spec.md \u2014 StonkMonk Full Spec",
@@ -775,9 +2465,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stonkmonk_spec_stonkmonk",
-      "community": 9,
-      "norm_label": "stonkmonk-spec.md \u2014 stonkmonk full spec"
+      "community": 58,
+      "norm_label": "stonkmonk-spec.md \u2014 stonkmonk full spec",
+      "id": "stonkmonk_spec_stonkmonk"
     },
     {
       "label": "scanner/requirements.txt \u2014 Python dependency manifest",
@@ -788,9 +2478,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "scanner_requirements_requirements",
       "community": 2,
-      "norm_label": "scanner/requirements.txt \u2014 python dependency manifest"
+      "norm_label": "scanner/requirements.txt \u2014 python dependency manifest",
+      "id": "scanner_requirements_requirements"
     },
     {
       "label": "StonkMonk (the project)",
@@ -801,9 +2491,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stonkmonk",
-      "community": 3,
-      "norm_label": "stonkmonk (the project)"
+      "community": 52,
+      "norm_label": "stonkmonk (the project)",
+      "id": "stonkmonk"
     },
     {
       "label": "Couchworthy (sibling project)",
@@ -814,9 +2504,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "couchworthy",
-      "community": 3,
-      "norm_label": "couchworthy (sibling project)"
+      "community": 22,
+      "norm_label": "couchworthy (sibling project)",
+      "id": "couchworthy"
     },
     {
       "label": "yfinance (market data source)",
@@ -827,9 +2517,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "yfinance",
       "community": 2,
-      "norm_label": "yfinance (market data source)"
+      "norm_label": "yfinance (market data source)",
+      "id": "yfinance"
     },
     {
       "label": "Nasdaq Trader symbol directory (nasdaqlisted.txt)",
@@ -840,9 +2530,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "nasdaq_symbol_directory",
-      "community": 3,
-      "norm_label": "nasdaq trader symbol directory (nasdaqlisted.txt)"
+      "community": 34,
+      "norm_label": "nasdaq trader symbol directory (nasdaqlisted.txt)",
+      "id": "nasdaq_symbol_directory"
     },
     {
       "label": "GitHub Actions daily cron workflow",
@@ -853,9 +2543,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "github_actions_cron_workflow",
-      "community": 3,
-      "norm_label": "github actions daily cron workflow"
+      "community": 31,
+      "norm_label": "github actions daily cron workflow",
+      "id": "github_actions_cron_workflow"
     },
     {
       "label": "Pick generation pipeline",
@@ -866,9 +2556,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pick_generation_pipeline",
-      "community": 3,
-      "norm_label": "pick generation pipeline"
+      "community": 44,
+      "norm_label": "pick generation pipeline",
+      "id": "pick_generation_pipeline"
     },
     {
       "label": "Universe build step",
@@ -879,9 +2569,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "universe_build_step",
-      "community": 2,
-      "norm_label": "universe build step"
+      "community": 62,
+      "norm_label": "universe build step",
+      "id": "universe_build_step"
     },
     {
       "label": "Data fetch step",
@@ -892,9 +2582,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "data_fetch_step",
-      "community": 2,
-      "norm_label": "data fetch step"
+      "community": 24,
+      "norm_label": "data fetch step",
+      "id": "data_fetch_step"
     },
     {
       "label": "Signal computation step (deterministic, no AI)",
@@ -905,9 +2595,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "signal_computation_step",
-      "community": 2,
-      "norm_label": "signal computation step (deterministic, no ai)"
+      "community": 51,
+      "norm_label": "signal computation step (deterministic, no ai)",
+      "id": "signal_computation_step"
     },
     {
       "label": "Selection step (top-N buy / up-to-N caution)",
@@ -918,9 +2608,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "selection_step",
-      "community": 2,
-      "norm_label": "selection step (top-n buy / up-to-n caution)"
+      "community": 49,
+      "norm_label": "selection step (top-n buy / up-to-n caution)",
+      "id": "selection_step"
     },
     {
       "label": "LLM reasoning pass step",
@@ -931,9 +2621,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "llm_reasoning_pass_step",
-      "community": 2,
-      "norm_label": "llm reasoning pass step"
+      "community": 33,
+      "norm_label": "llm reasoning pass step",
+      "id": "llm_reasoning_pass_step"
     },
     {
       "label": "Persist step (write data/picks JSON)",
@@ -944,9 +2634,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "persist_step",
-      "community": 7,
-      "norm_label": "persist step (write data/picks json)"
+      "community": 38,
+      "norm_label": "persist step (write data/picks json)",
+      "id": "persist_step"
     },
     {
       "label": "Outcome tracking step (Phase 2+)",
@@ -957,9 +2647,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "outcome_tracking_step",
-      "community": 7,
-      "norm_label": "outcome tracking step (phase 2+)"
+      "community": 37,
+      "norm_label": "outcome tracking step (phase 2+)",
+      "id": "outcome_tracking_step"
     },
     {
       "label": "React + Vite + TypeScript + Tailwind static frontend",
@@ -970,9 +2660,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "frontend_stack",
-      "community": 3,
-      "norm_label": "react + vite + typescript + tailwind static frontend"
+      "community": 29,
+      "norm_label": "react + vite + typescript + tailwind static frontend",
+      "id": "frontend_stack"
     },
     {
       "label": "Today view (buy/caution cards)",
@@ -983,9 +2673,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "today_view",
-      "community": 7,
-      "norm_label": "today view (buy/caution cards)"
+      "community": 60,
+      "norm_label": "today view (buy/caution cards)",
+      "id": "today_view"
     },
     {
       "label": "History view",
@@ -996,9 +2686,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "history_view",
-      "community": 7,
-      "norm_label": "history view"
+      "community": 32,
+      "norm_label": "history view",
+      "id": "history_view"
     },
     {
       "label": "Watchlist view",
@@ -1009,9 +2699,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "watchlist_view",
       "community": 11,
-      "norm_label": "watchlist view"
+      "norm_label": "watchlist view",
+      "id": "watchlist_view"
     },
     {
       "label": "Preferences panel (Phase 3)",
@@ -1022,9 +2712,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "preferences_panel",
-      "community": 7,
-      "norm_label": "preferences panel (phase 3)"
+      "community": 47,
+      "norm_label": "preferences panel (phase 3)",
+      "id": "preferences_panel"
     },
     {
       "label": "DailyRun data shape",
@@ -1035,9 +2725,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "dailyrun_shape",
-      "community": 7,
-      "norm_label": "dailyrun data shape"
+      "community": 23,
+      "norm_label": "dailyrun data shape",
+      "id": "dailyrun_shape"
     },
     {
       "label": "Pick data shape",
@@ -1048,9 +2738,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "pick_shape",
-      "community": 7,
-      "norm_label": "pick data shape"
+      "community": 45,
+      "norm_label": "pick data shape",
+      "id": "pick_shape"
     },
     {
       "label": "WatchlistItem data shape",
@@ -1061,9 +2751,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "watchlistitem_shape",
-      "community": 11,
-      "norm_label": "watchlistitem data shape"
+      "community": 64,
+      "norm_label": "watchlistitem data shape",
+      "id": "watchlistitem_shape"
     },
     {
       "label": "UserPreferences data shape",
@@ -1074,9 +2764,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "userpreferences_shape",
-      "community": 7,
-      "norm_label": "userpreferences data shape"
+      "community": 63,
+      "norm_label": "userpreferences data shape",
+      "id": "userpreferences_shape"
     },
     {
       "label": "scanner/universe.py (planned module)",
@@ -1087,9 +2777,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stonkmonk_spec_universe_py",
-      "community": 2,
-      "norm_label": "scanner/universe.py (planned module)"
+      "community": 59,
+      "norm_label": "scanner/universe.py (planned module)",
+      "id": "stonkmonk_spec_universe_py"
     },
     {
       "label": "scanner/data.py (planned module)",
@@ -1100,9 +2790,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stonkmonk_spec_data_py",
-      "community": 2,
-      "norm_label": "scanner/data.py (planned module)"
+      "community": 53,
+      "norm_label": "scanner/data.py (planned module)",
+      "id": "stonkmonk_spec_data_py"
     },
     {
       "label": "scanner/signals.py (planned module)",
@@ -1113,9 +2803,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stonkmonk_spec_signals_py",
-      "community": 2,
-      "norm_label": "scanner/signals.py (planned module)"
+      "community": 57,
+      "norm_label": "scanner/signals.py (planned module)",
+      "id": "stonkmonk_spec_signals_py"
     },
     {
       "label": "scanner/score.py (planned module)",
@@ -1126,9 +2816,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stonkmonk_spec_score_py",
-      "community": 2,
-      "norm_label": "scanner/score.py (planned module)"
+      "community": 56,
+      "norm_label": "scanner/score.py (planned module)",
+      "id": "stonkmonk_spec_score_py"
     },
     {
       "label": "scanner/llm.py (planned module)",
@@ -1139,9 +2829,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stonkmonk_spec_llm_py",
-      "community": 2,
-      "norm_label": "scanner/llm.py (planned module)"
+      "community": 54,
+      "norm_label": "scanner/llm.py (planned module)",
+      "id": "stonkmonk_spec_llm_py"
     },
     {
       "label": "scanner/main.py (planned module)",
@@ -1152,9 +2842,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stonkmonk_spec_main_py",
-      "community": 2,
-      "norm_label": "scanner/main.py (planned module)"
+      "community": 55,
+      "norm_label": "scanner/main.py (planned module)",
+      "id": "stonkmonk_spec_main_py"
     },
     {
       "label": "Compliance / disclaimer footer",
@@ -1165,9 +2855,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "compliance_footer",
       "community": 3,
-      "norm_label": "compliance / disclaimer footer"
+      "norm_label": "compliance / disclaimer footer",
+      "id": "compliance_footer"
     },
     {
       "label": "Phased roadmap (Phase 1\u20134)",
@@ -1178,9 +2868,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "phased_roadmap",
-      "community": 6,
-      "norm_label": "phased roadmap (phase 1\u20134)"
+      "community": 43,
+      "norm_label": "phased roadmap (phase 1\u20134)",
+      "id": "phased_roadmap"
     },
     {
       "label": "Phase 1 \u2014 MVP",
@@ -1191,9 +2881,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "phase1_mvp",
-      "community": 6,
-      "norm_label": "phase 1 \u2014 mvp"
+      "community": 39,
+      "norm_label": "phase 1 \u2014 mvp",
+      "id": "phase1_mvp"
     },
     {
       "label": "Phase 2 \u2014 Watchlist + track record",
@@ -1204,9 +2894,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "phase2_watchlist",
-      "community": 6,
-      "norm_label": "phase 2 \u2014 watchlist + track record"
+      "community": 40,
+      "norm_label": "phase 2 \u2014 watchlist + track record",
+      "id": "phase2_watchlist"
     },
     {
       "label": "Phase 3 \u2014 Personalization",
@@ -1217,9 +2907,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "phase3_personalization",
-      "community": 6,
-      "norm_label": "phase 3 \u2014 personalization"
+      "community": 41,
+      "norm_label": "phase 3 \u2014 personalization",
+      "id": "phase3_personalization"
     },
     {
       "label": "Phase 4 \u2014 Expansion",
@@ -1230,22 +2920,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "phase4_expansion",
-      "community": 3,
-      "norm_label": "phase 4 \u2014 expansion"
-    },
-    {
-      "label": "Open decisions to revisit",
-      "file_type": "concept",
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "open_decisions",
-      "community": 6,
-      "norm_label": "open decisions to revisit"
+      "community": 42,
+      "norm_label": "phase 4 \u2014 expansion",
+      "id": "phase4_expansion"
     },
     {
       "label": "Caution/Consider Trimming sell-framing rationale",
@@ -1256,9 +2933,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "sell_framing_rationale",
-      "community": 3,
-      "norm_label": "caution/consider trimming sell-framing rationale"
+      "community": 50,
+      "norm_label": "caution/consider trimming sell-framing rationale",
+      "id": "sell_framing_rationale"
     },
     {
       "label": "Isolate yfinance fetch layer for future swappability",
@@ -1269,9 +2946,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "data_isolation_rationale",
-      "community": 2,
-      "norm_label": "isolate yfinance fetch layer for future swappability"
+      "community": 25,
+      "norm_label": "isolate yfinance fetch layer for future swappability",
+      "id": "data_isolation_rationale"
     },
     {
       "label": "Fail the run rather than publish a thin/partial day",
@@ -1282,9 +2959,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "fail_loud_rationale",
-      "community": 2,
-      "norm_label": "fail the run rather than publish a thin/partial day"
+      "community": 27,
+      "norm_label": "fail the run rather than publish a thin/partial day",
+      "id": "fail_loud_rationale"
     },
     {
       "label": "Deterministic-logic-first, LLM-blurb-additive pattern",
@@ -1295,9 +2972,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "deterministic_first_llm_layer_pattern",
-      "community": 3,
-      "norm_label": "deterministic-logic-first, llm-blurb-additive pattern"
+      "community": 26,
+      "norm_label": "deterministic-logic-first, llm-blurb-additive pattern",
+      "id": "deterministic_first_llm_layer_pattern"
     },
     {
       "label": "GitHub Actions 60-day auto-disable risk & self-sustaining mitigation",
@@ -1308,9 +2985,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "ghactions_autodisable_rationale",
-      "community": 3,
-      "norm_label": "github actions 60-day auto-disable risk & self-sustaining mitigation"
+      "community": 30,
+      "norm_label": "github actions 60-day auto-disable risk & self-sustaining mitigation",
+      "id": "ghactions_autodisable_rationale"
     },
     {
       "label": "Full scored shortlist enables client-side re-ranking without a backend",
@@ -1321,9 +2998,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "client_side_reranking_rationale",
       "community": 7,
-      "norm_label": "full scored shortlist enables client-side re-ranking without a backend"
+      "norm_label": "full scored shortlist enables client-side re-ranking without a backend",
+      "id": "client_side_reranking_rationale"
     },
     {
       "label": "No trade execution / no brokerage connection (permanent constraint)",
@@ -1334,9 +3011,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "no_trade_execution_constraint",
-      "community": 3,
-      "norm_label": "no trade execution / no brokerage connection (permanent constraint)"
+      "community": 35,
+      "norm_label": "no trade execution / no brokerage connection (permanent constraint)",
+      "id": "no_trade_execution_constraint"
     },
     {
       "label": "Nasdaq Global Select as Robinhood-tradable proxy",
@@ -1347,9 +3024,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "robinhood_universe_approximation_rationale",
-      "community": 3,
-      "norm_label": "nasdaq global select as robinhood-tradable proxy"
+      "community": 48,
+      "norm_label": "nasdaq global select as robinhood-tradable proxy",
+      "id": "robinhood_universe_approximation_rationale"
     },
     {
       "label": "Anthropic (LLM provider)",
@@ -1360,9 +3037,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "anthropic_llm",
       "community": 2,
-      "norm_label": "anthropic (llm provider)"
+      "norm_label": "anthropic (llm provider)",
+      "id": "anthropic_llm"
     },
     {
       "label": "OpenAI (LLM provider)",
@@ -1373,9 +3050,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "openai_llm",
-      "community": 2,
-      "norm_label": "openai (llm provider)"
+      "community": 36,
+      "norm_label": "openai (llm provider)",
+      "id": "openai_llm"
     },
     {
       "label": "Finnhub (browser-callable quote API candidate)",
@@ -1386,9 +3063,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "finnhub_api",
-      "community": 6,
-      "norm_label": "finnhub (browser-callable quote api candidate)"
+      "community": 28,
+      "norm_label": "finnhub (browser-callable quote api candidate)",
+      "id": "finnhub_api"
     },
     {
       "label": "Twelve Data (browser-callable quote API candidate)",
@@ -1399,9 +3076,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "twelvedata_api",
-      "community": 6,
-      "norm_label": "twelve data (browser-callable quote api candidate)"
+      "community": 61,
+      "norm_label": "twelve data (browser-callable quote api candidate)",
+      "id": "twelvedata_api"
     },
     {
       "label": "Polygon (paid data API candidate)",
@@ -1412,9 +3089,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "polygon_api",
-      "community": 6,
-      "norm_label": "polygon (paid data api candidate)"
+      "community": 46,
+      "norm_label": "polygon (paid data api candidate)",
+      "id": "polygon_api"
     },
     {
       "label": "Alpha Vantage (paid data API candidate)",
@@ -1425,9 +3102,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "alphavantage_api",
       "community": 6,
-      "norm_label": "alpha vantage (paid data api candidate)"
+      "norm_label": "alpha vantage (paid data api candidate)",
+      "id": "alphavantage_api"
     },
     {
       "label": "StonkMonk App Logo (128px)",
@@ -1438,9 +3115,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "assets_logo_128_logo",
       "community": 8,
-      "norm_label": "stonkmonk app logo (128px)"
+      "norm_label": "stonkmonk app logo (128px)",
+      "id": "assets_logo_128_logo"
     },
     {
       "label": "StonkMonk Brand Identity / Monk Mascot Concept",
@@ -1451,9 +3128,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "stonkmonk_branding_concept",
       "community": 8,
-      "norm_label": "stonkmonk brand identity / monk mascot concept"
+      "norm_label": "stonkmonk brand identity / monk mascot concept",
+      "id": "stonkmonk_branding_concept"
     },
     {
       "label": "StonkMonk Logo Icon (32px)",
@@ -1464,9 +3141,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "assets_logo_32_logo",
       "community": 8,
-      "norm_label": "stonkmonk logo icon (32px)"
+      "norm_label": "stonkmonk logo icon (32px)",
+      "id": "assets_logo_32_logo"
     },
     {
       "label": "StonkMonk Logo (512px App Icon)",
@@ -1477,9 +3154,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "assets_logo_512_logo",
       "community": 8,
-      "norm_label": "stonkmonk logo (512px app icon)"
+      "norm_label": "stonkmonk logo (512px app icon)",
+      "id": "assets_logo_512_logo"
     },
     {
       "label": "StonkMonk Icon (logo.svg)",
@@ -1490,9 +3167,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "assets_logo_logo",
       "community": 8,
-      "norm_label": "stonkmonk icon (logo.svg)"
+      "norm_label": "stonkmonk icon (logo.svg)",
+      "id": "assets_logo_logo"
     }
   ],
   "links": [
@@ -1904,6 +3581,418 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "scanner_llm",
+      "target": "scanner_llm_build_prompt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "scanner_llm",
+      "target": "scanner_llm_fallback_reasoning",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "scanner_llm",
+      "target": "scanner_llm_generate_all",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "scanner_llm",
+      "target": "scanner_llm_generate_reasoning",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "scanner_llm",
+      "target": "scanner_llm_generic_fallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "scanner_llm",
+      "target": "scanner_llm_llm_reasoning",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "scanner_llm",
+      "target": "scanner_score",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "scanner_llm",
+      "target": "scanner_score_scoredticker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scanner_llm_rationale_1",
+      "target": "scanner_llm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "scanner_llm_generate_all",
+      "target": "scanner_llm_generate_reasoning",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "scanner_llm_generate_reasoning",
+      "target": "scanner_llm_fallback_reasoning",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "scanner_llm_generate_reasoning",
+      "target": "scanner_llm_llm_reasoning",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "scanner_llm_generate_reasoning",
+      "target": "scanner_score_scoredticker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "scanner_llm_rationale_59",
+      "target": "scanner_llm_generate_reasoning",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "scanner_llm_generate_all",
+      "target": "scanner_score_scoredticker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "scanner_llm_rationale_74",
+      "target": "scanner_llm_generate_all",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "scanner_llm_llm_reasoning",
+      "target": "scanner_llm_build_prompt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "scanner_llm_llm_reasoning",
+      "target": "scanner_score_scoredticker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "scanner_llm_build_prompt",
+      "target": "scanner_score_scoredticker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "scanner_llm_fallback_reasoning",
+      "target": "scanner_llm_generic_fallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "scanner_llm_fallback_reasoning",
+      "target": "scanner_score_scoredticker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "scanner_llm_rationale_121",
+      "target": "scanner_llm_fallback_reasoning",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/llm.py",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "scanner_llm_generic_fallback",
+      "target": "scanner_score_scoredticker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/main.py",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "scanner_main",
+      "target": "scanner_main_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/main.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "scanner_main",
+      "target": "scanner_main_persist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/main.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "scanner_main",
+      "target": "scanner_main_pick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/main.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "scanner_main",
+      "target": "scanner_main_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/main.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "scanner_main",
+      "target": "scanner_main_shortlist_entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/main.py",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "scanner_main",
+      "target": "scanner_main_update_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/main.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "scanner_main",
+      "target": "scanner_score",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/main.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "scanner_main",
+      "target": "scanner_score_scoredticker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/main.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scanner_main_rationale_1",
+      "target": "scanner_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/main.py",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "scanner_main_main",
+      "target": "scanner_main_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/main.py",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "scanner_main_run",
+      "target": "scanner_main_persist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/main.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "scanner_main_run",
+      "target": "scanner_main_pick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/main.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "scanner_main_run",
+      "target": "scanner_main_shortlist_entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/main.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "scanner_main_pick",
+      "target": "scanner_score_scoredticker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/main.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "scanner_main_shortlist_entry",
+      "target": "scanner_score_scoredticker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scanner/main.py",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "scanner_main_persist",
+      "target": "scanner_main_update_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "scanner/score.py",
       "source_location": "L27",
       "weight": 1.0,
@@ -2013,7 +4102,7 @@
       "source_location": "L27",
       "weight": 1.0,
       "source": "scanner_score_composite",
-      "target": "scanner_signals_signals",
+      "target": "signals",
       "confidence_score": 1.0
     },
     {
@@ -2644,14 +4733,2171 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "references",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/.oxlintrc.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_oxlintrc",
+      "target": "web_oxlintrc_plugins",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/.oxlintrc.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "web_oxlintrc",
+      "target": "web_oxlintrc_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/.oxlintrc.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_oxlintrc",
+      "target": "web_oxlintrc_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/.oxlintrc.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "web_oxlintrc_rules",
+      "target": "web_oxlintrc_rules_react_only_export_components",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/.oxlintrc.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "web_oxlintrc_rules",
+      "target": "web_oxlintrc_rules_react_rules_of_hooks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "web_package",
+      "target": "web_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "web_package",
+      "target": "web_package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_package",
+      "target": "web_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_package",
+      "target": "web_package_private",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "web_package",
+      "target": "web_package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "web_package",
+      "target": "web_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "web_package",
+      "target": "web_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "web_package_scripts",
+      "target": "web_package_scripts_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "web_package_scripts",
+      "target": "web_package_scripts_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "web_package_scripts",
+      "target": "web_package_scripts_lint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "web_package_scripts",
+      "target": "web_package_scripts_preview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "web_package_dependencies",
+      "target": "web_package_dependencies_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "web_package_dependencies",
+      "target": "web_package_dependencies_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "web_package_dependencies",
+      "target": "web_package_dependencies_tailwindcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "web_package_dependencies",
+      "target": "web_package_dependencies_tailwindcss_vite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "web_package_devdependencies",
+      "target": "web_package_devdependencies_oxlint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "web_package_devdependencies",
+      "target": "web_package_devdependencies_types_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "web_package_devdependencies",
+      "target": "web_package_devdependencies_types_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "web_package_devdependencies",
+      "target": "web_package_devdependencies_types_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "web_package_devdependencies",
+      "target": "web_package_devdependencies_typescript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "web_package_devdependencies",
+      "target": "web_package_devdependencies_vite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "web_package_devdependencies",
+      "target": "web_package_devdependencies_vitejs_plugin_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "web_src_app",
+      "target": "web_src_app_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "web_src_app",
+      "target": "web_src_app_tab",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "web_src_app",
+      "target": "web_src_components_compliancefooter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "web_src_app",
+      "target": "web_src_components_compliancefooter_compliancefooter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "web_src_app",
+      "target": "web_src_components_header",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "web_src_app",
+      "target": "web_src_components_header_header",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "web_src_app",
+      "target": "web_src_components_historyview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "web_src_app",
+      "target": "web_src_components_historyview_historyview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "web_src_app",
+      "target": "web_src_components_todayview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "web_src_app",
+      "target": "web_src_components_todayview_todayview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "web_src_app",
+      "target": "web_src_components_watchlistsidebar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "web_src_app",
+      "target": "web_src_components_watchlistsidebar_watchlistsidebar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_app",
+      "target": "web_src_lib_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_app",
+      "target": "web_src_lib_api_fetchlatest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_src_app",
+      "target": "web_src_lib_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/App.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_src_app",
+      "target": "web_src_lib_types_dailyrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/main.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "web_src_main",
+      "target": "web_src_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "web/src/App.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "web_src_app_app",
+      "target": "web_src_lib_api_fetchlatest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/ComplianceFooter.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "web_src_components_compliancefooter",
+      "target": "web_src_components_compliancefooter_compliancefooter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/Header.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "web_src_components_header",
+      "target": "web_src_components_header_formatgeneratedat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/Header.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "web_src_components_header",
+      "target": "web_src_components_header_header",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/Header.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "web_src_components_header",
+      "target": "web_src_components_header_headerprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/Header.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "web_src_components_header",
+      "target": "web_src_components_header_tab",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/Header.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "web_src_components_header",
+      "target": "web_src_components_header_tabs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/Header.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_header",
+      "target": "web_src_lib_storage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/Header.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_header",
+      "target": "web_src_lib_storage_getwatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/Header.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_header",
+      "target": "web_src_lib_storage_subscribetowatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/Header.tsx",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "web_src_components_header_header",
+      "target": "web_src_components_header_formatgeneratedat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "web/src/components/Header.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "web_src_components_header_header",
+      "target": "web_src_lib_storage_getwatchlist"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "web/src/components/Header.tsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "web_src_components_header_header",
+      "target": "web_src_lib_storage_subscribetowatchlist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/HistoryView.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "web_src_components_historyview",
+      "target": "web_src_components_historyview_historyview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/HistoryView.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "web_src_components_historyview",
+      "target": "web_src_components_pickslist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/HistoryView.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "web_src_components_historyview",
+      "target": "web_src_components_pickslist_pickslist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/HistoryView.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_historyview",
+      "target": "web_src_lib_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/HistoryView.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_historyview",
+      "target": "web_src_lib_api_fetchindex",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/HistoryView.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_historyview",
+      "target": "web_src_lib_api_fetchpicksfordate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/HistoryView.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_src_components_historyview",
+      "target": "web_src_lib_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/HistoryView.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_src_components_historyview",
+      "target": "web_src_lib_types_dailyrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "web/src/components/HistoryView.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "web_src_components_historyview_historyview",
+      "target": "web_src_lib_api_fetchindex"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "web/src/components/HistoryView.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "web_src_components_historyview_historyview",
+      "target": "web_src_lib_api_fetchpicksfordate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "web_src_components_pickcard",
+      "target": "web_src_components_pickcard_fmt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "web_src_components_pickcard",
+      "target": "web_src_components_pickcard_pickcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "web_src_components_pickcard",
+      "target": "web_src_components_pickcard_signal_labels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_pickcard",
+      "target": "web_src_lib_storage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_pickcard",
+      "target": "web_src_lib_storage_addtowatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_pickcard",
+      "target": "web_src_lib_storage_iswatchlisted",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_pickcard",
+      "target": "web_src_lib_storage_removefromwatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_pickcard",
+      "target": "web_src_lib_storage_subscribetowatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_src_components_pickcard",
+      "target": "web_src_lib_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_src_components_pickcard",
+      "target": "web_src_lib_types_pick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_src_components_pickcard",
+      "target": "web_src_lib_types_signals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/PicksList.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_src_components_pickslist",
+      "target": "web_src_components_pickcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "web_src_components_pickcard_pickcard",
+      "target": "web_src_components_pickcard_fmt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "web_src_components_pickcard_pickcard",
+      "target": "web_src_lib_storage_iswatchlisted"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "web/src/components/PickCard.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "web_src_components_pickcard_pickcard",
+      "target": "web_src_lib_storage_subscribetowatchlist"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/PicksList.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_src_components_pickslist",
+      "target": "web_src_components_pickcard_pickcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/PicksList.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "web_src_components_pickslist",
+      "target": "web_src_components_pickslist_pickslist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/PicksList.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "web_src_components_pickslist",
+      "target": "web_src_lib_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/PicksList.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "web_src_components_pickslist",
+      "target": "web_src_lib_types_dailyrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/TodayView.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_src_components_todayview",
+      "target": "web_src_components_pickslist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/TodayView.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_src_components_todayview",
+      "target": "web_src_components_pickslist_pickslist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/TodayView.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "web_src_components_todayview",
+      "target": "web_src_components_todayview_todayview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/TodayView.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "web_src_components_todayview",
+      "target": "web_src_components_todayview_todayviewprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/TodayView.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "web_src_components_todayview",
+      "target": "web_src_lib_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/TodayView.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "web_src_components_todayview",
+      "target": "web_src_lib_types_dailyrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/TodayView.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "web_src_components_todayview_todayviewprops",
+      "target": "web_src_lib_types_dailyrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_components_watchlistsidebar_resolvedentry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_components_watchlistsidebar_resolveticker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_components_watchlistsidebar_watchlistsidebar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_components_watchlistsidebar_watchlistsidebarprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_lib_storage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_lib_storage_getwatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_lib_storage_removefromwatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_lib_storage_subscribetowatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_lib_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_lib_types_dailyrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_lib_types_pickaction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar_watchlistsidebarprops",
+      "target": "web_src_lib_types_dailyrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar_resolvedentry",
+      "target": "web_src_lib_types_pickaction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar_watchlistsidebar",
+      "target": "web_src_components_watchlistsidebar_resolveticker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar_watchlistsidebar",
+      "target": "web_src_lib_storage_getwatchlist"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar_watchlistsidebar",
+      "target": "web_src_lib_storage_removefromwatchlist"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar_watchlistsidebar",
+      "target": "web_src_lib_storage_subscribetowatchlist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/api.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "web_src_lib_api",
+      "target": "web_src_lib_api_fetchindex",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/api.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "web_src_lib_api",
+      "target": "web_src_lib_api_fetchjson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/api.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "web_src_lib_api",
+      "target": "web_src_lib_api_fetchlatest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/api.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "web_src_lib_api",
+      "target": "web_src_lib_api_fetchpicksfordate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/api.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_lib_api",
+      "target": "web_src_lib_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/api.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_lib_api",
+      "target": "web_src_lib_types_dailyrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/api.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "web_src_lib_api_fetchindex",
+      "target": "web_src_lib_api_fetchjson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/api.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "web_src_lib_api_fetchlatest",
+      "target": "web_src_lib_api_fetchjson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/api.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "web_src_lib_api_fetchpicksfordate",
+      "target": "web_src_lib_api_fetchjson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "web_src_lib_storage",
+      "target": "web_src_lib_storage_addtowatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "web_src_lib_storage",
+      "target": "web_src_lib_storage_getwatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "web_src_lib_storage",
+      "target": "web_src_lib_storage_iswatchlisted",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "web_src_lib_storage",
+      "target": "web_src_lib_storage_readwatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "web_src_lib_storage",
+      "target": "web_src_lib_storage_removefromwatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "web_src_lib_storage",
+      "target": "web_src_lib_storage_subscribetowatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "web_src_lib_storage",
+      "target": "web_src_lib_storage_writewatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_lib_storage",
+      "target": "web_src_lib_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_lib_storage",
+      "target": "web_src_lib_types_watchlistitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "web_src_lib_storage_addtowatchlist",
+      "target": "web_src_lib_storage_readwatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "web_src_lib_storage_getwatchlist",
+      "target": "web_src_lib_storage_readwatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "web_src_lib_storage_iswatchlisted",
+      "target": "web_src_lib_storage_readwatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "web_src_lib_storage_removefromwatchlist",
+      "target": "web_src_lib_storage_readwatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "web_src_lib_storage_addtowatchlist",
+      "target": "web_src_lib_storage_writewatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "web_src_lib_storage_removefromwatchlist",
+      "target": "web_src_lib_storage_writewatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/types.ts",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "web_src_lib_types",
+      "target": "web_src_lib_types_dailyrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/types.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "web_src_lib_types",
+      "target": "web_src_lib_types_pick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/types.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "web_src_lib_types",
+      "target": "web_src_lib_types_pickaction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/types.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "web_src_lib_types",
+      "target": "web_src_lib_types_shortlistentry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/types.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "web_src_lib_types",
+      "target": "web_src_lib_types_signals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/types.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "web_src_lib_types",
+      "target": "web_src_lib_types_watchlistitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_tsconfig_app",
+      "target": "web_tsconfig_app_compileroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "web_tsconfig_app",
+      "target": "web_tsconfig_app_include",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "web_tsconfig_app_compileroptions",
+      "target": "web_tsconfig_app_compileroptions_allowarbitraryextensions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "web_tsconfig_app_compileroptions",
+      "target": "web_tsconfig_app_compileroptions_allowimportingtsextensions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "web_tsconfig_app_compileroptions",
+      "target": "web_tsconfig_app_compileroptions_erasablesyntaxonly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "web_tsconfig_app_compileroptions",
+      "target": "web_tsconfig_app_compileroptions_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "web_tsconfig_app_compileroptions",
+      "target": "web_tsconfig_app_compileroptions_lib",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "web_tsconfig_app_compileroptions",
+      "target": "web_tsconfig_app_compileroptions_module",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "web_tsconfig_app_compileroptions",
+      "target": "web_tsconfig_app_compileroptions_moduledetection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "web_tsconfig_app_compileroptions",
+      "target": "web_tsconfig_app_compileroptions_moduleresolution",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "web_tsconfig_app_compileroptions",
+      "target": "web_tsconfig_app_compileroptions_noemit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "web_tsconfig_app_compileroptions",
+      "target": "web_tsconfig_app_compileroptions_nofallthroughcasesinswitch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "web_tsconfig_app_compileroptions",
+      "target": "web_tsconfig_app_compileroptions_nounusedlocals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "web_tsconfig_app_compileroptions",
+      "target": "web_tsconfig_app_compileroptions_nounusedparameters",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "web_tsconfig_app_compileroptions",
+      "target": "web_tsconfig_app_compileroptions_skiplibcheck",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "web_tsconfig_app_compileroptions",
+      "target": "web_tsconfig_app_compileroptions_target",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_tsconfig_app_compileroptions",
+      "target": "web_tsconfig_app_compileroptions_tsbuildinfofile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "web_tsconfig_app_compileroptions",
+      "target": "web_tsconfig_app_compileroptions_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.app.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "web_tsconfig_app_compileroptions",
+      "target": "web_tsconfig_app_compileroptions_verbatimmodulesyntax",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_tsconfig",
+      "target": "web_tsconfig_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_tsconfig",
+      "target": "web_tsconfig_references",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "web_tsconfig_node",
+      "target": "web_tsconfig_node_compileroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "web_tsconfig_node",
+      "target": "web_tsconfig_node_include",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "web_tsconfig_node_compileroptions",
+      "target": "web_tsconfig_node_compileroptions_allowimportingtsextensions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "web_tsconfig_node_compileroptions",
+      "target": "web_tsconfig_node_compileroptions_erasablesyntaxonly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "web_tsconfig_node_compileroptions",
+      "target": "web_tsconfig_node_compileroptions_lib",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "web_tsconfig_node_compileroptions",
+      "target": "web_tsconfig_node_compileroptions_module",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "web_tsconfig_node_compileroptions",
+      "target": "web_tsconfig_node_compileroptions_moduledetection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "web_tsconfig_node_compileroptions",
+      "target": "web_tsconfig_node_compileroptions_noemit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "web_tsconfig_node_compileroptions",
+      "target": "web_tsconfig_node_compileroptions_nofallthroughcasesinswitch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "web_tsconfig_node_compileroptions",
+      "target": "web_tsconfig_node_compileroptions_nounusedlocals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "web_tsconfig_node_compileroptions",
+      "target": "web_tsconfig_node_compileroptions_nounusedparameters",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "web_tsconfig_node_compileroptions",
+      "target": "web_tsconfig_node_compileroptions_skiplibcheck",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "web_tsconfig_node_compileroptions",
+      "target": "web_tsconfig_node_compileroptions_target",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_tsconfig_node_compileroptions",
+      "target": "web_tsconfig_node_compileroptions_tsbuildinfofile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "web_tsconfig_node_compileroptions",
+      "target": "web_tsconfig_node_compileroptions_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/tsconfig.node.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "web_tsconfig_node_compileroptions",
+      "target": "web_tsconfig_node_compileroptions_verbatimmodulesyntax",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
-      "source_location": null,
+      "source_location": "L1",
       "weight": 1.0,
-      "source": "claude_stonkmonk",
-      "target": "stonkmonk_spec_stonkmonk"
+      "source": "claude",
+      "target": "claude_stonkmonk_project_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "claude_stonkmonk_project_context",
+      "target": "claude_current_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "claude_stonkmonk_project_context",
+      "target": "claude_decisions_already_made",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "claude_stonkmonk_project_context",
+      "target": "claude_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "claude_stonkmonk_project_context",
+      "target": "claude_key_technical_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "claude_stonkmonk_project_context",
+      "target": "claude_open_decisions_to_revisit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "claude_stonkmonk_project_context",
+      "target": "claude_pick_generation_pipeline_per_trading_day",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "claude_stonkmonk_project_context",
+      "target": "claude_what_it_is",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "claude_current_status",
+      "target": "claude_layout_proposed_not_yet_built",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "claude_current_status",
+      "target": "claude_status_not_started_phase_1_is_the_next_milestone",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "readme_stonkmonk",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "readme_stonkmonk",
+      "target": "readme_compliance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "readme_stonkmonk",
+      "target": "readme_live_demo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "readme_stonkmonk",
+      "target": "readme_repo_layout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "readme_stonkmonk",
+      "target": "readme_running_locally",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "readme_stonkmonk",
+      "target": "readme_tech_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "readme_running_locally",
+      "target": "readme_frontend_vite_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "readme_running_locally",
+      "target": "readme_scanner_python",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "stonkmonk_spec",
+      "target": "stonkmonk_spec_stonkmonk_full_spec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L259",
+      "weight": 1.0,
+      "source": "stonkmonk_spec_stonkmonk_full_spec",
+      "target": "stonkmonk_spec_compliance_permanent_not_a_phase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "stonkmonk_spec_stonkmonk_full_spec",
+      "target": "stonkmonk_spec_data_model_illustrative_shapes_not_final_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "stonkmonk_spec_stonkmonk_full_spec",
+      "target": "stonkmonk_spec_decisions_already_made",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "stonkmonk_spec_stonkmonk_full_spec",
+      "target": "stonkmonk_spec_frontend_react_vite_ts_tailwind_static",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "stonkmonk_spec_stonkmonk_full_spec",
+      "target": "stonkmonk_spec_key_technical_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L269",
+      "weight": 1.0,
+      "source": "stonkmonk_spec_stonkmonk_full_spec",
+      "target": "stonkmonk_spec_open_decisions_to_revisit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L234",
+      "weight": 1.0,
+      "source": "stonkmonk_spec_stonkmonk_full_spec",
+      "target": "stonkmonk_spec_phased_roadmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "stonkmonk_spec_stonkmonk_full_spec",
+      "target": "stonkmonk_spec_pick_generation_pipeline_runs_once_per_trading_day_in_actions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L210",
+      "weight": 1.0,
+      "source": "stonkmonk_spec_stonkmonk_full_spec",
+      "target": "stonkmonk_spec_repo_layout_proposed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "stonkmonk-spec.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "stonkmonk_spec_stonkmonk_full_spec",
+      "target": "stonkmonk_spec_what_it_is",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "web_readme",
+      "target": "web_readme_react_typescript_vite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/README.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "web_readme_react_typescript_vite",
+      "target": "web_readme_expanding_the_oxlint_configuration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/README.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "web_readme_react_typescript_vite",
+      "target": "web_readme_react_compiler",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -2672,556 +6918,6 @@
       "weight": 1.0,
       "source": "scanner_requirements_requirements",
       "target": "yfinance"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "compliance_footer",
-      "target": "stonkmonk"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "no_trade_execution_constraint",
-      "target": "stonkmonk"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "stonkmonk",
-      "target": "couchworthy"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "deterministic_first_llm_layer_pattern",
-      "target": "couchworthy"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "frontend_stack",
-      "target": "couchworthy"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "data_fetch_step",
-      "target": "yfinance"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "data_isolation_rationale",
-      "target": "yfinance"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "phase4_expansion",
-      "target": "nasdaq_symbol_directory"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "robinhood_universe_approximation_rationale",
-      "target": "nasdaq_symbol_directory"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "universe_build_step",
-      "target": "nasdaq_symbol_directory"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "ghactions_autodisable_rationale",
-      "target": "github_actions_cron_workflow"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "pick_generation_pipeline",
-      "target": "github_actions_cron_workflow"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "deterministic_first_llm_layer_pattern",
-      "target": "pick_generation_pipeline"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "stonkmonk_spec_universe_py",
-      "target": "universe_build_step"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "universe_build_step",
-      "target": "data_fetch_step"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "data_fetch_step",
-      "target": "signal_computation_step"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "fail_loud_rationale",
-      "target": "data_fetch_step"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "stonkmonk_spec_data_py",
-      "target": "data_fetch_step"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "signal_computation_step",
-      "target": "selection_step"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "stonkmonk_spec_signals_py",
-      "target": "signal_computation_step"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "selection_step",
-      "target": "llm_reasoning_pass_step"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "selection_step",
-      "target": "pick_shape"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "stonkmonk_spec_score_py",
-      "target": "selection_step"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "llm_reasoning_pass_step",
-      "target": "anthropic_llm"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "llm_reasoning_pass_step",
-      "target": "openai_llm"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "llm_reasoning_pass_step",
-      "target": "persist_step"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "stonkmonk_spec_llm_py",
-      "target": "llm_reasoning_pass_step"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "persist_step",
-      "target": "dailyrun_shape"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "persist_step",
-      "target": "outcome_tracking_step"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "persist_step",
-      "target": "pick_shape"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "today_view",
-      "target": "pick_shape"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "history_view",
-      "target": "dailyrun_shape"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "watchlist_view",
-      "target": "watchlistitem_shape"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "client_side_reranking_rationale",
-      "target": "preferences_panel"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "preferences_panel",
-      "target": "userpreferences_shape"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "client_side_reranking_rationale",
-      "target": "dailyrun_shape"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "dailyrun_shape",
-      "target": "pick_shape"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "sell_framing_rationale",
-      "target": "pick_shape"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "stonkmonk_spec_main_py",
-      "target": "stonkmonk_spec_universe_py"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "data_isolation_rationale",
-      "target": "stonkmonk_spec_data_py"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "stonkmonk_spec_main_py",
-      "target": "stonkmonk_spec_data_py"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "stonkmonk_spec_main_py",
-      "target": "stonkmonk_spec_signals_py"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "stonkmonk_spec_main_py",
-      "target": "stonkmonk_spec_score_py"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "stonkmonk_spec_main_py",
-      "target": "stonkmonk_spec_llm_py"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "phased_roadmap",
-      "target": "phase1_mvp"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "phased_roadmap",
-      "target": "phase2_watchlist"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "phased_roadmap",
-      "target": "phase3_personalization"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "phased_roadmap",
-      "target": "phase4_expansion"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "phase2_watchlist",
-      "target": "finnhub_api"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "phase2_watchlist",
-      "target": "twelvedata_api"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "open_decisions",
-      "target": "alphavantage_api"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "open_decisions",
-      "target": "finnhub_api"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "open_decisions",
-      "target": "polygon_api"
-    },
-    {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "sell_framing_rationale",
-      "target": "no_trade_execution_constraint"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.75,
-      "source_file": "stonkmonk-spec.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "robinhood_universe_approximation_rationale",
-      "target": "no_trade_execution_constraint"
     },
     {
       "relation": "conceptually_related_to",
@@ -3264,54 +6960,6 @@
       "target": "assets_logo_512_logo"
     }
   ],
-  "hyperedges": [
-    {
-      "id": "pick_generation_pipeline_steps",
-      "label": "Steps forming the daily pick generation pipeline",
-      "nodes": [
-        "universe_build_step",
-        "data_fetch_step",
-        "signal_computation_step",
-        "selection_step",
-        "llm_reasoning_pass_step",
-        "persist_step",
-        "outcome_tracking_step"
-      ],
-      "relation": "form",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md"
-    },
-    {
-      "id": "frontend_views_group",
-      "label": "Frontend views composing the static site",
-      "nodes": [
-        "today_view",
-        "history_view",
-        "watchlist_view",
-        "preferences_panel"
-      ],
-      "relation": "participate_in",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md"
-    },
-    {
-      "id": "scanner_modules_group",
-      "label": "Planned scanner/ modules implementing the pick pipeline",
-      "nodes": [
-        "stonkmonk_spec_universe_py",
-        "stonkmonk_spec_data_py",
-        "stonkmonk_spec_signals_py",
-        "stonkmonk_spec_score_py",
-        "stonkmonk_spec_llm_py",
-        "stonkmonk_spec_main_py"
-      ],
-      "relation": "implement",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "stonkmonk-spec.md"
-    }
-  ],
-  "built_at_commit": "61c9e94e7d1b7529706de952ec2f46d2ad941462"
+  "hyperedges": [],
+  "built_at_commit": "c56d3b4d3e655ad5a1c641f3a44ee85b7c306d42"
 }

@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Pick, Signals } from "../lib/types";
-import { addToWatchlist, isWatchlisted, removeFromWatchlist } from "../lib/storage";
+import { addToWatchlist, isWatchlisted, removeFromWatchlist, subscribeToWatchlist } from "../lib/storage";
 
 const SIGNAL_LABELS: Record<keyof Signals, string> = {
   trend: "Trend",
@@ -17,6 +17,11 @@ function fmt(value: number | null): string {
 export function PickCard({ pick }: { pick: Pick }) {
   const [expanded, setExpanded] = useState(false);
   const [watching, setWatching] = useState(() => isWatchlisted(pick.ticker));
+
+  useEffect(
+    () => subscribeToWatchlist(() => setWatching(isWatchlisted(pick.ticker))),
+    [pick.ticker],
+  );
 
   const isBuy = pick.action === "buy";
   const badgeClass = isBuy

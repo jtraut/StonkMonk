@@ -3,6 +3,7 @@
 import type { WatchlistItem } from "./types";
 
 const WATCHLIST_KEY = "stonkmonk:watchlist";
+const WATCHLIST_EVENT = "stonkmonk:watchlist-changed";
 
 function readWatchlist(): WatchlistItem[] {
   try {
@@ -15,10 +16,18 @@ function readWatchlist(): WatchlistItem[] {
 
 function writeWatchlist(items: WatchlistItem[]): void {
   localStorage.setItem(WATCHLIST_KEY, JSON.stringify(items));
+  window.dispatchEvent(new Event(WATCHLIST_EVENT));
 }
 
 export function getWatchlist(): WatchlistItem[] {
   return readWatchlist();
+}
+
+// Lets any mounted component (sidebar, per-pick toggle buttons) stay in sync
+// since watchlist state lives outside React in localStorage.
+export function subscribeToWatchlist(callback: () => void): () => void {
+  window.addEventListener(WATCHLIST_EVENT, callback);
+  return () => window.removeEventListener(WATCHLIST_EVENT, callback);
 }
 
 export function isWatchlisted(ticker: string): boolean {
