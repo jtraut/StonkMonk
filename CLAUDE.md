@@ -23,7 +23,7 @@ brokerage account.** Informational only.
 
 ## Decisions already made
 
-- **Name:** StonkMonk. Repo: `github.com/jtraut/StonkMonk` (adjust if taken).
+- **Name:** StonkMonk. Repo: https://github.com/jtraut/StonkMonk.
 - **Frontend:** React (Vite) + Tailwind, TypeScript (strict). Static build,
   deployed to GitHub Pages. No always-on server for the public demo.
 - **Pick engine:** Python (pandas, yfinance, pandas-ta or equivalent),
@@ -117,13 +117,31 @@ brokerage account.** Informational only.
    recent past picks, keyed by algorithmic vs. AI, feeding both the
    history/track-record view and the Scoreboard.
 
+## Compliance (permanent, not a phase)
+
+- No trade execution, no brokerage connection, ever.
+- Every view carries a visible "not financial advice, educational only"
+  disclaimer, plus data source attribution and no affiliation with
+  Robinhood/Nasdaq/Yahoo.
+- Reasoning blurbs must stay grounded in the computed signals passed to the
+  LLM — no free-floating claims about news, rumors, or non-computed factors.
+- Track-record/performance views (including the Scoreboard) must be clearly
+  labeled unrealized/paper and never imply guaranteed or typical results.
+- AI conviction picks carry a distinct, stronger disclaimer/badge than
+  algorithmic picks — a model judgment call, not a formula — and the
+  Scoreboard's algo-vs-AI comparison must read as an ongoing honest
+  comparison, not proof either approach wins. Full detail in the spec's
+  Compliance section.
+
 ## Current status
 
 - [x] Concept, stack, and phased roadmap finalized (`stonkmonk-spec.md`).
-- [ ] Repo not yet created.
-- [ ] Phase 1 scaffold not started.
+- [x] Repo created: https://github.com/jtraut/StonkMonk
+- [x] Phase 1 complete.
+- [x] Phase 2 complete.
+- [ ] Phase 3 not started.
 
-### Layout (proposed, not yet built)
+### Layout
 
 ```
 scanner/            # Python pick-generation engine
@@ -139,19 +157,21 @@ web/                 # Vite + React + TS + Tailwind, static frontend
   daily-scan.yml, deploy-pages.yml
 ```
 
-### Status: Not started — Phase 1 is the next milestone
+### Status: Phase 1 and Phase 2 done — Phase 3 is next
 
 **Phase 1** (universe build, yfinance fetch, deterministic scoring, top-5
 buy / up-to-5 caution selection, LLM blurbs via Actions secret, daily JSON
 commit, static frontend with Today + History views, GitHub Pages deploy,
-compliance footer) is the first build target.
+compliance footer) — done.
 
-**Phase 2** (next up after Phase 1) adds: watchlist + live quote refresh, AI
-conviction picks (1–3/day, key-gated, news-grounded, in-context feedback
-loop, tagged `ai_pick`), and outcome tracking split by algorithmic vs. AI
-track with a Scoreboard view comparing the two over time.
+**Phase 2** (watchlist + live quote refresh, AI conviction picks — 1–3/day,
+key-gated, news-grounded, in-context feedback loop, tagged `ai_pick` — and
+outcome tracking split by algorithmic vs. AI track with a Scoreboard view)
+— done.
 
-Phases 3–4 (personalization, expansion/notifications/backtesting) are
+**Next: Phase 3 — personalization** (preferences panel, client-side
+re-ranking of the full daily shortlist, BYO-key local run mode for a fully
+custom on-demand scan). Phase 4 (expansion/notifications/backtesting) is
 detailed in the spec.
 
 ## Open decisions to revisit
