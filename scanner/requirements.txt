@@ -1,0 +1,11 @@
+# StonkMonk scanner dependencies
+# Pin to reasonably recent, known-working versions. yfinance in particular
+# changes shape often; bump deliberately and re-test the fetch layer.
+pandas>=2.2,<3
+numpy>=1.26,<3
+yfinance>=0.2.40,<0.3
+requests>=2.31,<3
+
+# LLM reasoning pass (optional at runtime — the pipeline degrades to a
+# deterministic fallback blurb if no key/library is present).
+anthropic>=0.40,<1

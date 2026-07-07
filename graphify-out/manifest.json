@@ -1,0 +1,67 @@
+{
+  ".claude/settings.local.json": {
+    "mtime": 1783386224.424814,
+    "ast_hash": "bc50279a8d7f28c3e84711d2b3233da8",
+    "semantic_hash": "bc50279a8d7f28c3e84711d2b3233da8"
+  },
+  "scanner/config.py": {
+    "mtime": 1783037386.9461024,
+    "ast_hash": "ac9e06d0c7b3ed66a708abf5e10aeac7",
+    "semantic_hash": "ac9e06d0c7b3ed66a708abf5e10aeac7"
+  },
+  "scanner/data.py": {
+    "mtime": 1783037087.3880315,
+    "ast_hash": "6cf9aa4d2f85b25bd8958dbb4ac8a539",
+    "semantic_hash": "6cf9aa4d2f85b25bd8958dbb4ac8a539"
+  },
+  "scanner/score.py": {
+    "mtime": 1783037128.985787,
+    "ast_hash": "aac83b55fe72e0d1b25c37b5b7ff2e93",
+    "semantic_hash": "aac83b55fe72e0d1b25c37b5b7ff2e93"
+  },
+  "scanner/signals.py": {
+    "mtime": 1783037116.8943667,
+    "ast_hash": "6e8efcaa06f54b66c7a205f7bc374a80",
+    "semantic_hash": "6e8efcaa06f54b66c7a205f7bc374a80"
+  },
+  "scanner/universe.py": {
+    "mtime": 1783037054.9329307,
+    "ast_hash": "9bee3cc4a6775fcf88622bcf94ae311b",
+    "semantic_hash": "9bee3cc4a6775fcf88622bcf94ae311b"
+  },
+  "CLAUDE.md": {
+    "mtime": 1783035314.810677,
+    "ast_hash": "d8ea18102c00f0b048f70f0b5fcfe96d",
+    "semantic_hash": "d8ea18102c00f0b048f70f0b5fcfe96d"
+  },
+  "scanner/requirements.txt": {
+    "mtime": 1783037020.5692992,
+    "ast_hash": "87d4a076a718bae0d9bd39f5f79dea07",
+    "semantic_hash": "87d4a076a718bae0d9bd39f5f79dea07"
+  },
+  "stonkmonk-spec.md": {
+    "mtime": 1783035320.4008033,
+    "ast_hash": "9daa9603432c69e64354187e4f93082a",
+    "semantic_hash": "9daa9603432c69e64354187e4f93082a"
+  },
+  "assets/logo-128.png": {
+    "mtime": 1783036602.4761014,
+    "ast_hash": "d4b1f8e3cfda48c7ed31d9ab506f7b79",
+    "semantic_hash": "d4b1f8e3cfda48c7ed31d9ab506f7b79"
+  },
+  "assets/logo-32.png": {
+    "mtime": 1783036602.4927676,
+    "ast_hash": "56ff8bd99eb8dabc52fcc3e20f3a8802",
+    "semantic_hash": "56ff8bd99eb8dabc52fcc3e20f3a8802"
+  },
+  "assets/logo-512.png": {
+    "mtime": 1783036602.459438,
+    "ast_hash": "fddee5d0c44ed3b7c96724394e8546b1",
+    "semantic_hash": "fddee5d0c44ed3b7c96724394e8546b1"
+  },
+  "assets/logo.svg": {
+    "mtime": 1783036602.4491875,
+    "ast_hash": "72b6d6859258ce1e15a6439e2bc5a1a6",
+    "semantic_hash": "72b6d6859258ce1e15a6439e2bc5a1a6"
+  }
+}
