@@ -30,6 +30,7 @@ Public, no-login, static site. Refreshed automatically on trading days.
 - [Vite 8](https://vite.dev/)
 - [Tailwind CSS v4](https://tailwindcss.com/)
 - Reads static JSON (`data/*.json`) directly — no API server, no database
+- Optional live watchlist prices via [Finnhub](https://finnhub.io/)'s free-tier `/quote` endpoint, called directly from the browser with a user-supplied key (BYO-key, stored in localStorage only) — separate from the daily scan's yfinance pipeline
 
 **CI/CD** — GitHub Actions
 - `daily-scan.yml` — runs the scanner on a schedule (weekdays, cron) or on demand, commits the day's picks back to `data/`
@@ -57,7 +58,7 @@ data/
   outcomes.json        # per-pick 5d/30d return ledger, by track
   track_performance.json  # aggregated algo vs. AI stats, for the Scoreboard view
 web/                 # Vite + React + TS + Tailwind static frontend
-  src/lib/             # types, localStorage watchlist, JSON fetch helpers
+  src/lib/             # types, localStorage watchlist, JSON fetch helpers, Finnhub live-quote client
   src/components/      # Header, TodayView, HistoryView, ScoreboardView, PickCard, WatchlistSidebar, ComplianceFooter
   public/data/         # synced copy of root data/, served by Vite as static files
 .github/workflows/

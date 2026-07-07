@@ -1807,7 +1807,7 @@
       "label": "WatchlistSidebarProps",
       "file_type": "code",
       "source_file": "web/src/components/WatchlistSidebar.tsx",
-      "source_location": "L5",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "web_src_components_watchlistsidebar_watchlistsidebarprops",
       "community": 12,
@@ -1817,7 +1817,7 @@
       "label": "ResolvedEntry",
       "file_type": "code",
       "source_file": "web/src/components/WatchlistSidebar.tsx",
-      "source_location": "L11",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "web_src_components_watchlistsidebar_resolvedentry",
       "community": 12,
@@ -1827,7 +1827,7 @@
       "label": "resolveTicker()",
       "file_type": "code",
       "source_file": "web/src/components/WatchlistSidebar.tsx",
-      "source_location": "L20",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "web_src_components_watchlistsidebar_resolveticker",
       "community": 12,
@@ -1837,7 +1837,7 @@
       "label": "WatchlistSidebar()",
       "file_type": "code",
       "source_file": "web/src/components/WatchlistSidebar.tsx",
-      "source_location": "L46",
+      "source_location": "L54",
       "_origin": "ast",
       "id": "web_src_components_watchlistsidebar_watchlistsidebar",
       "community": 12,
@@ -1902,6 +1902,86 @@
       "id": "web_src_lib_api_fetchtrackperformance",
       "community": 66,
       "norm_label": "fetchtrackperformance()"
+    },
+    {
+      "label": "quotes.ts",
+      "file_type": "code",
+      "source_file": "web/src/lib/quotes.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "web_src_lib_quotes",
+      "community": 12,
+      "norm_label": "quotes.ts"
+    },
+    {
+      "label": "LiveQuote",
+      "file_type": "code",
+      "source_file": "web/src/lib/quotes.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "web_src_lib_quotes_livequote",
+      "community": 12,
+      "norm_label": "livequote"
+    },
+    {
+      "label": "InvalidApiKeyError",
+      "file_type": "code",
+      "source_file": "web/src/lib/quotes.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "web_src_lib_quotes_invalidapikeyerror",
+      "community": 12,
+      "norm_label": "invalidapikeyerror"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "web/src/lib/quotes.ts",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "web_src_lib_quotes_invalidapikeyerror_constructor",
+      "community": 12,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": "FinnhubQuote",
+      "file_type": "code",
+      "source_file": "web/src/lib/quotes.ts",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "web_src_lib_quotes_finnhubquote",
+      "community": 12,
+      "norm_label": "finnhubquote"
+    },
+    {
+      "label": "fetchQuote()",
+      "file_type": "code",
+      "source_file": "web/src/lib/quotes.ts",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "web_src_lib_quotes_fetchquote",
+      "community": 12,
+      "norm_label": "fetchquote()"
+    },
+    {
+      "label": "fetchQuotes()",
+      "file_type": "code",
+      "source_file": "web/src/lib/quotes.ts",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "web_src_lib_quotes_fetchquotes",
+      "community": 12,
+      "norm_label": "fetchquotes()"
+    },
+    {
+      "label": "toError()",
+      "file_type": "code",
+      "source_file": "web/src/lib/quotes.ts",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "web_src_lib_quotes_toerror",
+      "community": 12,
+      "norm_label": "toerror()"
     },
     {
       "label": "storage.ts",
@@ -1982,6 +2062,36 @@
       "id": "web_src_lib_storage_removefromwatchlist",
       "community": 12,
       "norm_label": "removefromwatchlist()"
+    },
+    {
+      "label": "getQuoteApiKey()",
+      "file_type": "code",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "web_src_lib_storage_getquoteapikey",
+      "community": 12,
+      "norm_label": "getquoteapikey()"
+    },
+    {
+      "label": "setQuoteApiKey()",
+      "file_type": "code",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "web_src_lib_storage_setquoteapikey",
+      "community": 12,
+      "norm_label": "setquoteapikey()"
+    },
+    {
+      "label": "clearQuoteApiKey()",
+      "file_type": "code",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "web_src_lib_storage_clearquoteapikey",
+      "community": 12,
+      "norm_label": "clearquoteapikey()"
     },
     {
       "label": "types.ts",
@@ -6829,7 +6939,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "web/src/components/WatchlistSidebar.tsx",
-      "source_location": "L11",
+      "source_location": "L19",
       "weight": 1.0,
       "source": "web_src_components_watchlistsidebar",
       "target": "web_src_components_watchlistsidebar_resolvedentry",
@@ -6839,7 +6949,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "web/src/components/WatchlistSidebar.tsx",
-      "source_location": "L20",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "web_src_components_watchlistsidebar",
       "target": "web_src_components_watchlistsidebar_resolveticker",
@@ -6849,7 +6959,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "web/src/components/WatchlistSidebar.tsx",
-      "source_location": "L46",
+      "source_location": "L54",
       "weight": 1.0,
       "source": "web_src_components_watchlistsidebar",
       "target": "web_src_components_watchlistsidebar_watchlistsidebar",
@@ -6859,10 +6969,54 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "web/src/components/WatchlistSidebar.tsx",
-      "source_location": "L5",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "web_src_components_watchlistsidebar",
       "target": "web_src_components_watchlistsidebar_watchlistsidebarprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_lib_quotes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_lib_quotes_fetchquotes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_lib_quotes_invalidapikeyerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_lib_quotes_livequote",
       "confidence_score": 1.0
     },
     {
@@ -6874,6 +7028,28 @@
       "weight": 1.0,
       "source": "web_src_components_watchlistsidebar",
       "target": "web_src_lib_storage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_lib_storage_clearquoteapikey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_lib_storage_getquoteapikey",
       "confidence_score": 1.0
     },
     {
@@ -6896,6 +7072,17 @@
       "weight": 1.0,
       "source": "web_src_components_watchlistsidebar",
       "target": "web_src_lib_storage_removefromwatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar",
+      "target": "web_src_lib_storage_setquoteapikey",
       "confidence_score": 1.0
     },
     {
@@ -6947,7 +7134,7 @@
       "context": "field",
       "confidence": "EXTRACTED",
       "source_file": "web/src/components/WatchlistSidebar.tsx",
-      "source_location": "L8",
+      "source_location": "L16",
       "weight": 1.0,
       "source": "web_src_components_watchlistsidebar_watchlistsidebarprops",
       "target": "web_src_lib_types_dailyrun",
@@ -6958,7 +7145,7 @@
       "context": "field",
       "confidence": "EXTRACTED",
       "source_file": "web/src/components/WatchlistSidebar.tsx",
-      "source_location": "L17",
+      "source_location": "L25",
       "weight": 1.0,
       "source": "web_src_components_watchlistsidebar_resolvedentry",
       "target": "web_src_lib_types_pickaction",
@@ -6969,7 +7156,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "web/src/components/WatchlistSidebar.tsx",
-      "source_location": "L52",
+      "source_location": "L78",
       "weight": 1.0,
       "source": "web_src_components_watchlistsidebar_watchlistsidebar",
       "target": "web_src_components_watchlistsidebar_resolveticker",
@@ -6981,7 +7168,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "web/src/components/WatchlistSidebar.tsx",
-      "source_location": "L47",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "web_src_components_watchlistsidebar_watchlistsidebar",
+      "target": "web_src_lib_storage_getquoteapikey"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "web/src/components/WatchlistSidebar.tsx",
+      "source_location": "L55",
       "weight": 1.0,
       "source": "web_src_components_watchlistsidebar_watchlistsidebar",
       "target": "web_src_lib_storage_getwatchlist"
@@ -6992,7 +7190,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "web/src/components/WatchlistSidebar.tsx",
-      "source_location": "L93",
+      "source_location": "L226",
       "weight": 1.0,
       "source": "web_src_components_watchlistsidebar_watchlistsidebar",
       "target": "web_src_lib_storage_removefromwatchlist"
@@ -7003,7 +7201,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "web/src/components/WatchlistSidebar.tsx",
-      "source_location": "L49",
+      "source_location": "L63",
       "weight": 1.0,
       "source": "web_src_components_watchlistsidebar_watchlistsidebar",
       "target": "web_src_lib_storage_subscribetowatchlist"
@@ -7138,11 +7336,123 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/quotes.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "web_src_lib_quotes",
+      "target": "web_src_lib_quotes_fetchquote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/quotes.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "web_src_lib_quotes",
+      "target": "web_src_lib_quotes_fetchquotes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/quotes.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "web_src_lib_quotes",
+      "target": "web_src_lib_quotes_finnhubquote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/quotes.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "web_src_lib_quotes",
+      "target": "web_src_lib_quotes_invalidapikeyerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/quotes.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "web_src_lib_quotes",
+      "target": "web_src_lib_quotes_livequote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/quotes.ts",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "web_src_lib_quotes",
+      "target": "web_src_lib_quotes_toerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/quotes.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "web_src_lib_quotes_invalidapikeyerror",
+      "target": "web_src_lib_quotes_invalidapikeyerror_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/quotes.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "web_src_lib_quotes_fetchquotes",
+      "target": "web_src_lib_quotes_fetchquote",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/quotes.ts",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "web_src_lib_quotes_fetchquotes",
+      "target": "web_src_lib_quotes_toerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "web/src/lib/storage.ts",
       "source_location": "L37",
       "weight": 1.0,
       "source": "web_src_lib_storage",
       "target": "web_src_lib_storage_addtowatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "web_src_lib_storage",
+      "target": "web_src_lib_storage_clearquoteapikey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "web_src_lib_storage",
+      "target": "web_src_lib_storage_getquoteapikey",
       "confidence_score": 1.0
     },
     {
@@ -7183,6 +7493,16 @@
       "weight": 1.0,
       "source": "web_src_lib_storage",
       "target": "web_src_lib_storage_removefromwatchlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/src/lib/storage.ts",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "web_src_lib_storage",
+      "target": "web_src_lib_storage_setquoteapikey",
       "confidence_score": 1.0
     },
     {
@@ -8125,5 +8445,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8751c4f9b4e7d2043e72a2f11aa59e7ff87ec709"
+  "built_at_commit": "67ebbaeb39d27e7128de28701086068cf219d7e6"
 }

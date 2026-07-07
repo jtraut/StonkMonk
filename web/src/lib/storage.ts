@@ -44,3 +44,20 @@ export function addToWatchlist(ticker: string): void {
 export function removeFromWatchlist(ticker: string): void {
   writeWatchlist(readWatchlist().filter((item) => item.ticker !== ticker));
 }
+
+// BYO-key for live watchlist quotes (Finnhub) - client-side only, same
+// plaintext-localStorage pattern as the watchlist itself. Never sent
+// anywhere but directly to Finnhub from the browser.
+const QUOTE_API_KEY = "stonkmonk:finnhub-key";
+
+export function getQuoteApiKey(): string | null {
+  return localStorage.getItem(QUOTE_API_KEY);
+}
+
+export function setQuoteApiKey(key: string): void {
+  localStorage.setItem(QUOTE_API_KEY, key);
+}
+
+export function clearQuoteApiKey(): void {
+  localStorage.removeItem(QUOTE_API_KEY);
+}

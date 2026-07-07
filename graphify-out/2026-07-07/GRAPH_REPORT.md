@@ -1,16 +1,16 @@
 # Graph Report - StonkMonk  (2026-07-07)
 
 ## Corpus Check
-- 41 files · ~22,361 words
+- 44 files · ~26,135 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 300 nodes · 364 edges · 66 communities (16 shown, 50 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.73)
+- 341 nodes · 436 edges · 69 communities (19 shown, 50 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.73)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c56d3b4d`
+- Built from commit: `8751c4f9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -80,11 +80,14 @@
 - [[_COMMUNITY_Universe build step|Universe build step]]
 - [[_COMMUNITY_UserPreferences data shape|UserPreferences data shape]]
 - [[_COMMUNITY_WatchlistItem data shape|WatchlistItem data shape]]
+- [[_COMMUNITY_App.tsx|App.tsx]]
+- [[_COMMUNITY_outcomes.py|outcomes.py]]
+- [[_COMMUNITY_main.py|main.py]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `compilerOptions` - 18 edges
-2. `compilerOptions` - 15 edges
-3. `ScoredTicker` - 14 edges
+1. `ScoredTicker` - 20 edges
+2. `compilerOptions` - 18 edges
+3. `compilerOptions` - 15 edges
 4. `compute_signals()` - 11 edges
 5. `StonkMonk — Full Spec` - 11 edges
 6. `fetch_prices()` - 9 edges
@@ -94,29 +97,29 @@
 10. `Signals` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `_aggregate()` --references--> `Track`  [EXTRACTED]
+  scanner/outcomes.py → web/src/lib/types.ts
 - `ScoredTicker` --uses--> `Signals`  [INFERRED]
   scanner/score.py → scanner/signals.py
+- `WatchlistSidebarProps` --references--> `DailyRun`  [EXTRACTED]
+  web/src/components/WatchlistSidebar.tsx → web/src/lib/types.ts
 - `scanner/requirements.txt — Python dependency manifest` --references--> `Anthropic (LLM provider)`  [EXTRACTED]
   scanner/requirements.txt → stonkmonk-spec.md
 - `scanner/requirements.txt — Python dependency manifest` --references--> `yfinance (market data source)`  [EXTRACTED]
   scanner/requirements.txt → stonkmonk-spec.md
-- `StonkMonk Icon (logo.svg)` --semantically_similar_to--> `StonkMonk App Logo (128px)`  [INFERRED] [semantically similar]
-  assets/logo.svg → assets/logo-128.png
-- `StonkMonk Icon (logo.svg)` --semantically_similar_to--> `StonkMonk Logo Icon (32px)`  [INFERRED] [semantically similar]
-  assets/logo.svg → assets/logo-32.png
 
 ## Import Cycles
 - None detected.
 
-## Communities (66 total, 50 thin omitted)
+## Communities (69 total, 50 thin omitted)
 
 ### Community 0 - "Signal Computation (signals.py)"
 Cohesion: 0.14
 Nodes (25): QuoteSnapshot, Lightweight per-ticker fundamentals we opportunistically capture.      All field, avg_dollar_volume(), _clip(), compute_signals(), _earnings_signal(), latest_price(), _momentum_signal() (+17 more)
 
 ### Community 1 - "Data Fetch & Caching (data.py)"
-Cohesion: 0.13
-Nodes (20): _cache_is_fresh(), _cache_path(), _download_batch(), fetch_prices(), fetch_quotes(), FetchResult, DataFrame, Market-data fetch layer — isolated so it can be swapped wholesale.  Everything Y (+12 more)
+Cohesion: 0.10
+Nodes (24): _cache_is_fresh(), _cache_path(), _download_batch(), fetch_current_prices(), fetch_news(), fetch_prices(), fetch_quotes(), FetchResult (+16 more)
 
 ### Community 2 - "Pipeline Steps & AI/Data Providers"
 Cohesion: 0.67
@@ -124,7 +127,7 @@ Nodes (3): Anthropic (LLM provider), scanner/requirements.txt — Python depende
 
 ### Community 4 - "Composite Scoring (score.py)"
 Cohesion: 0.13
-Nodes (26): _build_prompt(), _fallback_reasoning(), generate_all(), generate_reasoning(), _generic_fallback(), _llm_reasoning(), LLM reasoning-blurb generation — the only place AI touches the pipeline.  Turns, Deterministic template used when the LLM path is unavailable or fails.      Narr (+18 more)
+Nodes (27): _build_prompt(), _call_model(), _candidate_line(), _feedback_block(), generate_ai_picks(), AI conviction picks (Phase 2, key-gated) - a separate idea source from the compo, Return 0-``config.AI_PICK_COUNT_MAX`` AI conviction pick dicts, shaped like ``Pi, _shape_pick() (+19 more)
 
 ### Community 5 - "Universe Build (universe.py)"
 Cohesion: 0.29
@@ -135,8 +138,8 @@ Cohesion: 0.40
 Nodes (5): StonkMonk App Logo (128px), StonkMonk Logo Icon (32px), StonkMonk Logo (512px App Icon), StonkMonk Icon (logo.svg), StonkMonk Brand Identity / Monk Mascot Concept
 
 ### Community 12 - "App.tsx"
-Cohesion: 0.10
-Nodes (36): App(), Tab, ComplianceFooter(), formatGeneratedAt(), Header(), HeaderProps, Tab, TABS (+28 more)
+Cohesion: 0.15
+Nodes (23): formatGeneratedAt(), Header(), HeaderProps, Tab, TABS, fmt(), PickCard(), SIGNAL_LABELS (+15 more)
 
 ### Community 13 - "devDependencies"
 Cohesion: 0.09
@@ -170,25 +173,37 @@ Nodes (5): plugins, rules, react/only-export-components, react/rules-of-hooks, $
 Cohesion: 0.50
 Nodes (3): Expanding the Oxlint configuration, React Compiler, React + TypeScript + Vite
 
+### Community 66 - "App.tsx"
+Cohesion: 0.14
+Nodes (22): App(), Tab, ComplianceFooter(), HistoryView(), PicksList(), fmtDate(), fmtPct(), ScoreboardView() (+14 more)
+
+### Community 67 - "outcomes.py"
+Cohesion: 0.19
+Nodes (15): _aggregate(), _collect_entries(), _iter_picks(), _load_ledger(), load_recent_ai_outcomes(), Outcome tracking, split by algorithmic vs. AI track.  Runs best-effort at the en, Last ``limit`` resolved AI-track entries, most recent first.      Used as the ro, Aggregate the ledger into the Scoreboard's per-track summary. (+7 more)
+
+### Community 68 - "main.py"
+Cohesion: 0.33
+Nodes (9): main(), _persist(), _pick(), Orchestrates the daily pick-generation pipeline end-to-end.  Universe build -> d, Best-effort outcome tracking - never blocks or fails today's publish., run(), _shortlist_entry(), _track_outcomes() (+1 more)
+
 ## Knowledge Gaps
-- **135 isolated node(s):** `$schema`, `plugins`, `react/rules-of-hooks`, `react/only-export-components`, `name` (+130 more)
+- **137 isolated node(s):** `$schema`, `plugins`, `react/rules-of-hooks`, `react/only-export-components`, `name` (+132 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **50 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `ScoredTicker` connect `Composite Scoring (score.py)` to `Signal Computation (signals.py)`?**
+- **Why does `ScoredTicker` connect `Composite Scoring (score.py)` to `Signal Computation (signals.py)`, `main.py`?**
+  _High betweenness centrality (0.021) - this node is a cross-community bridge._
+- **Why does `Track` connect `App.tsx` to `outcomes.py`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+- **Why does `_aggregate()` connect `outcomes.py` to `App.tsx`?**
   _High betweenness centrality (0.015) - this node is a cross-community bridge._
-- **Why does `Signals` connect `Signal Computation (signals.py)` to `Composite Scoring (score.py)`?**
-  _High betweenness centrality (0.012) - this node is a cross-community bridge._
-- **Why does `QuoteSnapshot` connect `Signal Computation (signals.py)` to `Data Fetch & Caching (data.py)`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **What connects `Central configuration for the StonkMonk pick engine.  Everything tunable lives h`, `Market-data fetch layer — isolated so it can be swapped wholesale.  Everything Y`, `Lightweight per-ticker fundamentals we opportunistically capture.      All field` to the rest of the system?**
-  _177 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `AI conviction picks (Phase 2, key-gated) - a separate idea source from the compo`, `Return 0-``config.AI_PICK_COUNT_MAX`` AI conviction pick dicts, shaped like ``Pi`, `Central configuration for the StonkMonk pick engine.  Everything tunable lives h` to the rest of the system?**
+  _190 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Signal Computation (signals.py)` be split into smaller, more focused modules?**
   _Cohesion score 0.13675213675213677 - nodes in this community are weakly interconnected._
 - **Should `Data Fetch & Caching (data.py)` be split into smaller, more focused modules?**
-  _Cohesion score 0.12987012987012986 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10461538461538461 - nodes in this community are weakly interconnected._
 - **Should `Composite Scoring (score.py)` be split into smaller, more focused modules?**
-  _Cohesion score 0.12561576354679804 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.12643678160919541 - nodes in this community are weakly interconnected._

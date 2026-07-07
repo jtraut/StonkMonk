@@ -1,16 +1,16 @@
 # Graph Report - StonkMonk  (2026-07-07)
 
 ## Corpus Check
-- 44 files · ~26,135 words
+- 45 files · ~26,901 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 341 nodes · 436 edges · 69 communities (19 shown, 50 thin omitted)
+- 352 nodes · 456 edges · 69 communities (19 shown, 50 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.73)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8751c4f9`
+- Built from commit: `67ebbaeb`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -138,8 +138,8 @@ Cohesion: 0.40
 Nodes (5): StonkMonk App Logo (128px), StonkMonk Logo Icon (32px), StonkMonk Logo (512px App Icon), StonkMonk Icon (logo.svg), StonkMonk Brand Identity / Monk Mascot Concept
 
 ### Community 12 - "App.tsx"
-Cohesion: 0.15
-Nodes (23): formatGeneratedAt(), Header(), HeaderProps, Tab, TABS, fmt(), PickCard(), SIGNAL_LABELS (+15 more)
+Cohesion: 0.10
+Nodes (32): formatGeneratedAt(), Header(), HeaderProps, Tab, TABS, fmt(), PickCard(), SIGNAL_LABELS (+24 more)
 
 ### Community 13 - "devDependencies"
 Cohesion: 0.09
@@ -186,7 +186,7 @@ Cohesion: 0.33
 Nodes (9): main(), _persist(), _pick(), Orchestrates the daily pick-generation pipeline end-to-end.  Universe build -> d, Best-effort outcome tracking - never blocks or fails today's publish., run(), _shortlist_entry(), _track_outcomes() (+1 more)
 
 ## Knowledge Gaps
-- **137 isolated node(s):** `$schema`, `plugins`, `react/rules-of-hooks`, `react/only-export-components`, `name` (+132 more)
+- **138 isolated node(s):** `$schema`, `plugins`, `react/rules-of-hooks`, `react/only-export-components`, `name` (+133 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **50 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -194,13 +194,13 @@ Nodes (9): main(), _persist(), _pick(), Orchestrates the daily pick-generation p
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `ScoredTicker` connect `Composite Scoring (score.py)` to `Signal Computation (signals.py)`, `main.py`?**
-  _High betweenness centrality (0.021) - this node is a cross-community bridge._
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **Why does `Track` connect `App.tsx` to `outcomes.py`?**
-  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **Why does `_aggregate()` connect `outcomes.py` to `App.tsx`?**
-  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **What connects `AI conviction picks (Phase 2, key-gated) - a separate idea source from the compo`, `Return 0-``config.AI_PICK_COUNT_MAX`` AI conviction pick dicts, shaped like ``Pi`, `Central configuration for the StonkMonk pick engine.  Everything tunable lives h` to the rest of the system?**
-  _190 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _191 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Signal Computation (signals.py)` be split into smaller, more focused modules?**
   _Cohesion score 0.13675213675213677 - nodes in this community are weakly interconnected._
 - **Should `Data Fetch & Caching (data.py)` be split into smaller, more focused modules?**

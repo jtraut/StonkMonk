@@ -1,7 +1,7 @@
 {
   ".claude/settings.local.json": {
-    "mtime": 1783460121.4674983,
-    "ast_hash": "16ea670c5e8f6bb913a0545a8ba17ca7",
+    "mtime": 1783460930.4720583,
+    "ast_hash": "19c2df9911a2c91c3ccc105c45ce2f46",
     "semantic_hash": ""
   },
   "scanner/config.py": {
@@ -175,8 +175,8 @@
     "semantic_hash": ""
   },
   "web/src/components/WatchlistSidebar.tsx": {
-    "mtime": 1783446394.6441588,
-    "ast_hash": "e816e044f9695092fe9df63554b3d043",
+    "mtime": 1783460720.2313485,
+    "ast_hash": "7d268e47a7b8372993b298f41d1bc712",
     "semantic_hash": ""
   },
   "web/src/lib/api.ts": {
@@ -185,8 +185,8 @@
     "semantic_hash": ""
   },
   "web/src/lib/storage.ts": {
-    "mtime": 1783446298.668,
-    "ast_hash": "41e32e8d46c8784b9ba473076f4e7103",
+    "mtime": 1783460577.1882758,
+    "ast_hash": "051dd975cdb489d7fd6c1200122664b3",
     "semantic_hash": ""
   },
   "web/src/lib/types.ts": {
@@ -267,6 +267,11 @@
   "web/src/components/ScoreboardView.tsx": {
     "mtime": 1783459983.965412,
     "ast_hash": "eaa7bb52c2c207e710bf2234a9c37c7e",
+    "semantic_hash": ""
+  },
+  "web/src/lib/quotes.ts": {
+    "mtime": 1783460590.2511554,
+    "ast_hash": "8b5e47de6349fbabea1dc5dbaafb1482",
     "semantic_hash": ""
   }
 }

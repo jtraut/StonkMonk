@@ -64,5 +64,8 @@
   "62": "Universe build step",
   "63": "UserPreferences data shape",
   "64": "WatchlistItem data shape",
-  "65": "vite.config.ts"
+  "65": "vite.config.ts",
+  "66": "App.tsx",
+  "67": "outcomes.py",
+  "68": "main.py"
 }
