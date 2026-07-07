@@ -111,7 +111,9 @@ def _build_prompt(scored: ScoredTicker, action: str) -> str:
         "Write 1-3 sentences explaining why, grounded strictly in these signals. "
         "Do not mention news, rumors, or anything not in the numbers above. "
         "Do not give financial advice or tell the reader to buy or sell — describe "
-        "what the signals show. Plain English, no jargon dump."
+        "what the signals show. Plain English, no jargon dump. Respond with plain "
+        "prose only — no markdown, no headers, no bullet points, no bold/italic "
+        "formatting, just the sentences themselves."
     )
 
 
