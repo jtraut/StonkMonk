@@ -54,7 +54,7 @@ data/
   picks/YYYY-MM-DD.json
 web/                 # Vite + React + TS + Tailwind static frontend
   src/lib/             # types, localStorage watchlist, JSON fetch helpers
-  src/components/      # Header, TodayView, HistoryView, PickCard, ComplianceFooter
+  src/components/      # Header, TodayView, HistoryView, PickCard, WatchlistSidebar, ComplianceFooter
   public/data/         # synced copy of root data/, served by Vite as static files
 .github/workflows/
   daily-scan.yml
