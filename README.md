@@ -23,7 +23,7 @@ Public, no-login, static site. Refreshed automatically on trading days.
 - [yfinance](https://github.com/ranaroussi/yfinance) — OHLCV + quote data (unofficial Yahoo Finance scraper)
 - [pyarrow](https://arrow.apache.org/docs/python/) — Parquet OHLCV cache
 - [requests](https://requests.readthedocs.io/) — Nasdaq symbol directory fetch
-- [anthropic](https://github.com/anthropics/anthropic-sdk-python) (Claude Haiku 4.5) — reasoning blurbs only, with a deterministic template fallback if no API key/library is present
+- [anthropic](https://github.com/anthropics/anthropic-sdk-python) (Claude Haiku 4.5) — reasoning blurbs, with a deterministic template fallback if no API key/library is present; also powers the key-gated AI conviction pick pass (`ai_picks.py`), skipped entirely with no key
 
 **Frontend (`web/`)** — static site, no backend
 - [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) (strict)
@@ -41,10 +41,12 @@ Public, no-login, static site. Refreshed automatically on trading days.
 ```
 scanner/            # Python pick-generation engine
   universe.py          # Nasdaq Global Select universe build
-  data.py              # yfinance OHLCV + quote fetch, caching
+  data.py              # yfinance OHLCV + quote/news fetch, caching
   signals.py           # deterministic technical signal computation
   score.py             # composite scoring + buy/caution selection
   llm.py               # LLM reasoning blurbs (Anthropic), deterministic fallback
+  ai_picks.py          # AI conviction picks (Phase 2, key-gated, news-grounded)
+  outcomes.py          # outcome tracking, split by algorithmic/AI track
   main.py              # orchestrates the full pipeline, persists JSON
   config.py            # all tunable constants
   requirements.txt
@@ -52,9 +54,11 @@ data/
   latest.json          # most recent day's picks (DailyRun)
   index.json           # list of available dates, for History view
   picks/YYYY-MM-DD.json
+  outcomes.json        # per-pick 5d/30d return ledger, by track
+  track_performance.json  # aggregated algo vs. AI stats, for the Scoreboard view
 web/                 # Vite + React + TS + Tailwind static frontend
   src/lib/             # types, localStorage watchlist, JSON fetch helpers
-  src/components/      # Header, TodayView, HistoryView, PickCard, WatchlistSidebar, ComplianceFooter
+  src/components/      # Header, TodayView, HistoryView, ScoreboardView, PickCard, WatchlistSidebar, ComplianceFooter
   public/data/         # synced copy of root data/, served by Vite as static files
 .github/workflows/
   daily-scan.yml

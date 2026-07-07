@@ -28,6 +28,7 @@ export function PickCard({ pick }: { pick: Pick }) {
     ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300"
     : "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300";
   const badgeLabel = isBuy ? "Buy" : "Caution / Consider Trimming";
+  const aiBadgeClass = "bg-violet-100 text-violet-800 dark:bg-violet-900/40 dark:text-violet-300";
 
   function toggleWatchlist() {
     if (watching) {
@@ -46,18 +47,36 @@ export function PickCard({ pick }: { pick: Pick }) {
           <div className="font-semibold text-gray-900 dark:text-gray-100">{pick.ticker}</div>
           <div className="text-sm text-gray-500 dark:text-gray-400">{pick.name}</div>
         </div>
-        <span className={`text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap ${badgeClass}`}>
-          {badgeLabel}
+        <span className="flex flex-col items-end gap-1">
+          <span className={`text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap ${badgeClass}`}>
+            {badgeLabel}
+          </span>
+          {pick.ai_pick && (
+            <span className={`text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap ${aiBadgeClass}`}>
+              AI Pick
+            </span>
+          )}
         </span>
       </div>
 
       <div className="text-sm text-gray-600 dark:text-gray-300 flex flex-wrap gap-x-3 gap-y-1">
         {pick.sector && <span>{pick.sector}</span>}
         {pick.price_at_pick !== null && <span>${pick.price_at_pick.toFixed(2)}</span>}
-        <span>Score: {pick.composite_score.toFixed(1)}/100</span>
+        {pick.composite_score !== null && <span>Score: {pick.composite_score.toFixed(1)}/100</span>}
       </div>
 
       <p className="text-sm text-gray-700 dark:text-gray-300">{pick.reasoning}</p>
+
+      {pick.news_context && pick.news_context.length > 0 && (
+        <div className="text-xs text-gray-500 dark:text-gray-400">
+          <span className="font-medium">Based on recent headlines:</span>
+          <ul className="list-disc list-inside">
+            {pick.news_context.map((headline) => (
+              <li key={headline}>{headline}</li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       <button
         type="button"

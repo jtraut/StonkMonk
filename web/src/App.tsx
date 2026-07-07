@@ -5,9 +5,10 @@ import { Header } from "./components/Header";
 import { ComplianceFooter } from "./components/ComplianceFooter";
 import { TodayView } from "./components/TodayView";
 import { HistoryView } from "./components/HistoryView";
+import { ScoreboardView } from "./components/ScoreboardView";
 import { WatchlistSidebar } from "./components/WatchlistSidebar";
 
-type Tab = "today" | "history";
+type Tab = "today" | "history" | "scoreboard";
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>("today");
@@ -34,11 +35,9 @@ function App() {
         onToggleWatchlist={() => setWatchlistOpen((v) => !v)}
       />
       <main className="max-w-5xl mx-auto w-full px-4 py-6 flex-1">
-        {activeTab === "today" ? (
-          <TodayView run={latest} loading={latestLoading} error={latestError} />
-        ) : (
-          <HistoryView />
-        )}
+        {activeTab === "today" && <TodayView run={latest} loading={latestLoading} error={latestError} />}
+        {activeTab === "history" && <HistoryView />}
+        {activeTab === "scoreboard" && <ScoreboardView />}
       </main>
       <ComplianceFooter />
       <WatchlistSidebar open={watchlistOpen} onClose={() => setWatchlistOpen(false)} latest={latest} />

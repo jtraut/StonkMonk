@@ -19,6 +19,8 @@ CACHE_DIR = SCANNER_DIR / ".cache"
 
 LATEST_FILE = DATA_DIR / "latest.json"
 INDEX_FILE = DATA_DIR / "index.json"
+OUTCOMES_FILE = DATA_DIR / "outcomes.json"
+TRACK_PERFORMANCE_FILE = DATA_DIR / "track_performance.json"
 
 # --- Universe --------------------------------------------------------------
 
@@ -93,3 +95,23 @@ SHORTLIST_SIZE = 60
 LLM_MODEL = "claude-haiku-4-5"  # cheap + fast; blurbs are short. Tune freely.
 LLM_MAX_TOKENS = 200
 LLM_TEMPERATURE = 0.4
+
+# --- AI conviction picks (Phase 2, key-gated) -------------------------------
+
+# Candidate pool for the AI pick pass: top-N scored tickers by composite
+# score (algorithmic buys/cautions excluded so this is a separate idea
+# source, not a rehash of the composite score).
+AI_CANDIDATE_POOL_SIZE = 60
+AI_PICK_COUNT_MAX = 3
+AI_PICK_TEMPERATURE = 0.2  # lower than blurb generation - picks should be stable, not creative
+AI_NEWS_HEADLINES_PER_TICKER = 3
+# How many of the AI track's own past resolved outcomes to feed back into the
+# prompt as in-context learning (see outcomes.load_recent_ai_outcomes).
+AI_FEEDBACK_LOOKBACK = 10
+
+# --- Outcome tracking (Phase 2) ---------------------------------------------
+
+# Elapsed business days after which a pick's return is recorded (once, never
+# recomputed). No market-holiday calendar - a documented approximation.
+OUTCOME_5D_BDAYS = 5
+OUTCOME_30D_BDAYS = 30

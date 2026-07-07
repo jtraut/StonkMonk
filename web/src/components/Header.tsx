@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import logo from "../assets/logo.svg";
 import { getWatchlist, subscribeToWatchlist } from "../lib/storage";
 
-type Tab = "today" | "history";
+type Tab = "today" | "history" | "scoreboard";
 
 interface HeaderProps {
   activeTab: Tab;
@@ -18,7 +18,7 @@ function formatGeneratedAt(iso: string | null): string {
   return date.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
 }
 
-const TABS: Tab[] = ["today", "history"];
+const TABS: Tab[] = ["today", "history", "scoreboard"];
 
 export function Header({ activeTab, onTabChange, generatedAt, onToggleWatchlist }: HeaderProps) {
   const [watchlistCount, setWatchlistCount] = useState(() => getWatchlist().length);

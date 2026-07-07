@@ -196,6 +196,79 @@ def fetch_quotes(symbols: list[str]) -> dict[str, QuoteSnapshot]:
     return out
 
 
+def fetch_news(symbols: list[str], limit: int) -> dict[str, list[str]]:
+    """Best-effort recent headline titles per ticker, for AI-pick grounding.
+
+    ``yf.Ticker(sym).news`` shape has changed across yfinance versions (a
+    flat ``{"title": ...}`` dict, or a newer ``{"content": {"title": ...}}``
+    nesting) - handle both defensively. Any failure yields an empty list for
+    that symbol rather than aborting; callers must tolerate thin coverage.
+    """
+    import yfinance as yf
+
+    out: dict[str, list[str]] = {}
+    for sym in symbols:
+        titles: list[str] = []
+        try:
+            items = yf.Ticker(sym).news or []
+            for item in items:
+                content = item.get("content", item) if isinstance(item, dict) else {}
+                title = content.get("title")
+                if title:
+                    titles.append(title)
+                if len(titles) >= limit:
+                    break
+        except Exception as exc:
+            log.debug("News fetch failed for %s: %s", sym, exc)
+        out[sym] = titles
+    return out
+
+
+def fetch_current_prices(symbols: list[str]) -> dict[str, float]:
+    """Latest close price for a small, arbitrary set of tickers.
+
+    Used by outcome tracking (a handful of aging past picks, not the daily
+    universe scan) - a single lightweight download, no caching, no retries.
+    Symbols that fail to return usable data are simply absent from the dict.
+    """
+    import yfinance as yf
+
+    if not symbols:
+        return {}
+
+    out: dict[str, float] = {}
+    try:
+        raw = yf.download(
+            tickers=symbols,
+            period="5d",
+            interval="1d",
+            group_by="ticker",
+            auto_adjust=True,
+            threads=True,
+            progress=False,
+        )
+    except Exception as exc:
+        log.warning("Current-price fetch failed for %d symbols: %s", len(symbols), exc)
+        return out
+
+    if raw is None or raw.empty:
+        return out
+
+    single = len(symbols) == 1
+    for sym in symbols:
+        try:
+            df = raw.copy() if single else raw[sym]
+        except (KeyError, TypeError):
+            continue
+        if "Close" not in df.columns:
+            continue
+        close = df["Close"].dropna()
+        if close.empty:
+            continue
+        out[sym] = round(float(close.iloc[-1]), 2)
+    return out
+
+
 def save_manifest(path, coverage: float, universe_size: int) -> None:
     """Persist a tiny run manifest for debugging cache/coverage issues."""
     config.CACHE_DIR.mkdir(parents=True, exist_ok=True)

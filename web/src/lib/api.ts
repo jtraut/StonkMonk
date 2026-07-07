@@ -1,6 +1,6 @@
 // Fetches the static JSON the scanner pipeline commits to data/ and the deploy
 // workflow copies into public/data/. No backend — this is all static file reads.
-import type { DailyRun } from "./types";
+import type { DailyRun, TrackPerformance } from "./types";
 
 const base = import.meta.env.BASE_URL;
 
@@ -22,4 +22,8 @@ export function fetchIndex(): Promise<string[]> {
 
 export function fetchPicksForDate(date: string): Promise<DailyRun> {
   return fetchJson<DailyRun>(`picks/${date}.json`);
+}
+
+export function fetchTrackPerformance(): Promise<TrackPerformance[]> {
+  return fetchJson<TrackPerformance[]>("track_performance.json");
 }

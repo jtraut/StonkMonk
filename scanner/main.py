@@ -9,9 +9,10 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 from datetime import datetime, timezone
 
-from . import config, data, llm, score, signals, universe
+from . import ai_picks, config, data, llm, outcomes, score, signals, universe
 from .score import ScoredTicker
 
 log = logging.getLogger(__name__)
@@ -58,6 +59,11 @@ def run() -> None:
 
     reasoning = llm.generate_all(buys, cautions)
 
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    excluded = {s.ticker for s in buys + cautions}
+    ai_pick_list = ai_picks.generate_ai_picks(scored, excluded, api_key)
+    log.info("Generated %d AI conviction pick(s).", len(ai_pick_list))
+
     today = datetime.now(timezone.utc).date().isoformat()
     daily_run = {
         "date": today,
@@ -66,12 +72,24 @@ def run() -> None:
         "universe_coverage": round(coverage, 4),
         "buys": [_pick(s, "buy", reasoning) for s in buys],
         "cautions": [_pick(s, "caution", reasoning) for s in cautions],
+        "ai_picks": ai_pick_list,
         "shortlist": [_shortlist_entry(s) for s in scored[: config.SHORTLIST_SIZE]],
     }
 
     _persist(daily_run)
     data.save_manifest(config.CACHE_DIR / "run_manifest.json", coverage, len(symbols))
     log.info("Daily scan complete - wrote %s.", today)
+
+    _track_outcomes()
+
+
+def _track_outcomes() -> None:
+    """Best-effort outcome tracking - never blocks or fails today's publish."""
+    try:
+        outcomes.record_outcomes()
+        outcomes.write_track_performance()
+    except Exception:
+        log.warning("Outcome tracking failed; today's picks are still published.", exc_info=True)
 
 
 def _pick(scored: ScoredTicker, action: str, reasoning: dict[str, str]) -> dict:

@@ -18,8 +18,11 @@ export interface Pick {
   action: PickAction;
   price_at_pick: number | null;
   signals: Signals;
-  composite_score: number;
+  // Omitted (null) for AI conviction picks, since they weren't score-selected.
+  composite_score: number | null;
   reasoning: string;
+  ai_pick?: boolean;
+  news_context?: string[];
 }
 
 export interface ShortlistEntry {
@@ -38,10 +41,23 @@ export interface DailyRun {
   universe_coverage: number;
   buys: Pick[];
   cautions: Pick[];
+  // Absent on days generated before Phase 2, or when no AI key was configured.
+  ai_picks?: Pick[];
   shortlist: ShortlistEntry[];
 }
 
 export interface WatchlistItem {
   ticker: string;
   added_at: string;
+}
+
+export type Track = "algorithmic" | "ai";
+
+export interface TrackPerformance {
+  track: Track;
+  picks_count: number;
+  avg_return_5d: number | null;
+  avg_return_30d: number | null;
+  win_rate: number | null;
+  since: string | null;
 }
