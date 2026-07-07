@@ -35,11 +35,23 @@ brokerage account.** Informational only.
   directory, `Market Category = Q`. Used as a free proxy for "Robinhood-
   tradable" since Robinhood has no public equities API to check against
   directly.
-- **AI:** Anthropic/OpenAI, used only for the "why" reasoning blurb, never
-  for the underlying scoring. Public demo uses your API key as a **GitHub
+- **AI:** Anthropic/OpenAI, used for the "why" reasoning blurb (never the
+  underlying scoring) and, as of Phase 2, for 1–3 additional **AI conviction
+  picks** per day — see below. Public demo uses your API key as a **GitHub
   Actions secret** (server-side only, never shipped to the browser).
   Personal/local runs use BYO-key like Couchworthy.
-- **Pick counts:** 5 buy, up to 5 caution/sell (0–5, config constant).
+- **AI conviction picks (Phase 2):** key-gated (skipped entirely with no
+  key, day is algo-only). The model picks 1–3 buys from the full shortlist
+  (not just the algorithmic top-5), grounded in the same computed signals
+  plus fresh news headlines, and tagged `ai_pick: true` — algorithmic picks
+  carry no tag. Each day's prompt also includes a rolling summary of the AI
+  track's own past picks and what happened to them — in-context learning,
+  not fine-tuning/RL (too little data, too much market noise for that to be
+  reliable at this scale). Outcomes are tracked separately by track
+  (algorithmic vs. AI) and shown on a Scoreboard view — a live, honest
+  comparison, not a claim that either approach wins.
+- **Pick counts:** 5 buy, up to 5 caution/sell (0–5, config constant), plus
+  up to 3 AI conviction picks when a key is available.
 - **Sell framing:** "Caution / Consider Trimming," not "sell" — the app
   doesn't know what you actually own.
 - **Storage:** Daily picks as committed JSON (`data/picks/YYYY-MM-DD.json` +
@@ -72,6 +84,17 @@ brokerage account.** Informational only.
   documented approximation, not a verified match.
 - Compliance footer required everywhere: not financial advice, educational
   only, data source attribution, no affiliation with Robinhood/Nasdaq/Yahoo.
+  AI conviction picks need a stronger, distinct disclaimer/badge than
+  algorithmic picks — they're a model judgment call, not a formula.
+- Published LLM-stock-picking research (StockBench, LLM-equity surveys,
+  2025-era sentiment/RL work) shows models prompted from static knowledge
+  alone struggle to beat buy-and-hold; grounding in retrieved data (news,
+  filings) + blending with quant signals does better. AI picks are designed
+  around that: grounded in computed signals + fresh news, tracked separately,
+  not a replacement for the scoring engine.
+- News grounding for AI picks: `yfinance .news` first (free, already in the
+  stack), Finnhub free tier as fallback if it's too thin. Cap to shortlist
+  candidates only to bound token/API cost on the daily Actions run.
 
 ## Pick generation pipeline (per trading day)
 
@@ -85,9 +108,14 @@ brokerage account.** Informational only.
    threshold, up to 5 → caution list (can be fewer or zero).
 5. LLM reasoning pass → finalists only, blurb grounded strictly in computed
    signals.
-6. Persist → `data/picks/YYYY-MM-DD.json`, update `data/latest.json`, commit.
-7. (Phase 2+) Outcome tracking → record current price against recent past
-   picks for the history/track-record view.
+6. (Phase 2, key-gated) AI conviction pick pass → full shortlist + news
+   headlines + rolling summary of the AI track's own past results →
+   1–3 picks, tagged `ai_pick: true`. Skipped entirely with no key.
+7. Persist → `data/picks/YYYY-MM-DD.json` (incl. `ai_pick` flag + news
+   context), update `data/latest.json`, commit.
+8. (Phase 2) Outcome tracking, split by track → record current price against
+   recent past picks, keyed by algorithmic vs. AI, feeding both the
+   history/track-record view and the Scoreboard.
 
 ## Current status
 
@@ -99,9 +127,12 @@ brokerage account.** Informational only.
 
 ```
 scanner/            # Python pick-generation engine
-  universe.py, data.py, signals.py, score.py, llm.py, main.py
+  universe.py, data.py, signals.py, score.py, llm.py
+  ai_picks.py, outcomes.py   # Phase 2
+  main.py
 data/
   latest.json, picks/YYYY-MM-DD.json, index.json
+  track_performance.json    # Phase 2: algo vs ai aggregates
 web/                 # Vite + React + TS + Tailwind, static frontend
   src/lib/types.ts, src/lib/storage.ts, src/components/
 .github/workflows/
@@ -115,8 +146,13 @@ buy / up-to-5 caution selection, LLM blurbs via Actions secret, daily JSON
 commit, static frontend with Today + History views, GitHub Pages deploy,
 compliance footer) is the first build target.
 
-Phases 2–4 (watchlist + track record, personalization, expansion/
-notifications/backtesting) are detailed in the spec.
+**Phase 2** (next up after Phase 1) adds: watchlist + live quote refresh, AI
+conviction picks (1–3/day, key-gated, news-grounded, in-context feedback
+loop, tagged `ai_pick`), and outcome tracking split by algorithmic vs. AI
+track with a Scoreboard view comparing the two over time.
+
+Phases 3–4 (personalization, expansion/notifications/backtesting) are
+detailed in the spec.
 
 ## Open decisions to revisit
 
@@ -126,6 +162,10 @@ notifications/backtesting) are detailed in the spec.
 - Paid data API upgrade path if yfinance reliability becomes a blocker
   (Finnhub, Polygon, Alpha Vantage are candidates).
 - Notification delivery mechanism for Phase 4.
+- News grounding source for AI picks: start with `yfinance .news`, revisit
+  if too thin (Finnhub free tier as fallback).
+- Exact shape of the rolling feedback summary in the AI pick prompt (how
+  many past picks, what stats) — tune once there's real AI-track history.
 
 ## graphify
 

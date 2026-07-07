@@ -67,9 +67,17 @@ not a Phase 1 shortcut.
   - The scoring and ranking itself is fully deterministic and works with
     zero AI calls — the LLM layer is additive, exactly like Couchworthy's
     "deterministic parser first, LLM blurb layer on top."
+- **AI conviction picks (Phase 2):** in addition to the blurb layer, if an AI
+  key is present the pipeline generates 1–3 extra buy picks chosen by the
+  model itself, not the composite score — tagged `ai_pick: true` so they're
+  visually and structurally distinct from the algorithmic picks (which carry
+  no tag). If no key is present, this step is skipped and the day is
+  algo-only, same as Phase 1. See the AI conviction picks section below for
+  the full design — the point is to run algo and AI as two honestly-tracked
+  parallel tracks, not to replace the scoring engine with a model.
 - **Default pick counts:** 5 buy picks, up to 5 sell/caution picks (0–5,
-  varies by day). Both numbers are a config constant, not hardcoded — trivial
-  to change.
+  varies by day), plus up to 3 AI conviction picks when a key is available.
+  All three numbers are config constants, not hardcoded — trivial to change.
 - **Sell framing:** Because there's no brokerage connection, the app has no
   idea what you actually own. "Sell" candidates are framed as **"Caution /
   Consider Trimming"** — bearish-signal names worth a second look — not "you
@@ -114,6 +122,25 @@ not a Phase 1 shortcut.
   Nasdaq Trader. Not affiliated with or endorsed by Robinhood, Nasdaq, or
   Yahoo." Also disclose that picks are algorithmic and unverified, and that
   past performance shown in the history view is not a guarantee of anything.
+- **LLM stock-picking research (informs the AI conviction picks design):**
+  published results (StockBench, LLM-equity-market surveys, sentiment+RL
+  hybrids, 2025-era work) consistently show LLMs prompted to pick stocks from
+  static knowledge alone struggle to beat buy-and-hold and vary a lot with
+  market conditions — but grounding the model in retrieved data (news,
+  filings) and blending with quantitative signals performs better than
+  either alone. That's why AI picks are grounded in the same computed
+  signals plus fresh news, not free-floating model judgment, and why they're
+  a tracked addition to the deterministic engine rather than a replacement.
+- **News grounding source (AI picks only):** `yfinance`'s per-ticker `.news`
+  attribute is free and already in the stack; Finnhub's free-tier news
+  endpoint is a fallback/upgrade if `.news` proves thin or unreliable. Either
+  way, cap it to headlines for the shortlist candidates only (not the full
+  universe) to keep the extra token/API cost bounded and predictable for the
+  public demo's daily Actions run.
+- **AI pick determinism:** LLM output varies run to run. Use a low
+  temperature, log the picks and the reasoning as generated (don't silently
+  retry until you get a "better" answer), and treat day-to-day variance as
+  expected and disclosed, not a bug to hide.
 
 ## Pick generation pipeline (runs once per trading day, in Actions)
 
@@ -140,23 +167,56 @@ not a Phase 1 shortcut.
    to keep AI calls/cost small), send the computed numbers to
    Anthropic/OpenAI and ask for a 1–3 sentence plain-English "why," grounded
    strictly in the provided signals.
-6. **Persist** — write `data/picks/YYYY-MM-DD.json` (full snapshot: ticker,
+6. **(Phase 2, key-gated) AI conviction pick pass** — if an AI key is
+   configured, one more step runs before persisting: feed the model (a) the
+   full scored shortlist from step 3, not just the top N, (b) fresh headlines
+   per shortlisted candidate as grounding (see News grounding source above),
+   and (c) a short rolling summary of the AI track's own past picks and what
+   happened to them (return over the following 5 and 30 trading days, and
+   whether picks justified mainly by news/narrative held up worse or better
+   than ones with technical confirmation). Ask for 1–3 high-conviction buys
+   with independent reasoning, tagged `ai_pick: true`. The model may pick
+   names outside the algorithmic top-5 as long as they clear the same
+   liquidity/data-quality filter from step 1 — the point is a genuinely
+   separate idea source, not a rehash of the composite score. No key means
+   this step doesn't run and the day is algo-only.
+
+   The rolling-summary piece is the "learning" in this design: it's
+   in-context learning (the model sees its own recent results as part of the
+   prompt), not fine-tuning or RL. At the pick volume this produces (1-3 a
+   day) there isn't enough data to train a model on without overfitting to
+   market noise — feeding results back in as context is the honest version
+   of "learning" at this scale.
+7. **Persist** — write `data/picks/YYYY-MM-DD.json` (full snapshot: ticker,
    name, sector, action, entry price, entry date, signal values, composite
-   score, blurb) and update `data/latest.json`. Commit both.
-7. **(Phase 2+) Outcome tracking** — a lightweight follow-up step records
-   current price against still-recent past picks so the history/track-record
-   view can show "pick price → today," clearly labeled as unrealized/paper
-   performance only.
+   score, blurb, `ai_pick` flag, and news context for AI picks) and update
+   `data/latest.json`. Commit both.
+8. **(Phase 2) Outcome tracking, split by track** — a follow-up step records
+   current price against still-recent past picks, keyed by whether each pick
+   was algorithmic or AI, so the history/track-record view — and the
+   Scoreboard (see Frontend) — can show the two tracks' performance
+   separately rather than blended into one number. Clearly labeled
+   unrealized/paper performance only.
 
 ## Frontend (React + Vite + TS + Tailwind, static)
 
 - **Today view** — Buy cards (up to 5) and Caution cards (0–5), each with
   ticker, price at pick time, sector, one-line reasoning, expandable detail
-  (the underlying signal values), and an "Add to Watchlist" action.
+  (the underlying signal values), and an "Add to Watchlist" action. AI
+  conviction picks (Phase 2, 0–3, only when a key was available that day)
+  render as a visually distinct third group carrying an "AI" badge and a
+  slightly stronger disclaimer ("experimental, model-judgment pick, higher
+  variance") than the algorithmic cards.
 - **History view** — date picker or scrollable list over `data/picks/*.json`
   (an index file listing available dates avoids fetching a full directory
   listing from a static host), so a user who was away for a few days can
   scan what they missed.
+- **Scoreboard view (Phase 2)** — a running comparison of the algorithmic
+  track vs. the AI track: average return at 5/30 trading days, win rate, and
+  cumulative performance since each track's first pick. This is the actual
+  answer to "does AI do a better job," measured in public over time rather
+  than assumed — labeled unrealized/paper performance, not investment
+  advice.
 - **Watchlist view** — user-managed ticker list (localStorage), independent
   of the daily picks; shows last-known price from the daily scan if the
   ticker happens to be in the Global Select universe, plus (Phase 2+) a
@@ -186,16 +246,27 @@ Pick {
   name: string
   sector: string
   action: "buy" | "caution"
+  ai_pick?: boolean        // true only for AI conviction picks (Phase 2); absent = algorithmic
   price_at_pick: number
   signals: { trend, momentum, volume_surge, range_position, earnings_surprise? }
-  composite_score: number
-  reasoning: string        // LLM blurb, grounded in `signals`
+  composite_score?: number   // omitted for ai_pick, since it wasn't score-selected
+  reasoning: string        // LLM blurb (algo picks) or full model thesis (ai_pick)
+  news_context?: string[]   // headlines used as grounding, ai_pick only
 }
 
 WatchlistItem {
   ticker: string
   added_at: string
   note?: string
+}
+
+TrackPerformance {          // Phase 2, aggregated for the Scoreboard view
+  track: "algorithmic" | "ai"
+  picks_count: number
+  avg_return_5d: number
+  avg_return_30d: number
+  win_rate: number
+  since: string              // ISO date of that track's first recorded pick
 }
 
 UserPreferences {           // client-side only, Phase 3
@@ -216,16 +287,19 @@ scanner/            # Python: the daily pick-generation engine
   signals.py          # deterministic technical/momentum signal computation
   score.py            # composite scoring + selection (top N buy / up-to-N caution)
   llm.py               # reasoning blurb generation (Anthropic/OpenAI)
+  ai_picks.py          # Phase 2: AI conviction picks — news grounding, rolling feedback summary, model pick call
+  outcomes.py          # Phase 2: outcome tracking, split by algo/ai track
   main.py              # orchestrates the above, writes data/ output
   requirements.txt
 data/
   latest.json
   picks/YYYY-MM-DD.json
   index.json           # list of available dates, for the History view
+  track_performance.json  # Phase 2: algo vs ai aggregates, for the Scoreboard view
 web/                 # Vite + React + TS + Tailwind, static frontend
   src/lib/types.ts
   src/lib/storage.ts    # watchlist + preferences (localStorage)
-  src/components/       # TodayView, HistoryView, WatchlistView, PreferencesDrawer
+  src/components/       # TodayView, HistoryView, WatchlistView, ScoreboardView, PreferencesDrawer
 .github/workflows/
   daily-scan.yml        # cron: run scanner, commit data/
   deploy-pages.yml       # build web/, publish to GitHub Pages
@@ -239,10 +313,14 @@ up-to-5 caution selection, LLM reasoning blurbs (via Actions secret key),
 daily JSON commit, static frontend with Today + History views, GitHub Pages
 deploy, compliance footer.
 
-**Phase 2 — Watchlist + track record**
+**Phase 2 — Watchlist, AI conviction picks, and track record**
 Client-side watchlist (add/remove, localStorage), browser-callable live
-quote refresh for watchlisted tickers (separate BYO-key API), outcome
-tracking on past picks (price then vs. now, clearly labeled as unrealized).
+quote refresh for watchlisted tickers (separate BYO-key API); AI conviction
+picks (1–3/day, key-gated, news-grounded, tagged `ai_pick`, with a rolling
+in-context feedback summary of the AI track's own past results); outcome
+tracking on past picks split by algorithmic vs. AI track (price then vs.
+now, clearly labeled as unrealized), surfaced in a Scoreboard view comparing
+the two tracks over time.
 
 **Phase 3 — Personalization**
 Preferences panel (sector excludes, risk tilt, custom counts), client-side
@@ -265,6 +343,13 @@ optional accounts/cross-device sync for preferences and watchlist.
   LLM — no free-floating claims about news, rumors, or non-computed factors.
 - Track-record/performance views must be clearly labeled unrealized/paper
   and must not imply guaranteed or typical results.
+- AI conviction picks carry their own, slightly stronger disclaimer than
+  algorithmic picks — they're closer to a model judgment call than a
+  formula, and the UI (badge + copy) must make that distinction obvious
+  rather than presenting all picks as equivalent in kind.
+- The Scoreboard reports algo-vs-AI performance as an ongoing, honest
+  comparison — it must not be framed as proof either approach "wins," since
+  a short track record on noisy data isn't a reliable performance claim.
 
 ## Open decisions to revisit
 
@@ -276,3 +361,8 @@ optional accounts/cross-device sync for preferences and watchlist.
   blocker (Finnhub, Polygon, Alpha Vantage are the likely candidates).
 - Notification delivery mechanism for Phase 4 (email via a free transactional
   service is the simplest; push needs more infrastructure).
+- News grounding source for AI picks: start with `yfinance .news`, revisit
+  if it's too thin/unreliable in practice (Finnhub free tier as fallback).
+- Exact shape of the rolling feedback summary fed back into the AI pick
+  prompt (how many past picks, what stats, how far back) — start simple,
+  tune once there's a few weeks of AI-track history to look at.
