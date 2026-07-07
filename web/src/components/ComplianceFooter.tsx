@@ -6,7 +6,12 @@ export function ComplianceFooter() {
           Educational use only. Not financial advice. Data via Yahoo Finance (yfinance) and Nasdaq
           Trader. Not affiliated with or endorsed by Robinhood, Nasdaq, or Yahoo.
         </p>
-        <p>Picks are generated algorithmically and are not reviewed by a human before publishing.</p>
+        <p>
+          Buy/caution picks are generated algorithmically from computed technical signals and are
+          not reviewed by a human before publishing. AI conviction picks (badged "AI Pick," when
+          present) are an experimental, model-judgment layer — closer to a judgment call than a
+          formula, not score-selected, and carry higher variance.
+        </p>
       </div>
     </footer>
   );

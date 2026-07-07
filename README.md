@@ -112,5 +112,10 @@ URL — if you fork this to a different repo name, update that (and re-sync
 
 Educational use only. Not financial advice. Data via Yahoo Finance
 (yfinance) and Nasdaq Trader. Not affiliated with or endorsed by Robinhood,
-Nasdaq, or Yahoo. Picks are generated algorithmically and are not reviewed by
-a human before publishing.
+Nasdaq, or Yahoo. Buy/caution picks are generated algorithmically from
+computed technical signals and are not reviewed by a human before
+publishing. AI conviction picks (badged "AI Pick," when present) are an
+experimental, model-judgment layer — closer to a judgment call than a
+formula, not score-selected, and carry higher variance. Track-record/
+Scoreboard figures are unrealized/paper performance only, not a guarantee of
+future results or a claim that either track "wins."
