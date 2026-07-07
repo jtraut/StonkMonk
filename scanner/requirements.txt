@@ -6,6 +6,9 @@ numpy>=1.26,<3
 yfinance>=0.2.40,<0.3
 requests>=2.31,<3
 
+# Parquet engine for the OHLCV cache (data.py's _write_cache/read_parquet).
+pyarrow>=15,<21
+
 # LLM reasoning pass (optional at runtime — the pipeline degrades to a
 # deterministic fallback blurb if no key/library is present).
 anthropic>=0.40,<1
