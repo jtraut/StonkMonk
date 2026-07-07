@@ -8,7 +8,7 @@ export function ComplianceFooter() {
         </p>
         <p>
           Buy/caution picks are generated algorithmically from computed technical signals and are
-          not reviewed by a human before publishing. AI conviction picks (badged "AI Pick," when
+          not reviewed by a human before publishing. AI conviction picks (badged "AI Pick", when
           present) are an experimental, model-judgment layer — closer to a judgment call than a
           formula, not score-selected, and carry higher variance.
         </p>
