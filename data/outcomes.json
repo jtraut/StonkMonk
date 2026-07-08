@@ -1,6 +1,123 @@
 [
   {
     "ticker": "ZVRA",
+    "pick_date": "2026-07-08",
+    "track": "algorithmic",
+    "action": "buy",
+    "price_at_pick": 14.75,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "TMC",
+    "pick_date": "2026-07-08",
+    "track": "algorithmic",
+    "action": "caution",
+    "price_at_pick": 4.02,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "ROIV",
+    "pick_date": "2026-07-08",
+    "track": "ai",
+    "action": "buy",
+    "price_at_pick": 36.09,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "PHVS",
+    "pick_date": "2026-07-08",
+    "track": "algorithmic",
+    "action": "buy",
+    "price_at_pick": 35.92,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "MLCO",
+    "pick_date": "2026-07-08",
+    "track": "algorithmic",
+    "action": "caution",
+    "price_at_pick": 5.25,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "METC",
+    "pick_date": "2026-07-08",
+    "track": "algorithmic",
+    "action": "caution",
+    "price_at_pick": 12.23,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "MBX",
+    "pick_date": "2026-07-08",
+    "track": "algorithmic",
+    "action": "buy",
+    "price_at_pick": 61.74,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "LI",
+    "pick_date": "2026-07-08",
+    "track": "algorithmic",
+    "action": "caution",
+    "price_at_pick": 12.12,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "HTZ",
+    "pick_date": "2026-07-08",
+    "track": "algorithmic",
+    "action": "caution",
+    "price_at_pick": 1.97,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "EWTX",
+    "pick_date": "2026-07-08",
+    "track": "algorithmic",
+    "action": "buy",
+    "price_at_pick": 46.3,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "DSGN",
+    "pick_date": "2026-07-08",
+    "track": "ai",
+    "action": "buy",
+    "price_at_pick": 15.28,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "DNLI",
+    "pick_date": "2026-07-08",
+    "track": "algorithmic",
+    "action": "buy",
+    "price_at_pick": 26.69,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "CTNM",
+    "pick_date": "2026-07-08",
+    "track": "ai",
+    "action": "buy",
+    "price_at_pick": 15.65,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "ZVRA",
     "pick_date": "2026-07-07",
     "track": "ai",
     "action": "buy",
