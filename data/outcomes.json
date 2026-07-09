@@ -1,5 +1,122 @@
 [
   {
+    "ticker": "TMC",
+    "pick_date": "2026-07-09",
+    "track": "algorithmic",
+    "action": "caution",
+    "price_at_pick": 4.11,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "ROIV",
+    "pick_date": "2026-07-09",
+    "track": "ai",
+    "action": "buy",
+    "price_at_pick": 36.35,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "METC",
+    "pick_date": "2026-07-09",
+    "track": "algorithmic",
+    "action": "caution",
+    "price_at_pick": 12.4,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "MBX",
+    "pick_date": "2026-07-09",
+    "track": "algorithmic",
+    "action": "buy",
+    "price_at_pick": 64.47,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "LI",
+    "pick_date": "2026-07-09",
+    "track": "algorithmic",
+    "action": "caution",
+    "price_at_pick": 11.84,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "IMVT",
+    "pick_date": "2026-07-09",
+    "track": "ai",
+    "action": "buy",
+    "price_at_pick": 40.99,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "HTZ",
+    "pick_date": "2026-07-09",
+    "track": "algorithmic",
+    "action": "caution",
+    "price_at_pick": 2.17,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "GLUE",
+    "pick_date": "2026-07-09",
+    "track": "algorithmic",
+    "action": "buy",
+    "price_at_pick": 24.6,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "EWTX",
+    "pick_date": "2026-07-09",
+    "track": "algorithmic",
+    "action": "buy",
+    "price_at_pick": 47.22,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "DNLI",
+    "pick_date": "2026-07-09",
+    "track": "algorithmic",
+    "action": "buy",
+    "price_at_pick": 26.83,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "CCOI",
+    "pick_date": "2026-07-09",
+    "track": "algorithmic",
+    "action": "caution",
+    "price_at_pick": 12.31,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "ARWR",
+    "pick_date": "2026-07-09",
+    "track": "ai",
+    "action": "buy",
+    "price_at_pick": 85.49,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "ACRS",
+    "pick_date": "2026-07-09",
+    "track": "algorithmic",
+    "action": "buy",
+    "price_at_pick": 5.78,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
     "ticker": "ZVRA",
     "pick_date": "2026-07-08",
     "track": "algorithmic",
