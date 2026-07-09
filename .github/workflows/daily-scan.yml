@@ -2,11 +2,13 @@ name: Daily Scan
 
 on:
   schedule:
-    # 21:30 UTC, Mon-Fri. Cron is UTC and does not shift for DST, so this
-    # lands 4:30pm ET (EDT) or 5:30pm ET (EST) - a safe margin after the
-    # 4pm ET market close either way. Does not account for market holidays;
-    # a holiday run just re-scans a closed/unchanged day.
-    - cron: '30 21 * * 1-5'
+    # 14:35 UTC, Mon-Fri. Cron is UTC and does not shift for DST, so this
+    # lands 9:35am ET (EST) or 10:35am ET (EDT) - always after the 9:30am ET
+    # market open, with a tight 5min margin in winter and a wider one in
+    # summer (prioritizing "never before open" over a tight margin
+    # year-round). Does not account for market holidays; a holiday run just
+    # re-scans a closed/unchanged day.
+    - cron: '35 14 * * 1-5'
   workflow_dispatch: {}
 
 permissions:
