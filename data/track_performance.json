@@ -1,7 +1,7 @@
 [
   {
     "track": "algorithmic",
-    "picks_count": 16,
+    "picks_count": 26,
     "avg_return_5d": null,
     "avg_return_30d": null,
     "win_rate": null,
@@ -9,7 +9,7 @@
   },
   {
     "track": "ai",
-    "picks_count": 3,
+    "picks_count": 6,
     "avg_return_5d": null,
     "avg_return_30d": null,
     "win_rate": null,
