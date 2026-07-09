@@ -15,7 +15,14 @@ function formatGeneratedAt(iso: string | null): string {
   if (!iso) return "unknown";
   const date = new Date(iso);
   if (Number.isNaN(date.getTime())) return "unknown";
-  return date.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short", timeZoneName: "short" });
+  return date.toLocaleString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    timeZoneName: "short",
+  });
 }
 
 const TABS: Tab[] = ["today", "history", "scoreboard"];
