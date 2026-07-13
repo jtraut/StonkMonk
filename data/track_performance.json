@@ -1,15 +1,15 @@
 [
   {
     "track": "algorithmic",
-    "picks_count": 46,
-    "avg_return_5d": 44.34,
+    "picks_count": 56,
+    "avg_return_5d": 24.62,
     "avg_return_30d": null,
-    "win_rate": 0.5,
+    "win_rate": 0.33,
     "since": "2026-07-03"
   },
   {
     "track": "ai",
-    "picks_count": 12,
+    "picks_count": 15,
     "avg_return_5d": null,
     "avg_return_30d": null,
     "win_rate": null,

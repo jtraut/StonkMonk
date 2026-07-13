@@ -1,5 +1,122 @@
 [
   {
+    "ticker": "TXG",
+    "pick_date": "2026-07-13",
+    "track": "algorithmic",
+    "action": "buy",
+    "price_at_pick": 42.32,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "TMC",
+    "pick_date": "2026-07-13",
+    "track": "algorithmic",
+    "action": "caution",
+    "price_at_pick": 3.98,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "TLRY",
+    "pick_date": "2026-07-13",
+    "track": "algorithmic",
+    "action": "caution",
+    "price_at_pick": 4.38,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "TCBK",
+    "pick_date": "2026-07-13",
+    "track": "algorithmic",
+    "action": "buy",
+    "price_at_pick": 59.63,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "PGNY",
+    "pick_date": "2026-07-13",
+    "track": "ai",
+    "action": "buy",
+    "price_at_pick": 31.73,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "MBX",
+    "pick_date": "2026-07-13",
+    "track": "algorithmic",
+    "action": "buy",
+    "price_at_pick": 59.21,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "LENZ",
+    "pick_date": "2026-07-13",
+    "track": "algorithmic",
+    "action": "caution",
+    "price_at_pick": 5.34,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "KTOS",
+    "pick_date": "2026-07-13",
+    "track": "algorithmic",
+    "action": "caution",
+    "price_at_pick": 46.85,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "HTZ",
+    "pick_date": "2026-07-13",
+    "track": "algorithmic",
+    "action": "caution",
+    "price_at_pick": 1.85,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "GPRE",
+    "pick_date": "2026-07-13",
+    "track": "algorithmic",
+    "action": "buy",
+    "price_at_pick": 17.57,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "ELVN",
+    "pick_date": "2026-07-13",
+    "track": "algorithmic",
+    "action": "buy",
+    "price_at_pick": 50.75,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "DNLI",
+    "pick_date": "2026-07-13",
+    "track": "ai",
+    "action": "buy",
+    "price_at_pick": 26.28,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
+    "ticker": "ACRS",
+    "pick_date": "2026-07-13",
+    "track": "ai",
+    "action": "buy",
+    "price_at_pick": 5.47,
+    "return_5d": null,
+    "return_30d": null
+  },
+  {
     "ticker": "WDFC",
     "pick_date": "2026-07-10",
     "track": "algorithmic",
@@ -473,7 +590,7 @@
     "track": "algorithmic",
     "action": "buy",
     "price_at_pick": 512.1,
-    "return_5d": null,
+    "return_5d": -23.3,
     "return_30d": null
   },
   {
@@ -482,7 +599,7 @@
     "track": "algorithmic",
     "action": "buy",
     "price_at_pick": 985.6,
-    "return_5d": null,
+    "return_5d": -6.32,
     "return_30d": null
   },
   {
