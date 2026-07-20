@@ -40,6 +40,9 @@ function TrackCard({ perf }: { perf: TrackPerformance }) {
           <dt className="text-gray-500 dark:text-gray-400">Avg return (30d)</dt>
           <dd className="text-gray-900 dark:text-gray-100">{fmtPct(perf.avg_return_30d)}</dd>
 
+          <dt className="text-gray-500 dark:text-gray-400">All-time return</dt>
+          <dd className="text-gray-900 dark:text-gray-100">{fmtPct(perf.avg_return_all_time)}</dd>
+
           <dt className="text-gray-500 dark:text-gray-400">Win rate</dt>
           <dd className="text-gray-900 dark:text-gray-100">
             {perf.win_rate === null ? "n/a" : `${(perf.win_rate * 100).toFixed(0)}%`}

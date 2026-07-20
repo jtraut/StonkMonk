@@ -6,6 +6,12 @@ once (never recomputed), and aggregates both tracks into a small performance
 summary for the Scoreboard view. Clearly unrealized/paper performance - see
 CLAUDE.md Compliance notes.
 
+Alongside those fixed-horizon returns, every tracked pick also gets a
+mark-to-market ``return_all_time`` against today's current price - unlike
+``return_5d``/``return_30d`` this is recomputed every run, so it reflects a
+true since-inception performance number rather than a snapshot frozen at a
+fixed checkpoint.
+
 The ledger (``data/outcomes.json``) is separate from the daily
 ``data/picks/*.json`` snapshots, which stay immutable audit-trail entries.
 Business-day counting uses ``numpy.busday_count`` (weekdays only, no market-
@@ -83,30 +89,29 @@ def _collect_entries() -> dict[tuple, dict]:
                     "price_at_pick": price_at_pick,
                     "return_5d": None,
                     "return_30d": None,
+                    "return_all_time": None,
                 }
     return existing
 
 
 def record_outcomes() -> None:
-    """Resolve any outstanding 5d/30d returns and persist the updated ledger."""
+    """Resolve outstanding 5d/30d returns and refresh the all-time mark-to-market.
+
+    Every tracked ticker needs a fresh current price each run for the
+    all-time figure, so unlike the old threshold-gated fetch, this always
+    hits the network when there's at least one tracked pick.
+    """
     entries = _collect_entries()
     today = _today()
 
-    needs_price: set[str] = set()
-    for entry in entries.values():
-        elapsed = int(np.busday_count(entry["pick_date"], today))
-        if entry["return_5d"] is None and elapsed >= config.OUTCOME_5D_BDAYS:
-            needs_price.add(entry["ticker"])
-        if entry["return_30d"] is None and elapsed >= config.OUTCOME_30D_BDAYS:
-            needs_price.add(entry["ticker"])
-
-    if not needs_price:
-        log.info("Outcome tracking: no new returns due (%d tracked picks).", len(entries))
+    all_tickers = sorted({entry["ticker"] for entry in entries.values()})
+    if not all_tickers:
+        log.info("Outcome tracking: no tracked picks yet.")
         _save_ledger(list(entries.values()))
         return
 
-    log.info("Outcome tracking: fetching current prices for %d ticker(s).", len(needs_price))
-    current_prices = data.fetch_current_prices(sorted(needs_price))
+    log.info("Outcome tracking: fetching current prices for %d ticker(s).", len(all_tickers))
+    current_prices = data.fetch_current_prices(all_tickers)
 
     for entry in entries.values():
         current = current_prices.get(entry["ticker"])
@@ -118,8 +123,9 @@ def record_outcomes() -> None:
             entry["return_5d"] = entry_return
         if entry["return_30d"] is None and elapsed >= config.OUTCOME_30D_BDAYS:
             entry["return_30d"] = entry_return
+        entry["return_all_time"] = entry_return
 
-    log.info("Outcome tracking: resolved returns for %d ticker(s).", len(current_prices))
+    log.info("Outcome tracking: refreshed prices for %d ticker(s).", len(current_prices))
     _save_ledger(list(entries.values()))
 
 
@@ -141,12 +147,16 @@ def _aggregate(entries: list[dict], track: Track) -> dict:
     track_entries = [e for e in entries if e["track"] == track]
     resolved_5d = [e["return_5d"] for e in track_entries if e["return_5d"] is not None]
     resolved_30d = [e["return_30d"] for e in track_entries if e["return_30d"] is not None]
+    resolved_all_time = [e["return_all_time"] for e in track_entries if e.get("return_all_time") is not None]
 
     return {
         "track": track,
         "picks_count": len(track_entries),
         "avg_return_5d": round(sum(resolved_5d) / len(resolved_5d), 2) if resolved_5d else None,
         "avg_return_30d": round(sum(resolved_30d) / len(resolved_30d), 2) if resolved_30d else None,
+        "avg_return_all_time": round(sum(resolved_all_time) / len(resolved_all_time), 2)
+        if resolved_all_time
+        else None,
         # Win rate is measured at the 5-day horizon, the first one that resolves.
         "win_rate": round(sum(1 for r in resolved_5d if r > 0) / len(resolved_5d), 2) if resolved_5d else None,
         "since": min((e["pick_date"] for e in track_entries), default=None),

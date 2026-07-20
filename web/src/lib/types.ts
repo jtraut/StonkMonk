@@ -58,6 +58,7 @@ export interface TrackPerformance {
   picks_count: number;
   avg_return_5d: number | null;
   avg_return_30d: number | null;
+  avg_return_all_time: number | null;
   win_rate: number | null;
   since: string | null;
 }

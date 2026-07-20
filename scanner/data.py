@@ -225,11 +225,13 @@ def fetch_news(symbols: list[str], limit: int) -> dict[str, list[str]]:
 
 
 def fetch_current_prices(symbols: list[str]) -> dict[str, float]:
-    """Latest close price for a small, arbitrary set of tickers.
+    """Latest close price for an arbitrary set of tickers.
 
-    Used by outcome tracking (a handful of aging past picks, not the daily
-    universe scan) - a single lightweight download, no caching, no retries.
-    Symbols that fail to return usable data are simply absent from the dict.
+    Used by outcome tracking - every distinct ticker ever picked, fetched
+    fresh each run for the all-time mark-to-market plus any 5d/30d
+    thresholds coming due. A single batched download, no caching, no
+    retries. Symbols that fail to return usable data are simply absent
+    from the dict.
     """
     import yfinance as yf
 
