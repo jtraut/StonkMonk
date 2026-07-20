@@ -77,11 +77,11 @@ SIGNAL_WEIGHTS = {
 
 # --- Selection -------------------------------------------------------------
 
-BUY_COUNT = 5
-SELL_COUNT_MAX = 5
+BUY_COUNT = 3
+SELL_COUNT_MAX = 3
 
 # A caution pick must be at least this bearish (composite on the 0-100 scale,
-# where 50 is neutral). This is what makes "up to 5" real: a day with no
+# where 50 is neutral). This is what makes "up to 3" real: a day with no
 # strongly bearish names returns fewer — or zero — cautions.
 CAUTION_MAX_SCORE = 38  # composite must be <= this to qualify as caution
 BUY_MIN_SCORE = 55      # a buy finalist should be at least mildly bullish

@@ -50,8 +50,10 @@ brokerage account.** Informational only.
   reliable at this scale). Outcomes are tracked separately by track
   (algorithmic vs. AI) and shown on a Scoreboard view — a live, honest
   comparison, not a claim that either approach wins.
-- **Pick counts:** 5 buy, up to 5 caution/sell (0–5, config constant), plus
-  up to 3 AI conviction picks when a key is available.
+- **Pick counts:** 3 buy, up to 3 caution/sell (0–3, config constant), plus
+  up to 3 AI conviction picks when a key is available — kept equal across
+  all three so the Scoreboard's algo-vs-AI comparison isn't skewed by one
+  track simply having far more picks than the other.
 - **Sell framing:** "Caution / Consider Trimming," not "sell" — the app
   doesn't know what you actually own.
 - **Storage:** Daily picks as committed JSON (`data/picks/YYYY-MM-DD.json` +
@@ -104,8 +106,8 @@ brokerage account.** Informational only.
 3. Signal computation (deterministic, no AI) → trend, momentum, volume
    surge, 52-week range position, earnings surprise where available →
    composite bullish/bearish score.
-4. Selection → top 5 bullish → buy list. Bearish names clearing a minimum
-   threshold, up to 5 → caution list (can be fewer or zero).
+4. Selection → top 3 bullish → buy list. Bearish names clearing a minimum
+   threshold, up to 3 → caution list (can be fewer or zero).
 5. LLM reasoning pass → finalists only, blurb grounded strictly in computed
    signals.
 6. (Phase 2, key-gated) AI conviction pick pass → full shortlist + news

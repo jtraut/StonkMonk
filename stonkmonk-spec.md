@@ -75,8 +75,10 @@ not a Phase 1 shortcut.
   algo-only, same as Phase 1. See the AI conviction picks section below for
   the full design — the point is to run algo and AI as two honestly-tracked
   parallel tracks, not to replace the scoring engine with a model.
-- **Default pick counts:** 5 buy picks, up to 5 sell/caution picks (0–5,
-  varies by day), plus up to 3 AI conviction picks when a key is available.
+- **Default pick counts:** 3 buy picks, up to 3 sell/caution picks (0–3,
+  varies by day), plus up to 3 AI conviction picks when a key is available —
+  kept equal across tracks so the Scoreboard's algo-vs-AI comparison isn't
+  skewed by one track accumulating far more picks than the other over time.
   All three numbers are config constants, not hardcoded — trivial to change.
 - **Sell framing:** Because there's no brokerage connection, the app has no
   idea what you actually own. "Sell" candidates are framed as **"Caution /
@@ -200,7 +202,7 @@ not a Phase 1 shortcut.
 
 ## Frontend (React + Vite + TS + Tailwind, static)
 
-- **Today view** — Buy cards (up to 5) and Caution cards (0–5), each with
+- **Today view** — Buy cards (up to 3) and Caution cards (0–3), each with
   ticker, price at pick time, sector, one-line reasoning, expandable detail
   (the underlying signal values), and an "Add to Watchlist" action. AI
   conviction picks (Phase 2, 0–3, only when a key was available that day)
