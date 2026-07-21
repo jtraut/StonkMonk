@@ -1,0 +1,1080 @@
+{
+  "date": "2026-07-16",
+  "generated_at": "2026-07-16T16:07:21.431939+00:00",
+  "universe_size": 1448,
+  "universe_coverage": 0.9993,
+  "buys": [
+    {
+      "ticker": "GPRE",
+      "name": "Green Plains, Inc. - Common Stock",
+      "sector": "Basic Materials",
+      "action": "buy",
+      "price_at_pick": 17.55,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.7665423694797988,
+        "volume_surge": 0.0,
+        "range_position": 0.872029111649328,
+        "earnings_surprise": 1.0
+      },
+      "composite_score": 88.3,
+      "reasoning": "GPRE shows strong bullish signals across multiple technical measures, with perfect scores on both trend and earnings surprise indicating upward price movement and better-than-expected financial results. The stock is positioned in the upper half of its 52-week range and has solid momentum, suggesting continued strength, though volume remains neutral and offers no additional confirmation. The composite score of 88.3 reflects these predominantly positive indicators concentrated in price action and earnings performance."
+    },
+    {
+      "ticker": "CMPR",
+      "name": "Cimpress plc - Ordinary Shares",
+      "sector": "Industrials",
+      "action": "buy",
+      "price_at_pick": 105.13,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.729953625463007,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": null
+      },
+      "composite_score": 87.9,
+      "reasoning": "CMPR is showing strong bullish signals across multiple technical measures. The stock is trading at the top of its 52-week range with a clear uptrend in place, and momentum indicators are solidly positive, suggesting continued buying interest. Volume is neutral, which means the price moves are occurring without exceptional trading activity to reinforce the move."
+    },
+    {
+      "ticker": "ELVN",
+      "name": "Enliven Therapeutics, Inc.  - Common Stock",
+      "sector": "Healthcare",
+      "action": "buy",
+      "price_at_pick": 51.58,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.664488902706668,
+        "volume_surge": -0.0,
+        "range_position": 0.9166228771622063,
+        "earnings_surprise": 1.0
+      },
+      "composite_score": 87.5,
+      "reasoning": "ELVN shows strong bullish signals across multiple technical indicators, with perfect scores on trend and earnings surprise suggesting both upward price momentum and better-than-expected financial performance. The stock is positioned near its 52-week highs and maintains solid positive momentum, indicating sustained buying interest. Volume is neutral, which means the strength in other metrics is not yet accompanied by exceptional trading activity."
+    },
+    {
+      "ticker": "MBX",
+      "name": "MBX Biosciences, Inc. - Common Stock",
+      "sector": "Healthcare",
+      "action": "buy",
+      "price_at_pick": 60.01,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.7428898146082585,
+        "volume_surge": -0.0,
+        "range_position": 0.7963012295352592,
+        "earnings_surprise": 1.0
+      },
+      "composite_score": 87.2,
+      "reasoning": "MBX is showing strong bullish signals across multiple technical measures, with perfect scores on both trend and earnings surprise indicating upward price movement and better-than-expected financial results. The stock is trading in the upper half of its 52-week range and has solid momentum behind it, suggesting sustained buying interest. Volume is neutral, which means the price moves are happening without unusual trading activity to confirm them, but the overall composite score of 87.2 reflects predominantly positive technical conditions."
+    },
+    {
+      "ticker": "TXG",
+      "name": "10x Genomics, Inc. - Common Stock",
+      "sector": "Healthcare",
+      "action": "buy",
+      "price_at_pick": 43.19,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.7272811145110007,
+        "volume_surge": -0.0,
+        "range_position": 0.8487663579364138,
+        "earnings_surprise": null
+      },
+      "composite_score": 86.2,
+      "reasoning": "10x Genomics shows strong bullish signals across multiple technical measures. The stock is in a solid uptrend with solid momentum, and it's trading in the upper half of its 52-week range, suggesting sustained strength. Volume is neutral, but the combination of trend, momentum, and price position relative to the year's range points to continued upward movement."
+    }
+  ],
+  "cautions": [
+    {
+      "ticker": "HTZ",
+      "name": "Hertz Global Holdings, Inc - Common Stock",
+      "sector": "Industrials",
+      "action": "caution",
+      "price_at_pick": 1.91,
+      "signals": {
+        "trend": -1.0,
+        "momentum": -0.9446203251825338,
+        "volume_surge": 0.0,
+        "range_position": -0.9736738364343689,
+        "earnings_surprise": -1.0
+      },
+      "composite_score": 8.5,
+      "reasoning": "HTZ is showing broad weakness across nearly all measured dimensions. The stock is trading near its 52-week lows with deteriorating trend and momentum, while recent earnings have disappointed expectations, and volume offers no offsetting support for a reversal. These converging signals suggest the stock remains under pressure with few technical bright spots."
+    },
+    {
+      "ticker": "LENZ",
+      "name": "LENZ Therapeutics, Inc. - Common Stock",
+      "sector": "Healthcare",
+      "action": "caution",
+      "price_at_pick": 4.74,
+      "signals": {
+        "trend": -1.0,
+        "momentum": -0.8447950054970178,
+        "volume_surge": -0.0,
+        "range_position": -1.0,
+        "earnings_surprise": -1.0
+      },
+      "composite_score": 9.4,
+      "reasoning": "LENZ is showing weakness across nearly all technical measures, with price trending downward at the bottom of its 52-week range and momentum deteriorating sharply. The stock has also disappointed on earnings, and while trading volume is neutral, the combination of negative trend, weak momentum, and poor earnings results creates a cautionary picture. The composite score of 9.4 reflects how consistently the signals point in a bearish direction."
+    },
+    {
+      "ticker": "TMC",
+      "name": "TMC the metals company Inc. - Common Stock",
+      "sector": "Basic Materials",
+      "action": "caution",
+      "price_at_pick": 3.83,
+      "signals": {
+        "trend": -1.0,
+        "momentum": -0.7616941727464291,
+        "volume_surge": -0.0,
+        "range_position": -1.0,
+        "earnings_surprise": -1.0
+      },
+      "composite_score": 10.5,
+      "reasoning": "TMC is showing weakness across nearly all measured dimensions, with the stock in a clear downtrend and momentum deteriorating sharply. The company sits near its 52-week lows and recently missed earnings expectations, while trading volume offers no offsetting support. These combined signals suggest the stock lacks positive catalysts at present."
+    },
+    {
+      "ticker": "SENS",
+      "name": "Senseonics Holdings, Inc. - Common Stock",
+      "sector": "Healthcare",
+      "action": "caution",
+      "price_at_pick": 5.07,
+      "signals": {
+        "trend": -1.0,
+        "momentum": -0.7174066772254108,
+        "volume_surge": -0.0,
+        "range_position": -0.9775449683117453,
+        "earnings_surprise": -1.0
+      },
+      "composite_score": 11.3,
+      "reasoning": "SENS is showing broad weakness across multiple technical measures, with its trend and 52-week range position both deeply negative, indicating the stock is near its lows and moving downward. Momentum has deteriorated significantly and earnings have disappointed relative to expectations, while volume offers no offsetting support for a reversal. The combination of these signals suggests the stock lacks near-term bullish drivers and remains under pressure."
+    },
+    {
+      "ticker": "CCOI",
+      "name": "Cogent Communications Holdings, Inc. - Common Stock",
+      "sector": "Communication Services",
+      "action": "caution",
+      "price_at_pick": 12.15,
+      "signals": {
+        "trend": -1.0,
+        "momentum": -0.6705749869851548,
+        "volume_surge": -0.0,
+        "range_position": -0.9752829176088273,
+        "earnings_surprise": -1.0
+      },
+      "composite_score": 11.9,
+      "reasoning": "CCOI is showing broad weakness across nearly all technical measures, with a downtrend firmly in place and the stock trading near its 52-week lows. Momentum has deteriorated significantly, and earnings have missed expectations, while volume offers no offsetting support. The composite score of 11.9 reflects these converging headwinds across trend, valuation position, and fundamental performance."
+    }
+  ],
+  "ai_picks": [
+    {
+      "ticker": "OTTR",
+      "name": "Otter Tail Corporation - Common Stock",
+      "sector": "Industrials",
+      "action": "buy",
+      "ai_pick": true,
+      "price_at_pick": 92.33,
+      "signals": {
+        "trend": 0.9625630472432114,
+        "momentum": 0.324050677077426,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": 0.9680451127819542
+      },
+      "composite_score": null,
+      "reasoning": "Otter Tail shows exceptional earnings surprise (0.97) and strong trend (0.96) with a perfect range position (1.0), indicating genuine fundamental outperformance. Recent headlines confirm Q1 earnings beat analyst forecasts with analysts updating models upward\u2014this is real earnings momentum, not just technical noise.",
+      "news_context": [
+        "Earnings Beat: Otter Tail Corporation Just Beat Analyst Forecasts, And Analysts Have Been Updating Their Models",
+        "Otter Tail (OTTR) Q1 2026 Earnings Transcript",
+        "Otter Tail Q1 Earnings Call Highlights"
+      ]
+    },
+    {
+      "ticker": "ANGO",
+      "name": "AngioDynamics, Inc. - Common Stock",
+      "sector": "Healthcare",
+      "action": "buy",
+      "ai_pick": true,
+      "price_at_pick": 14.99,
+      "signals": {
+        "trend": 0.964146389657131,
+        "momentum": 0.9475134878980276,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -1.0
+      },
+      "composite_score": null,
+      "reasoning": "AngioDynamics delivered Q4 earnings beat with gross margin expansion and strong revenue growth, backed by excellent trend (0.96) and momentum (0.95) signals. Despite the -1.0 earnings surprise signal (likely a data artifact given the positive headlines), the actual reported results show genuine operational strength.",
+      "news_context": [
+        "AngioDynamics Q4 Earnings Beat Estimates, Gross Margin Expands",
+        "AngioDynamics Inc (ANGO) Q4 2026 Earnings Call Highlights: Strong Revenue Growth Amidst Challenges",
+        "AngioDynamics Q4 Earnings Call Highlights"
+      ]
+    },
+    {
+      "ticker": "PGNY",
+      "name": "Progyny, Inc. - Common Stock",
+      "sector": "Healthcare",
+      "action": "buy",
+      "ai_pick": true,
+      "price_at_pick": 32.4,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 1.0,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.8559073578937536
+      },
+      "composite_score": null,
+      "reasoning": "Progyny shows perfect momentum (1.0) and range position (1.0) with fresh analyst upgrades suggesting 50% undervaluation. The negative earnings surprise signal appears contradicted by rising analyst optimism on employer-demand trends, indicating the market may be repricing the stock higher based on forward guidance rather than trailing results.",
+      "news_context": [
+        "Progyny (PGNY) Stock May Be 50% Undervalued On Fresh Analyst Upgrades",
+        "Does Rising Analyst Optimism On June Trends Reframe Progyny\u2019s (PGNY) Employer-Demand Story?",
+        "Stocks making big moves yesterday: RXO, Progyny, Cigna, GoodRx, and Domino's"
+      ]
+    }
+  ],
+  "shortlist": [
+    {
+      "ticker": "GPRE",
+      "name": "Green Plains, Inc. - Common Stock",
+      "sector": "Basic Materials",
+      "price_at_pick": 17.55,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.7665423694797988,
+        "volume_surge": 0.0,
+        "range_position": 0.872029111649328,
+        "earnings_surprise": 1.0
+      },
+      "composite_score": 88.3
+    },
+    {
+      "ticker": "CMPR",
+      "name": "Cimpress plc - Ordinary Shares",
+      "sector": "Industrials",
+      "price_at_pick": 105.13,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.729953625463007,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": null
+      },
+      "composite_score": 87.9
+    },
+    {
+      "ticker": "ELVN",
+      "name": "Enliven Therapeutics, Inc.  - Common Stock",
+      "sector": "Healthcare",
+      "price_at_pick": 51.58,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.664488902706668,
+        "volume_surge": -0.0,
+        "range_position": 0.9166228771622063,
+        "earnings_surprise": 1.0
+      },
+      "composite_score": 87.5
+    },
+    {
+      "ticker": "MBX",
+      "name": "MBX Biosciences, Inc. - Common Stock",
+      "sector": "Healthcare",
+      "price_at_pick": 60.01,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.7428898146082585,
+        "volume_surge": -0.0,
+        "range_position": 0.7963012295352592,
+        "earnings_surprise": 1.0
+      },
+      "composite_score": 87.2
+    },
+    {
+      "ticker": "TXG",
+      "name": "10x Genomics, Inc. - Common Stock",
+      "sector": "Healthcare",
+      "price_at_pick": 43.19,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.7272811145110007,
+        "volume_surge": -0.0,
+        "range_position": 0.8487663579364138,
+        "earnings_surprise": null
+      },
+      "composite_score": 86.2
+    },
+    {
+      "ticker": "ACRS",
+      "name": "Aclaris Therapeutics, Inc. - Common Stock",
+      "sector": "Healthcare",
+      "price_at_pick": 5.41,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.5992957522268625,
+        "volume_surge": -0.0,
+        "range_position": 0.8588516403910955,
+        "earnings_surprise": 1.0
+      },
+      "composite_score": 86.1
+    },
+    {
+      "ticker": "LILAK",
+      "name": "Liberty Latin America Ltd. - Class C Common Stock",
+      "sector": "Communication Services",
+      "price_at_pick": 7.51,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.7246611810715962,
+        "volume_surge": 0.0,
+        "range_position": 0.7870402877980323,
+        "earnings_surprise": null
+      },
+      "composite_score": 85.5
+    },
+    {
+      "ticker": "GLUE",
+      "name": "Monte Rosa Therapeutics, Inc. - Common Stock",
+      "sector": "Healthcare",
+      "price_at_pick": 23.07,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.5827068587523868,
+        "volume_surge": -0.0,
+        "range_position": 0.7878788036146336,
+        "earnings_surprise": 1.0
+      },
+      "composite_score": 85.2
+    },
+    {
+      "ticker": "NEOG",
+      "name": "Neogen Corporation - Common Stock",
+      "sector": "Healthcare",
+      "price_at_pick": 10.35,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.6469587636697605,
+        "volume_surge": 0.0,
+        "range_position": 0.7080837106212268,
+        "earnings_surprise": 1.0
+      },
+      "composite_score": 85.2
+    },
+    {
+      "ticker": "WABC",
+      "name": "Westamerica Bancorporation - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 61.46,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.5797747689069455,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": 0.5346985210466447
+      },
+      "composite_score": 84.9
+    },
+    {
+      "ticker": "CTBI",
+      "name": "Community Trust Bancorp, Inc. - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 77.36,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.8320878355159927,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.13387236553674875
+      },
+      "composite_score": 84.7
+    },
+    {
+      "ticker": "IMOS",
+      "name": "ChipMOS TECHNOLOGIES INC. - American Depositary Shares",
+      "sector": "Technology",
+      "price_at_pick": 72.36,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.5899862470318683,
+        "volume_surge": 0.0,
+        "range_position": 0.8873473759260948,
+        "earnings_surprise": null
+      },
+      "composite_score": 84.7
+    },
+    {
+      "ticker": "TCBK",
+      "name": "TriCo Bancshares - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 61.18,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.8933291906042523,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.2839526354202885
+      },
+      "composite_score": 84.7
+    },
+    {
+      "ticker": "AGNC",
+      "name": "AGNC Investment Corp. - Common Stock",
+      "sector": "Real Estate",
+      "price_at_pick": 11.41,
+      "signals": {
+        "trend": 0.924821404616848,
+        "momentum": 0.6415213078792892,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": 0.4759104184349291
+      },
+      "composite_score": 84.3
+    },
+    {
+      "ticker": "RUSHB",
+      "name": "Rush Enterprises, Inc. - Class B Common Stock",
+      "sector": "Consumer Cyclical",
+      "price_at_pick": 77.47,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.5001206975078389,
+        "volume_surge": 0.0,
+        "range_position": 0.9501522539119098,
+        "earnings_surprise": null
+      },
+      "composite_score": 84.2
+    },
+    {
+      "ticker": "GOOD",
+      "name": "Gladstone Commercial Corporation - Real Estate Investment Trust",
+      "sector": "Real Estate",
+      "price_at_pick": 12.97,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.44516443405879036,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": null
+      },
+      "composite_score": 84.0
+    },
+    {
+      "ticker": "FDUS",
+      "name": "Fidus Investment Corporation - Closed End Fund",
+      "sector": "Financial Services",
+      "price_at_pick": 20.26,
+      "signals": {
+        "trend": 0.8653039365828668,
+        "momentum": 0.5841488210154661,
+        "volume_surge": -0.0,
+        "range_position": 0.9189920736626382,
+        "earnings_surprise": 0.8578745198463519
+      },
+      "composite_score": 83.8
+    },
+    {
+      "ticker": "CARE",
+      "name": "Carter Bankshares, Inc. - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 32.78,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.45776491723855756,
+        "volume_surge": 0.0,
+        "range_position": 0.7956458769474042,
+        "earnings_surprise": 1.0
+      },
+      "composite_score": 83.7
+    },
+    {
+      "ticker": "GSBC",
+      "name": "Great Southern Bancorp, Inc. - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 79.99,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.5137629149663595,
+        "volume_surge": 0.30929449285853616,
+        "range_position": 0.912090853877521,
+        "earnings_surprise": 0.16814159292035352
+      },
+      "composite_score": 83.7
+    },
+    {
+      "ticker": "ITIC",
+      "name": "Investors Title Company - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 281.7,
+      "signals": {
+        "trend": 0.8291604087657733,
+        "momentum": 0.625758510824446,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": null
+      },
+      "composite_score": 83.6
+    },
+    {
+      "ticker": "ECPG",
+      "name": "Encore Capital Group Inc - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 91.34,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.4769544989952077,
+        "volume_surge": 0.0,
+        "range_position": 0.915254078499899,
+        "earnings_surprise": null
+      },
+      "composite_score": 83.5
+    },
+    {
+      "ticker": "SYRE",
+      "name": "Spyre Therapeutics, Inc. - Common Stock",
+      "sector": "Healthcare",
+      "price_at_pick": 95.53,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.5631007288832294,
+        "volume_surge": -0.0,
+        "range_position": 0.8499713886774714,
+        "earnings_surprise": 0.5816863726590152
+      },
+      "composite_score": 83.4
+    },
+    {
+      "ticker": "TRST",
+      "name": "TrustCo Bank Corp NY - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 55.78,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.40836465053032805,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": null
+      },
+      "composite_score": 83.4
+    },
+    {
+      "ticker": "OTTR",
+      "name": "Otter Tail Corporation - Common Stock",
+      "sector": "Industrials",
+      "price_at_pick": 92.33,
+      "signals": {
+        "trend": 0.9625630472432114,
+        "momentum": 0.324050677077426,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": 0.9680451127819542
+      },
+      "composite_score": 83.3
+    },
+    {
+      "ticker": "HTO",
+      "name": "H2O America  - Common Stock",
+      "sector": "Utilities",
+      "price_at_pick": 63.36,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.6734767199353835,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.04469285892932856
+      },
+      "composite_score": 83.2
+    },
+    {
+      "ticker": "PGNY",
+      "name": "Progyny, Inc. - Common Stock",
+      "sector": "Healthcare",
+      "price_at_pick": 32.4,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 1.0,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.8559073578937536
+      },
+      "composite_score": 83.2
+    },
+    {
+      "ticker": "FFBC",
+      "name": "First Financial Bancorp. - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 36.06,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.8161674316611931,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.5102726435476667
+      },
+      "composite_score": 82.7
+    },
+    {
+      "ticker": "CTNM",
+      "name": "Contineum Therapeutics, Inc. - Common stock",
+      "sector": "Healthcare",
+      "price_at_pick": 14.4,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.49257269425495115,
+        "volume_surge": -0.0,
+        "range_position": 0.6823249973386716,
+        "earnings_surprise": 0.921297036306213
+      },
+      "composite_score": 82.6
+    },
+    {
+      "ticker": "CLMT",
+      "name": "Calumet, Inc - Common Stock",
+      "sector": "Basic Materials",
+      "price_at_pick": 41.64,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 1.0,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -1.0
+      },
+      "composite_score": 82.5
+    },
+    {
+      "ticker": "VCTR",
+      "name": "Victory Capital Holdings, Inc. - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 100.69,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.9287570484509031,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.817955001498469
+      },
+      "composite_score": 82.5
+    },
+    {
+      "ticker": "CLBK",
+      "name": "Columbia Financial, Inc. - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 22.67,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.7998980439551793,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.5128205128205133
+      },
+      "composite_score": 82.4
+    },
+    {
+      "ticker": "FA",
+      "name": "First Advantage Corporation - Common Stock",
+      "sector": "Industrials",
+      "price_at_pick": 22.44,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.9954418427573979,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -1.0
+      },
+      "composite_score": 82.4
+    },
+    {
+      "ticker": "NBTB",
+      "name": "NBT Bancorp Inc. - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 53.03,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.8542294880814858,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.6622090837709717
+      },
+      "composite_score": 82.4
+    },
+    {
+      "ticker": "MSBI",
+      "name": "Midland States Bancorp, Inc. - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 31.72,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.5363254565773758,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": 0.09860050890585145
+      },
+      "composite_score": 82.2
+    },
+    {
+      "ticker": "CCBG",
+      "name": "Capital City Bank Group - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 51.18,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.6332110484715783,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.17240487514054034
+      },
+      "composite_score": 82.1
+    },
+    {
+      "ticker": "IMKTA",
+      "name": "Ingles Markets, Incorporated - Class A Common Stock",
+      "sector": "Consumer Defensive",
+      "price_at_pick": 93.27,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.38988187927085527,
+        "volume_surge": 0.0,
+        "range_position": 0.9004997120945659,
+        "earnings_surprise": null
+      },
+      "composite_score": 82.1
+    },
+    {
+      "ticker": "RBCAA",
+      "name": "Republic Bancorp, Inc. - Class A Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 92.21,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.5818886041329165,
+        "volume_surge": 0.0,
+        "range_position": 0.9590835025661346,
+        "earnings_surprise": 0.045317220543807026
+      },
+      "composite_score": 82.1
+    },
+    {
+      "ticker": "KELYA",
+      "name": "Kelly Services, Inc. - Class A Common Stock",
+      "sector": "Industrials",
+      "price_at_pick": 15.3,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.9607348229826391,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -1.0
+      },
+      "composite_score": 82.0
+    },
+    {
+      "ticker": "PNTG",
+      "name": "The Pennant Group, Inc. - Common Stock",
+      "sector": "Healthcare",
+      "price_at_pick": 42.01,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.9351390830902557,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -1.0
+      },
+      "composite_score": 81.7
+    },
+    {
+      "ticker": "IBOC",
+      "name": "International Bancshares Corporation - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 77.65,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.29491885073348256,
+        "volume_surge": 0.0,
+        "range_position": 0.977393047667168,
+        "earnings_surprise": null
+      },
+      "composite_score": 81.6
+    },
+    {
+      "ticker": "RRBI",
+      "name": "Red River Bancshares, Inc. - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 100.0,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.7002122109934773,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.43764532269351275
+      },
+      "composite_score": 81.6
+    },
+    {
+      "ticker": "SRCE",
+      "name": "1st Source Corporation - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 84.44,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.6489553496529183,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.3178461490293415
+      },
+      "composite_score": 81.5
+    },
+    {
+      "ticker": "ALMS",
+      "name": "Alumis Inc. - Common Stock",
+      "sector": "Healthcare",
+      "price_at_pick": 27.91,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.5845816619996217,
+        "volume_surge": -0.0,
+        "range_position": 0.822897409993274,
+        "earnings_surprise": 0.17603249830737996
+      },
+      "composite_score": 81.4
+    },
+    {
+      "ticker": "PFBC",
+      "name": "Preferred Bank - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 109.27,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.7065221315530814,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.4873710423336891
+      },
+      "composite_score": 81.4
+    },
+    {
+      "ticker": "ANGO",
+      "name": "AngioDynamics, Inc. - Common Stock",
+      "sector": "Healthcare",
+      "price_at_pick": 14.99,
+      "signals": {
+        "trend": 0.964146389657131,
+        "momentum": 0.9475134878980276,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -1.0
+      },
+      "composite_score": 81.3
+    },
+    {
+      "ticker": "HBT",
+      "name": "HBT Financial, Inc. - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 33.31,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.6810949614124957,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.44718081659105613
+      },
+      "composite_score": 81.3
+    },
+    {
+      "ticker": "IMVT",
+      "name": "Immunovant, Inc.  - Common Stock",
+      "sector": "Healthcare",
+      "price_at_pick": 39.16,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.6299909475767466,
+        "volume_surge": -0.0,
+        "range_position": 0.8537878588375643,
+        "earnings_surprise": -0.03160452478287206
+      },
+      "composite_score": 81.3
+    },
+    {
+      "ticker": "STBA",
+      "name": "S&T Bancorp, Inc. - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 50.72,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.5771532771097792,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.19101851196421973
+      },
+      "composite_score": 81.3
+    },
+    {
+      "ticker": "TRIN",
+      "name": "Trinity Capital Inc. - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 17.71,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.46764909276204514,
+        "volume_surge": -0.0,
+        "range_position": 0.9928004697741988,
+        "earnings_surprise": 0.08525617842073499
+      },
+      "composite_score": 81.2
+    },
+    {
+      "ticker": "FBNC",
+      "name": "First Bancorp - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 65.54,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.5522293199299163,
+        "volume_surge": 0.32459479289345544,
+        "range_position": 1.0,
+        "earnings_surprise": -0.6479156202913103
+      },
+      "composite_score": 81.1
+    },
+    {
+      "ticker": "HST",
+      "name": "Host Hotels & Resorts, Inc. - Common Stock",
+      "sector": "Real Estate",
+      "price_at_pick": 23.83,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.144178667491855,
+        "volume_surge": 0.0,
+        "range_position": 0.9252487307524742,
+        "earnings_surprise": 1.0
+      },
+      "composite_score": 81.1
+    },
+    {
+      "ticker": "CGON",
+      "name": "CG Oncology, Inc. - Common stock",
+      "sector": "Healthcare",
+      "price_at_pick": 69.27,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.4819966237755056,
+        "volume_surge": -0.0,
+        "range_position": 0.7672287188298432,
+        "earnings_surprise": 0.4462499460268579
+      },
+      "composite_score": 80.9
+    },
+    {
+      "ticker": "TFSL",
+      "name": "TFS Financial Corporation - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 18.45,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.8475546290650842,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.9459459459459453
+      },
+      "composite_score": 80.9
+    },
+    {
+      "ticker": "ZION",
+      "name": "Zions Bancorporation N.A. - Common Stock",
+      "sector": "Financial Services",
+      "price_at_pick": 73.0,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.6562089707038388,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.4608996721848159
+      },
+      "composite_score": 80.9
+    },
+    {
+      "ticker": "ACIW",
+      "name": "ACI Worldwide, Inc. - Common Stock",
+      "sector": "Technology",
+      "price_at_pick": 58.51,
+      "signals": {
+        "trend": 0.8572102768764125,
+        "momentum": 0.9711828674677898,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.8420052083333331
+      },
+      "composite_score": 80.8
+    },
+    {
+      "ticker": "ASND",
+      "name": "Ascendis Pharma A/S - Ordinary Share",
+      "sector": "Healthcare",
+      "price_at_pick": 264.36,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.5818934946659677,
+        "volume_surge": -0.0,
+        "range_position": 0.7747236371082649,
+        "earnings_surprise": 0.15239655274328198
+      },
+      "composite_score": 80.8
+    },
+    {
+      "ticker": "LFST",
+      "name": "LifeStance Health Group, Inc. - Common Stock",
+      "sector": "Healthcare",
+      "price_at_pick": 11.41,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.862455690344621,
+        "volume_surge": 0.0,
+        "range_position": 0.9960732087307131,
+        "earnings_surprise": -1.0
+      },
+      "composite_score": 80.7
+    },
+    {
+      "ticker": "SWBI",
+      "name": "Smith & Wesson Brands, Inc. - Common Stock",
+      "sector": "Industrials",
+      "price_at_pick": 15.15,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.29399035457191813,
+        "volume_surge": 0.0,
+        "range_position": 0.6983076084145476,
+        "earnings_surprise": 1.0
+      },
+      "composite_score": 80.7
+    },
+    {
+      "ticker": "EWTX",
+      "name": "Edgewise Therapeutics, Inc. - Common Stock",
+      "sector": "Healthcare",
+      "price_at_pick": 39.55,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.43879535036923817,
+        "volume_surge": -0.0,
+        "range_position": 0.5065881867792232,
+        "earnings_surprise": 1.0
+      },
+      "composite_score": 80.6
+    },
+    {
+      "ticker": "IART",
+      "name": "Integra LifeSciences Holdings Corporation - Common Stock",
+      "sector": "Healthcare",
+      "price_at_pick": 19.83,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.7040355393807587,
+        "volume_surge": 0.0,
+        "range_position": 1.0,
+        "earnings_surprise": -0.641943900100465
+      },
+      "composite_score": 80.6
+    }
+  ]
+}
