@@ -3,8 +3,8 @@ import type { Track, TrackPerformance } from "../lib/types";
 import { fetchTrackPerformance } from "../lib/api";
 
 const TRACK_LABELS: Record<Track, string> = {
-  buy: "Buy",
-  caution: "Caution",
+  buy: "Buy (Algo)",
+  caution: "Sell (Caution)",
   ai: "AI Conviction",
 };
 
