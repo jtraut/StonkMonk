@@ -3,13 +3,23 @@ import type { Track, TrackPerformance } from "../lib/types";
 import { fetchTrackPerformance } from "../lib/api";
 
 const TRACK_LABELS: Record<Track, string> = {
-  algorithmic: "Algorithmic",
+  buy: "Buy",
+  caution: "Caution",
   ai: "AI Conviction",
 };
 
 const TRACK_ACCENT: Record<Track, string> = {
-  algorithmic: "text-blue-700 dark:text-blue-400",
+  buy: "text-blue-700 dark:text-blue-400",
+  caution: "text-amber-700 dark:text-amber-400",
   ai: "text-violet-700 dark:text-violet-400",
+};
+
+// Buy and AI picks are bullish calls (win = price rose); caution picks are
+// bearish calls (win = price fell) - see scanner/outcomes.py _aggregate.
+const WIN_RATE_LABEL: Record<Track, string> = {
+  buy: "Win rate (price rose)",
+  caution: "Win rate (price fell)",
+  ai: "Win rate (price rose)",
 };
 
 function fmtPct(value: number | null): string {
@@ -43,7 +53,7 @@ function TrackCard({ perf }: { perf: TrackPerformance }) {
           <dt className="text-gray-500 dark:text-gray-400">All-time return</dt>
           <dd className="text-gray-900 dark:text-gray-100">{fmtPct(perf.avg_return_all_time)}</dd>
 
-          <dt className="text-gray-500 dark:text-gray-400">Win rate</dt>
+          <dt className="text-gray-500 dark:text-gray-400">{WIN_RATE_LABEL[perf.track]}</dt>
           <dd className="text-gray-900 dark:text-gray-100">
             {perf.win_rate === null ? "n/a" : `${(perf.win_rate * 100).toFixed(0)}%`}
           </dd>
@@ -84,9 +94,10 @@ export function ScoreboardView() {
     <div className="space-y-4">
       <p className="text-xs text-gray-500 dark:text-gray-400">
         Unrealized/paper performance only — not investment advice. This is an ongoing, honest
-        comparison between the two tracks, not a claim that either approach "wins."
+        comparison between Buy, Caution, and AI Conviction picks, not a claim that any approach
+        "wins." Caution picks are bearish calls, so a negative return there is the good outcome.
       </p>
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-3">
         {performance.map((perf) => (
           <TrackCard key={perf.track} perf={perf} />
         ))}

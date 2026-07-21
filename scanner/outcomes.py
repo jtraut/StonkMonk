@@ -2,8 +2,10 @@
 
 Runs best-effort at the end of the daily scan: walks every past pick still
 recent enough to have a 5- or 30-business-day return outstanding, records it
-once (never recomputed), and aggregates both tracks into a small performance
-summary for the Scoreboard view. Clearly unrealized/paper performance - see
+once (never recomputed), and aggregates the ledger into three Scoreboard
+cards - Buy, Caution, and AI Conviction. Buy and Caution both come from the
+"algorithmic" ledger track (split by action, since they're opposite bets);
+AI Conviction is its own track. Clearly unrealized/paper performance - see
 CLAUDE.md Compliance notes.
 
 Alongside those fixed-horizon returns, every tracked pick also gets a
@@ -30,7 +32,7 @@ from . import config, data
 
 log = logging.getLogger(__name__)
 
-Track = str  # "algorithmic" | "ai"
+Track = str  # ledger track: "algorithmic" | "ai" (Scoreboard cards further split "algorithmic" into buy/caution)
 
 
 def _today() -> str:
@@ -143,30 +145,58 @@ def load_recent_ai_outcomes(limit: int) -> list[dict]:
     return resolved[:limit]
 
 
-def _aggregate(entries: list[dict], track: Track) -> dict:
-    track_entries = [e for e in entries if e["track"] == track]
+def _aggregate(
+    entries: list[dict],
+    label: str,
+    *,
+    track: Track,
+    action: str | None = None,
+    invert_win: bool = False,
+) -> dict:
+    """Aggregate ledger entries into one Scoreboard card.
+
+    ``label`` is the card identifier (buy / caution / ai), which is not
+    always the same as the ledger's ``track`` field - buy and caution picks
+    both live under the "algorithmic" track but get their own cards, since
+    they're opposite bets and a blended average of the two wouldn't mean
+    much. ``invert_win`` flips win-rate polarity for caution picks: a
+    caution call is a "win" when the price actually fell, not rose.
+    """
+    track_entries = [
+        e for e in entries if e["track"] == track and (action is None or e["action"] == action)
+    ]
     resolved_5d = [e["return_5d"] for e in track_entries if e["return_5d"] is not None]
     resolved_30d = [e["return_30d"] for e in track_entries if e["return_30d"] is not None]
     resolved_all_time = [e["return_all_time"] for e in track_entries if e.get("return_all_time") is not None]
 
+    if resolved_5d:
+        # Win rate is measured at the 5-day horizon, the first one that resolves.
+        wins = sum(1 for r in resolved_5d if (r < 0 if invert_win else r > 0))
+        win_rate = round(wins / len(resolved_5d), 2)
+    else:
+        win_rate = None
+
     return {
-        "track": track,
+        "track": label,
         "picks_count": len(track_entries),
         "avg_return_5d": round(sum(resolved_5d) / len(resolved_5d), 2) if resolved_5d else None,
         "avg_return_30d": round(sum(resolved_30d) / len(resolved_30d), 2) if resolved_30d else None,
         "avg_return_all_time": round(sum(resolved_all_time) / len(resolved_all_time), 2)
         if resolved_all_time
         else None,
-        # Win rate is measured at the 5-day horizon, the first one that resolves.
-        "win_rate": round(sum(1 for r in resolved_5d if r > 0) / len(resolved_5d), 2) if resolved_5d else None,
+        "win_rate": win_rate,
         "since": min((e["pick_date"] for e in track_entries), default=None),
     }
 
 
 def write_track_performance() -> None:
-    """Aggregate the ledger into the Scoreboard's per-track summary."""
+    """Aggregate the ledger into the Scoreboard's three per-card summaries."""
     entries = _load_ledger()
-    summary = [_aggregate(entries, "algorithmic"), _aggregate(entries, "ai")]
+    summary = [
+        _aggregate(entries, "buy", track="algorithmic", action="buy"),
+        _aggregate(entries, "caution", track="algorithmic", action="caution", invert_win=True),
+        _aggregate(entries, "ai", track="ai"),
+    ]
     config.DATA_DIR.mkdir(parents=True, exist_ok=True)
     config.TRACK_PERFORMANCE_FILE.write_text(json.dumps(summary, indent=2), encoding="utf-8")
     log.info("Wrote track performance: %s", {s["track"]: s["picks_count"] for s in summary})

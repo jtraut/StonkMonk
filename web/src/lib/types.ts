@@ -51,7 +51,7 @@ export interface WatchlistItem {
   added_at: string;
 }
 
-export type Track = "algorithmic" | "ai";
+export type Track = "buy" | "caution" | "ai";
 
 export interface TrackPerformance {
   track: Track;
