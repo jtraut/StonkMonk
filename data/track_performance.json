@@ -9,15 +9,6 @@
     "since": "2026-07-03"
   },
   {
-    "track": "caution",
-    "picks_count": 52,
-    "avg_return_5d": -0.71,
-    "avg_return_30d": null,
-    "avg_return_all_time": null,
-    "win_rate": 0.63,
-    "since": "2026-07-03"
-  },
-  {
     "track": "ai",
     "picks_count": 30,
     "avg_return_5d": -7.56,
@@ -25,5 +16,14 @@
     "avg_return_all_time": null,
     "win_rate": 0.2,
     "since": "2026-07-07"
+  },
+  {
+    "track": "caution",
+    "picks_count": 52,
+    "avg_return_5d": -0.71,
+    "avg_return_30d": null,
+    "avg_return_all_time": null,
+    "win_rate": 0.63,
+    "since": "2026-07-03"
   }
 ]

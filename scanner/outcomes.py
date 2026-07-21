@@ -194,8 +194,8 @@ def write_track_performance() -> None:
     entries = _load_ledger()
     summary = [
         _aggregate(entries, "buy", track="algorithmic", action="buy"),
-        _aggregate(entries, "caution", track="algorithmic", action="caution", invert_win=True),
         _aggregate(entries, "ai", track="ai"),
+        _aggregate(entries, "caution", track="algorithmic", action="caution", invert_win=True),
     ]
     config.DATA_DIR.mkdir(parents=True, exist_ok=True)
     config.TRACK_PERFORMANCE_FILE.write_text(json.dumps(summary, indent=2), encoding="utf-8")
