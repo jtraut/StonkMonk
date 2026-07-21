@@ -6,7 +6,8 @@
     "action": "caution",
     "price_at_pick": 3.71,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 0.27
   },
   {
     "ticker": "OTTR",
@@ -15,7 +16,8 @@
     "action": "buy",
     "price_at_pick": 91.75,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -0.47
   },
   {
     "ticker": "METC",
@@ -24,7 +26,8 @@
     "action": "caution",
     "price_at_pick": 11.37,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 0.62
   },
   {
     "ticker": "MBX",
@@ -33,7 +36,8 @@
     "action": "buy",
     "price_at_pick": 61.4,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -2.05
   },
   {
     "ticker": "LENZ",
@@ -42,7 +46,8 @@
     "action": "caution",
     "price_at_pick": 5.03,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -1.39
   },
   {
     "ticker": "HTZ",
@@ -51,7 +56,8 @@
     "action": "caution",
     "price_at_pick": 1.78,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -1.12
   },
   {
     "ticker": "GPRE",
@@ -60,7 +66,8 @@
     "action": "buy",
     "price_at_pick": 17.48,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -3.72
   },
   {
     "ticker": "GLUE",
@@ -69,7 +76,8 @@
     "action": "buy",
     "price_at_pick": 24.3,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -3.37
   },
   {
     "ticker": "ELVN",
@@ -78,7 +86,8 @@
     "action": "buy",
     "price_at_pick": 52.66,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -1.88
   },
   {
     "ticker": "CRNX",
@@ -87,7 +96,8 @@
     "action": "buy",
     "price_at_pick": 83.89,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -0.02
   },
   {
     "ticker": "CLBK",
@@ -96,7 +106,8 @@
     "action": "buy",
     "price_at_pick": 24.14,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 1.49
   },
   {
     "ticker": "BYND",
@@ -105,7 +116,8 @@
     "action": "caution",
     "price_at_pick": 0.58,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 1.72
   },
   {
     "ticker": "ACRS",
@@ -114,7 +126,8 @@
     "action": "buy",
     "price_at_pick": 5.66,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -1.59
   },
   {
     "ticker": "TMC",
@@ -123,7 +136,8 @@
     "action": "caution",
     "price_at_pick": 3.73,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -0.27
   },
   {
     "ticker": "OTTR",
@@ -132,7 +146,8 @@
     "action": "buy",
     "price_at_pick": 93.06,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -1.87
   },
   {
     "ticker": "NFLX",
@@ -141,7 +156,8 @@
     "action": "caution",
     "price_at_pick": 68.6,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -1.46
   },
   {
     "ticker": "MBX",
@@ -150,7 +166,8 @@
     "action": "buy",
     "price_at_pick": 62.03,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -3.05
   },
   {
     "ticker": "ISRG",
@@ -159,7 +176,8 @@
     "action": "caution",
     "price_at_pick": 352.11,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 0.3
   },
   {
     "ticker": "HTZ",
@@ -168,7 +186,8 @@
     "action": "caution",
     "price_at_pick": 1.76,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 0.0
   },
   {
     "ticker": "GPRE",
@@ -177,7 +196,8 @@
     "action": "buy",
     "price_at_pick": 18.81,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -10.53
   },
   {
     "ticker": "GLUE",
@@ -186,7 +206,8 @@
     "action": "buy",
     "price_at_pick": 24.1,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -2.57
   },
   {
     "ticker": "ELVN",
@@ -195,7 +216,8 @@
     "action": "buy",
     "price_at_pick": 52.5,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -1.58
   },
   {
     "ticker": "CRNX",
@@ -204,7 +226,8 @@
     "action": "buy",
     "price_at_pick": 83.9,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -0.04
   },
   {
     "ticker": "CLBK",
@@ -213,7 +236,8 @@
     "action": "buy",
     "price_at_pick": 23.33,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 5.02
   },
   {
     "ticker": "CCOI",
@@ -222,7 +246,8 @@
     "action": "caution",
     "price_at_pick": 11.18,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 10.91
   },
   {
     "ticker": "ACRS",
@@ -231,7 +256,8 @@
     "action": "buy",
     "price_at_pick": 5.54,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 0.54
   },
   {
     "ticker": "TXG",
@@ -240,7 +266,8 @@
     "action": "buy",
     "price_at_pick": 43.19,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 0.07
   },
   {
     "ticker": "TMC",
@@ -249,7 +276,8 @@
     "action": "caution",
     "price_at_pick": 3.83,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -2.87
   },
   {
     "ticker": "SENS",
@@ -258,7 +286,8 @@
     "action": "caution",
     "price_at_pick": 5.07,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 0.79
   },
   {
     "ticker": "PGNY",
@@ -267,7 +296,8 @@
     "action": "buy",
     "price_at_pick": 32.4,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -1.94
   },
   {
     "ticker": "OTTR",
@@ -276,7 +306,8 @@
     "action": "buy",
     "price_at_pick": 92.33,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -1.09
   },
   {
     "ticker": "MBX",
@@ -285,7 +316,8 @@
     "action": "buy",
     "price_at_pick": 60.01,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 0.22
   },
   {
     "ticker": "LENZ",
@@ -294,7 +326,8 @@
     "action": "caution",
     "price_at_pick": 4.74,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 4.64
   },
   {
     "ticker": "HTZ",
@@ -303,7 +336,8 @@
     "action": "caution",
     "price_at_pick": 1.91,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -7.85
   },
   {
     "ticker": "GPRE",
@@ -312,7 +346,8 @@
     "action": "buy",
     "price_at_pick": 17.55,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -4.1
   },
   {
     "ticker": "ELVN",
@@ -321,7 +356,8 @@
     "action": "buy",
     "price_at_pick": 51.58,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 0.17
   },
   {
     "ticker": "CMPR",
@@ -330,7 +366,8 @@
     "action": "buy",
     "price_at_pick": 105.13,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -2.0
   },
   {
     "ticker": "CCOI",
@@ -339,7 +376,8 @@
     "action": "caution",
     "price_at_pick": 12.15,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 2.06
   },
   {
     "ticker": "ANGO",
@@ -348,7 +386,8 @@
     "action": "buy",
     "price_at_pick": 14.99,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -8.54
   },
   {
     "ticker": "TXG",
@@ -357,7 +396,8 @@
     "action": "buy",
     "price_at_pick": 45.48,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -4.97
   },
   {
     "ticker": "TMC",
@@ -366,7 +406,8 @@
     "action": "caution",
     "price_at_pick": 4.0,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -7.0
   },
   {
     "ticker": "SENS",
@@ -375,7 +416,8 @@
     "action": "caution",
     "price_at_pick": 5.1,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 0.2
   },
   {
     "ticker": "OTTR",
@@ -384,7 +426,8 @@
     "action": "buy",
     "price_at_pick": 92.31,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -1.07
   },
   {
     "ticker": "OLED",
@@ -393,7 +436,8 @@
     "action": "caution",
     "price_at_pick": 78.55,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 3.81
   },
   {
     "ticker": "NEOG",
@@ -402,7 +446,8 @@
     "action": "buy",
     "price_at_pick": 10.02,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -0.1
   },
   {
     "ticker": "MBX",
@@ -411,7 +456,8 @@
     "action": "buy",
     "price_at_pick": 59.24,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 1.52
   },
   {
     "ticker": "LENZ",
@@ -420,7 +466,8 @@
     "action": "caution",
     "price_at_pick": 4.87,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 1.85
   },
   {
     "ticker": "HTZ",
@@ -429,7 +476,8 @@
     "action": "caution",
     "price_at_pick": 1.9,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -7.37
   },
   {
     "ticker": "ELVN",
@@ -438,7 +486,8 @@
     "action": "buy",
     "price_at_pick": 51.93,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -0.5
   },
   {
     "ticker": "CMPR",
@@ -447,7 +496,8 @@
     "action": "buy",
     "price_at_pick": 103.13,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -0.1
   },
   {
     "ticker": "CARE",
@@ -456,7 +506,8 @@
     "action": "buy",
     "price_at_pick": 32.47,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 1.66
   },
   {
     "ticker": "ACRS",
@@ -465,7 +516,8 @@
     "action": "buy",
     "price_at_pick": 5.5,
     "return_5d": null,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 1.27
   },
   {
     "ticker": "TXG",
@@ -473,8 +525,9 @@
     "track": "algorithmic",
     "action": "buy",
     "price_at_pick": 44.46,
-    "return_5d": null,
-    "return_30d": null
+    "return_5d": -2.79,
+    "return_30d": null,
+    "return_all_time": -2.79
   },
   {
     "ticker": "SYRE",
@@ -482,8 +535,9 @@
     "track": "algorithmic",
     "action": "buy",
     "price_at_pick": 104.41,
-    "return_5d": null,
-    "return_30d": null
+    "return_5d": -6.78,
+    "return_30d": null,
+    "return_all_time": -6.78
   },
   {
     "ticker": "SHOE",
@@ -491,8 +545,9 @@
     "track": "algorithmic",
     "action": "caution",
     "price_at_pick": 14.6,
-    "return_5d": null,
-    "return_30d": null
+    "return_5d": 1.78,
+    "return_30d": null,
+    "return_all_time": 1.78
   },
   {
     "ticker": "SENS",
@@ -500,8 +555,9 @@
     "track": "algorithmic",
     "action": "caution",
     "price_at_pick": 5.14,
-    "return_5d": null,
-    "return_30d": null
+    "return_5d": -0.58,
+    "return_30d": null,
+    "return_all_time": -0.58
   },
   {
     "ticker": "MBX",
@@ -509,8 +565,9 @@
     "track": "ai",
     "action": "buy",
     "price_at_pick": 55.39,
-    "return_5d": null,
-    "return_30d": null
+    "return_5d": 8.58,
+    "return_30d": null,
+    "return_all_time": 8.58
   },
   {
     "ticker": "LENZ",
@@ -518,8 +575,9 @@
     "track": "algorithmic",
     "action": "caution",
     "price_at_pick": 5.03,
-    "return_5d": null,
-    "return_30d": null
+    "return_5d": -1.39,
+    "return_30d": null,
+    "return_all_time": -1.39
   },
   {
     "ticker": "HTZ",
@@ -527,8 +585,9 @@
     "track": "algorithmic",
     "action": "caution",
     "price_at_pick": 1.85,
-    "return_5d": null,
-    "return_30d": null
+    "return_5d": -4.86,
+    "return_30d": null,
+    "return_all_time": -4.86
   },
   {
     "ticker": "GPRE",
@@ -536,8 +595,9 @@
     "track": "algorithmic",
     "action": "buy",
     "price_at_pick": 17.42,
-    "return_5d": null,
-    "return_30d": null
+    "return_5d": -3.39,
+    "return_30d": null,
+    "return_all_time": -3.39
   },
   {
     "ticker": "GLUE",
@@ -545,8 +605,9 @@
     "track": "ai",
     "action": "buy",
     "price_at_pick": 22.64,
-    "return_5d": null,
-    "return_30d": null
+    "return_5d": 3.71,
+    "return_30d": null,
+    "return_all_time": 3.71
   },
   {
     "ticker": "ELVN",
@@ -554,8 +615,9 @@
     "track": "algorithmic",
     "action": "buy",
     "price_at_pick": 51.45,
-    "return_5d": null,
-    "return_30d": null
+    "return_5d": 0.43,
+    "return_30d": null,
+    "return_all_time": 0.43
   },
   {
     "ticker": "CTNM",
@@ -563,8 +625,9 @@
     "track": "ai",
     "action": "buy",
     "price_at_pick": 14.87,
-    "return_5d": null,
-    "return_30d": null
+    "return_5d": -9.01,
+    "return_30d": null,
+    "return_all_time": -9.01
   },
   {
     "ticker": "CSGP",
@@ -572,8 +635,9 @@
     "track": "algorithmic",
     "action": "caution",
     "price_at_pick": 27.58,
-    "return_5d": null,
-    "return_30d": null
+    "return_5d": 7.61,
+    "return_30d": null,
+    "return_all_time": 7.61
   },
   {
     "ticker": "ACRS",
@@ -581,8 +645,9 @@
     "track": "algorithmic",
     "action": "buy",
     "price_at_pick": 5.51,
-    "return_5d": null,
-    "return_30d": null
+    "return_5d": 1.09,
+    "return_30d": null,
+    "return_all_time": 1.09
   },
   {
     "ticker": "TXG",
@@ -591,7 +656,8 @@
     "action": "buy",
     "price_at_pick": 42.32,
     "return_5d": 1.91,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 2.13
   },
   {
     "ticker": "TMC",
@@ -600,7 +666,8 @@
     "action": "caution",
     "price_at_pick": 3.98,
     "return_5d": -7.04,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -6.53
   },
   {
     "ticker": "TLRY",
@@ -609,7 +676,8 @@
     "action": "caution",
     "price_at_pick": 4.38,
     "return_5d": -2.97,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -3.42
   },
   {
     "ticker": "TCBK",
@@ -618,7 +686,8 @@
     "action": "buy",
     "price_at_pick": 59.63,
     "return_5d": 0.8,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 0.29
   },
   {
     "ticker": "PGNY",
@@ -627,7 +696,8 @@
     "action": "buy",
     "price_at_pick": 31.73,
     "return_5d": 1.17,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 0.13
   },
   {
     "ticker": "MBX",
@@ -636,7 +706,8 @@
     "action": "buy",
     "price_at_pick": 59.21,
     "return_5d": 2.84,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 1.57
   },
   {
     "ticker": "LENZ",
@@ -645,7 +716,8 @@
     "action": "caution",
     "price_at_pick": 5.34,
     "return_5d": -6.18,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -7.12
   },
   {
     "ticker": "KTOS",
@@ -654,7 +726,8 @@
     "action": "caution",
     "price_at_pick": 46.85,
     "return_5d": -0.06,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -1.94
   },
   {
     "ticker": "HTZ",
@@ -663,7 +736,8 @@
     "action": "caution",
     "price_at_pick": 1.85,
     "return_5d": -4.32,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -4.86
   },
   {
     "ticker": "GPRE",
@@ -672,7 +746,8 @@
     "action": "buy",
     "price_at_pick": 17.57,
     "return_5d": -1.2,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -4.21
   },
   {
     "ticker": "ELVN",
@@ -681,7 +756,8 @@
     "action": "buy",
     "price_at_pick": 50.75,
     "return_5d": 3.8,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 1.81
   },
   {
     "ticker": "DNLI",
@@ -690,7 +766,8 @@
     "action": "buy",
     "price_at_pick": 26.28,
     "return_5d": -12.18,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -12.86
   },
   {
     "ticker": "ACRS",
@@ -699,7 +776,8 @@
     "action": "buy",
     "price_at_pick": 5.47,
     "return_5d": 3.47,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 1.83
   },
   {
     "ticker": "WDFC",
@@ -708,7 +786,8 @@
     "action": "buy",
     "price_at_pick": 269.32,
     "return_5d": -7.2,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -11.04
   },
   {
     "ticker": "TXG",
@@ -717,7 +796,8 @@
     "action": "buy",
     "price_at_pick": 42.68,
     "return_5d": 2.06,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 1.27
   },
   {
     "ticker": "TMC",
@@ -726,7 +806,8 @@
     "action": "caution",
     "price_at_pick": 4.16,
     "return_5d": -10.34,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -10.58
   },
   {
     "ticker": "METC",
@@ -735,7 +816,8 @@
     "action": "caution",
     "price_at_pick": 12.26,
     "return_5d": -3.59,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -6.69
   },
   {
     "ticker": "MBX",
@@ -744,7 +826,8 @@
     "action": "buy",
     "price_at_pick": 60.93,
     "return_5d": 0.66,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -1.3
   },
   {
     "ticker": "LENZ",
@@ -753,7 +836,8 @@
     "action": "caution",
     "price_at_pick": 5.59,
     "return_5d": -9.3,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -11.27
   },
   {
     "ticker": "IMOS",
@@ -762,7 +846,8 @@
     "action": "buy",
     "price_at_pick": 76.55,
     "return_5d": -10.39,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -17.6
   },
   {
     "ticker": "HTZ",
@@ -771,7 +856,8 @@
     "action": "caution",
     "price_at_pick": 2.1,
     "return_5d": -15.71,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -16.19
   },
   {
     "ticker": "EWTX",
@@ -780,7 +866,8 @@
     "action": "buy",
     "price_at_pick": 44.42,
     "return_5d": -10.18,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -12.63
   },
   {
     "ticker": "DSGN",
@@ -789,7 +876,8 @@
     "action": "buy",
     "price_at_pick": 14.93,
     "return_5d": -14.27,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -20.5
   },
   {
     "ticker": "CSGP",
@@ -798,7 +886,8 @@
     "action": "caution",
     "price_at_pick": 28.31,
     "return_5d": 4.95,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 4.84
   },
   {
     "ticker": "CGON",
@@ -807,7 +896,8 @@
     "action": "buy",
     "price_at_pick": 72.06,
     "return_5d": 0.39,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -2.6
   },
   {
     "ticker": "ACRS",
@@ -816,7 +906,8 @@
     "action": "buy",
     "price_at_pick": 5.55,
     "return_5d": 0.0,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 0.36
   },
   {
     "ticker": "TMC",
@@ -825,7 +916,8 @@
     "action": "caution",
     "price_at_pick": 4.11,
     "return_5d": -7.06,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -9.49
   },
   {
     "ticker": "ROIV",
@@ -834,7 +926,8 @@
     "action": "buy",
     "price_at_pick": 36.35,
     "return_5d": -6.08,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -6.33
   },
   {
     "ticker": "METC",
@@ -843,7 +936,8 @@
     "action": "caution",
     "price_at_pick": 12.4,
     "return_5d": -0.08,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -7.74
   },
   {
     "ticker": "MBX",
@@ -852,7 +946,8 @@
     "action": "buy",
     "price_at_pick": 64.47,
     "return_5d": -7.21,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -6.72
   },
   {
     "ticker": "LI",
@@ -861,7 +956,8 @@
     "action": "caution",
     "price_at_pick": 11.84,
     "return_5d": 11.06,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 4.48
   },
   {
     "ticker": "IMVT",
@@ -870,7 +966,8 @@
     "action": "buy",
     "price_at_pick": 40.99,
     "return_5d": -4.64,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -2.61
   },
   {
     "ticker": "HTZ",
@@ -879,7 +976,8 @@
     "action": "caution",
     "price_at_pick": 2.17,
     "return_5d": -12.44,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -18.89
   },
   {
     "ticker": "GLUE",
@@ -888,7 +986,8 @@
     "action": "buy",
     "price_at_pick": 24.6,
     "return_5d": -6.3,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -4.55
   },
   {
     "ticker": "EWTX",
@@ -897,7 +996,8 @@
     "action": "buy",
     "price_at_pick": 47.22,
     "return_5d": -16.65,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -17.81
   },
   {
     "ticker": "DNLI",
@@ -906,7 +1006,8 @@
     "action": "buy",
     "price_at_pick": 26.83,
     "return_5d": -15.54,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -14.65
   },
   {
     "ticker": "CCOI",
@@ -915,7 +1016,8 @@
     "action": "caution",
     "price_at_pick": 12.31,
     "return_5d": -1.79,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 0.73
   },
   {
     "ticker": "ARWR",
@@ -924,7 +1026,8 @@
     "action": "buy",
     "price_at_pick": 85.49,
     "return_5d": -17.12,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -16.19
   },
   {
     "ticker": "ACRS",
@@ -933,7 +1036,8 @@
     "action": "buy",
     "price_at_pick": 5.78,
     "return_5d": -6.23,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -3.63
   },
   {
     "ticker": "ZVRA",
@@ -942,7 +1046,8 @@
     "action": "buy",
     "price_at_pick": 14.75,
     "return_5d": -13.22,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -18.44
   },
   {
     "ticker": "TMC",
@@ -951,7 +1056,8 @@
     "action": "caution",
     "price_at_pick": 4.02,
     "return_5d": -0.25,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -7.46
   },
   {
     "ticker": "ROIV",
@@ -960,7 +1066,8 @@
     "action": "buy",
     "price_at_pick": 36.09,
     "return_5d": -3.52,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -5.65
   },
   {
     "ticker": "PHVS",
@@ -969,7 +1076,8 @@
     "action": "buy",
     "price_at_pick": 35.92,
     "return_5d": -2.73,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -6.6
   },
   {
     "ticker": "MLCO",
@@ -978,7 +1086,8 @@
     "action": "caution",
     "price_at_pick": 5.25,
     "return_5d": 1.71,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 4.38
   },
   {
     "ticker": "METC",
@@ -987,7 +1096,8 @@
     "action": "caution",
     "price_at_pick": 12.23,
     "return_5d": 0.82,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -6.46
   },
   {
     "ticker": "MBX",
@@ -996,7 +1106,8 @@
     "action": "buy",
     "price_at_pick": 61.74,
     "return_5d": -4.13,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -2.59
   },
   {
     "ticker": "LI",
@@ -1005,7 +1116,8 @@
     "action": "caution",
     "price_at_pick": 12.12,
     "return_5d": 5.69,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 2.06
   },
   {
     "ticker": "HTZ",
@@ -1014,7 +1126,8 @@
     "action": "caution",
     "price_at_pick": 1.97,
     "return_5d": -3.55,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -10.66
   },
   {
     "ticker": "EWTX",
@@ -1023,7 +1136,8 @@
     "action": "buy",
     "price_at_pick": 46.3,
     "return_5d": -14.28,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -16.18
   },
   {
     "ticker": "DSGN",
@@ -1032,7 +1146,8 @@
     "action": "buy",
     "price_at_pick": 15.28,
     "return_5d": -11.32,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -22.32
   },
   {
     "ticker": "DNLI",
@@ -1041,7 +1156,8 @@
     "action": "buy",
     "price_at_pick": 26.69,
     "return_5d": -14.76,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -14.2
   },
   {
     "ticker": "CTNM",
@@ -1050,7 +1166,8 @@
     "action": "buy",
     "price_at_pick": 15.65,
     "return_5d": -9.33,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -13.55
   },
   {
     "ticker": "ZVRA",
@@ -1059,7 +1176,8 @@
     "action": "buy",
     "price_at_pick": 14.44,
     "return_5d": -8.31,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -16.69
   },
   {
     "ticker": "TMC",
@@ -1068,7 +1186,8 @@
     "action": "caution",
     "price_at_pick": 4.04,
     "return_5d": 3.47,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -7.92
   },
   {
     "ticker": "METC",
@@ -1077,7 +1196,8 @@
     "action": "caution",
     "price_at_pick": 12.16,
     "return_5d": 7.48,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -5.92
   },
   {
     "ticker": "MBX",
@@ -1086,7 +1206,8 @@
     "action": "buy",
     "price_at_pick": 62.0,
     "return_5d": -10.52,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -3.0
   },
   {
     "ticker": "LI",
@@ -1095,7 +1216,8 @@
     "action": "caution",
     "price_at_pick": 12.05,
     "return_5d": 3.57,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 2.66
   },
   {
     "ticker": "HTZ",
@@ -1104,7 +1226,8 @@
     "action": "caution",
     "price_at_pick": 2.1,
     "return_5d": -11.9,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -16.19
   },
   {
     "ticker": "GLUE",
@@ -1113,7 +1236,8 @@
     "action": "buy",
     "price_at_pick": 24.4,
     "return_5d": -5.94,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -3.77
   },
   {
     "ticker": "EWTX",
@@ -1122,7 +1246,8 @@
     "action": "buy",
     "price_at_pick": 43.13,
     "return_5d": -7.56,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -10.02
   },
   {
     "ticker": "DNLI",
@@ -1131,7 +1256,8 @@
     "action": "buy",
     "price_at_pick": 26.31,
     "return_5d": -13.99,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -12.96
   },
   {
     "ticker": "CCOI",
@@ -1140,7 +1266,8 @@
     "action": "caution",
     "price_at_pick": 11.65,
     "return_5d": 6.35,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 6.44
   },
   {
     "ticker": "BEAM",
@@ -1149,7 +1276,8 @@
     "action": "buy",
     "price_at_pick": 37.92,
     "return_5d": -17.48,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -30.56
   },
   {
     "ticker": "ARWR",
@@ -1158,7 +1286,8 @@
     "action": "buy",
     "price_at_pick": 86.97,
     "return_5d": -15.82,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -17.62
   },
   {
     "ticker": "ACRS",
@@ -1167,7 +1296,8 @@
     "action": "buy",
     "price_at_pick": 5.62,
     "return_5d": -1.96,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -0.89
   },
   {
     "ticker": "MSFT",
@@ -1176,7 +1306,8 @@
     "action": "buy",
     "price_at_pick": 512.1,
     "return_5d": -23.3,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -21.44
   },
   {
     "ticker": "COST",
@@ -1185,7 +1316,8 @@
     "action": "buy",
     "price_at_pick": 985.6,
     "return_5d": -6.32,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -5.05
   },
   {
     "ticker": "XOM",
@@ -1194,7 +1326,8 @@
     "action": "caution",
     "price_at_pick": 102.15,
     "return_5d": 34.65,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 45.24
   },
   {
     "ticker": "PFE",
@@ -1203,7 +1336,8 @@
     "action": "caution",
     "price_at_pick": 24.8,
     "return_5d": -2.22,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -0.2
   },
   {
     "ticker": "NVDA",
@@ -1212,7 +1346,8 @@
     "action": "buy",
     "price_at_pick": 612.3,
     "return_5d": -65.74,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": -66.8
   },
   {
     "ticker": "AMD",
@@ -1221,6 +1356,7 @@
     "action": "buy",
     "price_at_pick": 178.4,
     "return_5d": 210.65,
-    "return_30d": null
+    "return_30d": null,
+    "return_all_time": 182.27
   }
 ]
