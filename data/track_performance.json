@@ -1,28 +1,28 @@
 [
   {
     "track": "buy",
-    "picks_count": 206,
-    "avg_return_5d": -0.8,
-    "avg_return_30d": 4.31,
-    "avg_return_all_time": 3.04,
-    "win_rate": 0.42,
+    "picks_count": 209,
+    "avg_return_5d": -0.74,
+    "avg_return_30d": 4.34,
+    "avg_return_all_time": 1.28,
+    "win_rate": 0.43,
     "since": "2026-07-03"
   },
   {
     "track": "ai",
-    "picks_count": 183,
-    "avg_return_5d": -1.28,
-    "avg_return_30d": -3.15,
-    "avg_return_all_time": -4.63,
+    "picks_count": 186,
+    "avg_return_5d": -1.22,
+    "avg_return_30d": -3.75,
+    "avg_return_all_time": -5.45,
     "win_rate": 0.42,
     "since": "2026-07-07"
   },
   {
     "track": "caution",
-    "picks_count": 204,
-    "avg_return_5d": 49.97,
-    "avg_return_30d": 106.56,
-    "avg_return_all_time": 37.29,
+    "picks_count": 207,
+    "avg_return_5d": 49.25,
+    "avg_return_30d": 103.18,
+    "avg_return_all_time": 35.15,
     "win_rate": 0.47,
     "since": "2026-07-03"
   }
