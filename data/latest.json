@@ -1,8 +1,8 @@
 {
-  "date": "2026-11-25",
-  "generated_at": "2026-11-25T23:21:13.150564+00:00",
+  "date": "2026-11-26",
+  "generated_at": "2026-11-26T23:18:41.096017+00:00",
   "universe_size": 1438,
-  "universe_coverage": 1.0,
+  "universe_coverage": 0.9993,
   "buys": [
     {
       "ticker": "COLM",
@@ -18,7 +18,7 @@
         "earnings_surprise": 1.0
       },
       "composite_score": 92.1,
-      "reasoning": "Columbia Sportswear is showing strong bullish signals across nearly every technical measure, with perfect scores on trend, 52-week range position, and earnings surprise, plus near-perfect momentum at 0.97. The stock is trading near its 52-week highs while maintaining strong upward momentum and recently beat earnings expectations. Volume is neutral, which is the only area not contributing to the overall strength of the signal."
+      "reasoning": "Columbia Sportswear is showing strong bullish signals across nearly every technical measure, with perfect scores on trend, 52-week range position, and earnings surprise, plus near-perfect momentum at 0.97. The stock is trading near its 52-week highs while maintaining strong upward momentum and recently beat earnings expectations. Volume is neutral, which is the only area not adding to the overall strength of the setup."
     },
     {
       "ticker": "SGRY",
@@ -34,7 +34,7 @@
         "earnings_surprise": 1.0
       },
       "composite_score": 91.2,
-      "reasoning": "Surgery Partners shows strong bullish signals across nearly every technical measure, with perfect scores in trend direction and earnings surprise alongside excellent momentum readings. The stock is trading near its 52-week highs and has maintained buying pressure, suggesting sustained upward movement. Volume remains neutral rather than a drag on the price action, allowing the other positive signals to drive the overall composite score of 91.2."
+      "reasoning": "Surgery Partners shows strong bullish signals across the board, with perfect scores on trend and earnings surprise indicating sustained upward momentum and better-than-expected financial performance. The stock is trading near its 52-week highs with robust momentum readings, suggesting continued buying interest. Volume is neutral, but the combination of positive price direction, earnings beats, and strong momentum creates a composite score well above the neutral midpoint."
     },
     {
       "ticker": "ALEC",
@@ -45,12 +45,12 @@
       "signals": {
         "trend": 0.8264981811092502,
         "momentum": 0.7064480848779288,
-        "volume_surge": 0.4141175211487136,
+        "volume_surge": 0.4141959949024246,
         "range_position": 1.0,
         "earnings_surprise": 1.0
       },
       "composite_score": 89.3,
-      "reasoning": "ALEC is showing strong bullish signals across the board, with a composite score of 89.3 indicating notably positive conditions. The stock is trading at the top of its 52-week range and has beaten earnings expectations, while the trend and momentum indicators both point upward, suggesting sustained buying interest. Volume support is moderate, which rounds out a picture of broad-based strength in the numbers."
+      "reasoning": "ALEC is showing strong bullish signals across multiple technical measures, with a composite score of 89.3 out of 100. The stock is trading at the top of its 52-week range and recently beat earnings expectations, while also displaying solid upward price momentum and an improving trend. Volume support is moderate, suggesting the moves are backed by trading activity, though not exceptionally heavy."
     }
   ],
   "cautions": [
@@ -68,7 +68,7 @@
         "earnings_surprise": -1.0
       },
       "composite_score": 1.3,
-      "reasoning": "Ambarella is showing weakness across every measured dimension: the stock is in a downtrend with negative momentum, trading near its 52-week lows on declining volume, and has recently missed earnings expectations. All five signals are pointing downward simultaneously, which is why the composite score is extremely low at 1.3 out of 100."
+      "reasoning": "Ambarella is showing weakness across all measured dimensions, with the stock in a clear downtrend and trading near its 52-week lows while volume has dried up. Momentum indicators are deeply negative, and the company recently missed earnings expectations, suggesting deteriorating business performance. The combination of falling price, weak volume, and disappointing results points to sustained selling pressure with little near-term support visible in the data."
     },
     {
       "ticker": "WB",
@@ -79,12 +79,12 @@
       "signals": {
         "trend": -1.0,
         "momentum": -0.9958426532844404,
-        "volume_surge": -0.4862946007626279,
+        "volume_surge": -0.48628122293675496,
         "range_position": -1.0,
         "earnings_surprise": -0.7305383515959993
       },
       "composite_score": 5.3,
-      "reasoning": "Weibo is showing weakness across nearly all technical measures, with trend and momentum both at their lowest levels and the stock trading near its 52-week lows. Volume is also below normal, suggesting weak conviction behind price moves, while recent earnings have disappointed relative to expectations. The combination of deteriorating price direction, fading momentum, and below-average trading activity points to sustained downward pressure on the stock."
+      "reasoning": "Weibo is showing weakness across nearly all measured dimensions, with trend and momentum both at their weakest levels, suggesting the stock is moving downward without buying interest behind it. The 52-week range position is also at its lowest point, indicating the stock is trading near its yearly lows, while recent earnings have disappointed relative to expectations. Volume is moderately below normal, which combined with the downward price action suggests limited conviction among traders."
     },
     {
       "ticker": "SNEX",
@@ -95,15 +95,51 @@
       "signals": {
         "trend": -1.0,
         "momentum": -0.9591269493494303,
-        "volume_surge": -0.30391766129535913,
+        "volume_surge": -0.30458684571761657,
         "range_position": -1.0,
         "earnings_surprise": -0.9647058823529415
       },
       "composite_score": 5.9,
-      "reasoning": "SNEX is showing weakness across nearly all measured dimensions, with the stock in a downtrend at the bottom of its 52-week range and momentum indicators pointing sharply lower. Volume is also declining alongside price, suggesting weak conviction behind the selling. Earnings have disappointed relative to expectations, adding to the bearish picture reflected in the composite score of 5.9."
+      "reasoning": "SNEX is showing weakness across nearly every technical measure tracked by this scanner. The stock is trading near its 52-week lows with deteriorating momentum and trend, while earnings have disappointed relative to expectations. Volume patterns are also turning negative, reinforcing the overall downward pressure on the stock."
     }
   ],
   "ai_picks": [
+    {
+      "ticker": "ALKS",
+      "name": "Alkermes plc - Ordinary Shares",
+      "sector": "Healthcare",
+      "action": "buy",
+      "ai_pick": true,
+      "price_at_pick": 51.07,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.7300953352281154,
+        "volume_surge": 0.30591894791758945,
+        "range_position": 0.7037829080599434,
+        "earnings_surprise": 1.0
+      },
+      "composite_score": null,
+      "reasoning": "Perfect trend (1.0), strong momentum (0.73), solid volume surge (0.31), and positive earnings surprise (1.0) create a multi-factor bullish setup. The combination of technical strength and earnings beat suggests genuine upside potential.",
+      "news_context": []
+    },
+    {
+      "ticker": "ATAT",
+      "name": "Atour Lifestyle Holdings Limited - American Depositary Shares",
+      "sector": "Consumer Cyclical",
+      "action": "buy",
+      "ai_pick": true,
+      "price_at_pick": 39.85,
+      "signals": {
+        "trend": 0.589490445648782,
+        "momentum": 0.8344625971188202,
+        "volume_surge": 0.5922261394796365,
+        "range_position": 0.6949467199507708,
+        "earnings_surprise": 1.0
+      },
+      "composite_score": null,
+      "reasoning": "Exceptional momentum (0.83) paired with strong volume surge (0.59) and positive earnings surprise (1.0) indicate accumulation and institutional interest. Despite slightly lower trend score (0.59), the momentum and volume confluence suggests conviction buying.",
+      "news_context": []
+    },
     {
       "ticker": "HCSG",
       "name": "Healthcare Services Group, Inc. - Common Stock",
@@ -119,43 +155,7 @@
         "earnings_surprise": 0.6615893775668898
       },
       "composite_score": null,
-      "reasoning": "Healthcare Services Group shows exceptional trend strength (0.996) combined with a solid positive earnings surprise (0.66), suggesting fundamental improvement alongside technical momentum. The high range position (0.758) indicates room for continued upside.",
-      "news_context": []
-    },
-    {
-      "ticker": "ASND",
-      "name": "Ascendis Pharma A/S - Ordinary Share",
-      "sector": "Healthcare",
-      "action": "buy",
-      "ai_pick": true,
-      "price_at_pick": 276.8,
-      "signals": {
-        "trend": 0.7554424192585533,
-        "momentum": 0.5993128016516085,
-        "volume_surge": 0.0,
-        "range_position": 0.9905647438758354,
-        "earnings_surprise": 0.38137285571060653
-      },
-      "composite_score": null,
-      "reasoning": "Ascendis Pharma displays strong trend (0.755) and excellent range positioning (0.991), with a meaningful positive earnings surprise (0.38) that validates the technical setup. The combination of technical strength and earnings beat suggests genuine conviction.",
-      "news_context": []
-    },
-    {
-      "ticker": "HTHT",
-      "name": "H World Group Limited - American Depositary Shares",
-      "sector": "Consumer Cyclical",
-      "action": "buy",
-      "ai_pick": true,
-      "price_at_pick": 51.73,
-      "signals": {
-        "trend": 0.7798783761703074,
-        "momentum": 0.6116953260160042,
-        "volume_surge": -0.0,
-        "range_position": 0.5971948408994401,
-        "earnings_surprise": 1.0
-      },
-      "composite_score": null,
-      "reasoning": "H World Group shows solid trend (0.780) and positive earnings surprise (1.0), with balanced momentum (0.612) and reasonable range position (0.597). The earnings beat in the hospitality/consumer cyclical space provides fundamental support for the technical setup.",
+      "reasoning": "Nearly perfect trend (0.996), strong positive earnings surprise (0.66), and solid momentum (0.36) show fundamental improvement alongside technical strength. Recent track record shows +0.12% return, and the earnings beat provides fundamental support for continuation.",
       "news_context": []
     }
   ],
@@ -196,7 +196,7 @@
       "signals": {
         "trend": 0.8264981811092502,
         "momentum": 0.7064480848779288,
-        "volume_surge": 0.4141175211487136,
+        "volume_surge": 0.4141959949024246,
         "range_position": 1.0,
         "earnings_surprise": 1.0
       },
@@ -210,7 +210,7 @@
       "signals": {
         "trend": 1.0,
         "momentum": 0.716678987103435,
-        "volume_surge": 0.01735772507450924,
+        "volume_surge": 0.017307967386640016,
         "range_position": 1.0,
         "earnings_surprise": 1.0
       },
@@ -238,7 +238,7 @@
       "signals": {
         "trend": 1.0,
         "momentum": 0.7300953352281154,
-        "volume_surge": 0.3059058071033987,
+        "volume_surge": 0.30591894791758945,
         "range_position": 0.7037829080599434,
         "earnings_surprise": 1.0
       },
@@ -294,7 +294,7 @@
       "signals": {
         "trend": 1.0,
         "momentum": 0.7560212563531168,
-        "volume_surge": 0.2515520317500437,
+        "volume_surge": 0.25406168864621465,
         "range_position": 1.0,
         "earnings_surprise": -0.03380496104593835
       },
@@ -306,10 +306,10 @@
       "sector": "Consumer Cyclical",
       "price_at_pick": 39.85,
       "signals": {
-        "trend": 0.5894904342105327,
-        "momentum": 0.8344625970845526,
-        "volume_surge": 0.5921523301829703,
-        "range_position": 0.6949472697726795,
+        "trend": 0.589490445648782,
+        "momentum": 0.8344625971188202,
+        "volume_surge": 0.5922261394796365,
+        "range_position": 0.6949467199507708,
         "earnings_surprise": 1.0
       },
       "composite_score": 85.7
@@ -321,12 +321,12 @@
       "price_at_pick": 142.65,
       "signals": {
         "trend": 1.0,
-        "momentum": 0.8810667033676511,
+        "momentum": 0.8810667033090549,
         "volume_surge": 0.0,
         "range_position": 1.0,
-        "earnings_surprise": -0.2324649298597205
+        "earnings_surprise": -0.19972533493655187
       },
-      "composite_score": 84.9
+      "composite_score": 85.0
     },
     {
       "ticker": "COKE",
@@ -335,8 +335,8 @@
       "price_at_pick": 218.64,
       "signals": {
         "trend": 1.0,
-        "momentum": 0.3103582989583641,
-        "volume_surge": 0.2218292651796093,
+        "momentum": 0.31035829895840333,
+        "volume_surge": 0.2219774166896172,
         "range_position": 1.0,
         "earnings_surprise": null
       },
@@ -363,7 +363,7 @@
       "price_at_pick": 5.94,
       "signals": {
         "trend": 1.0,
-        "momentum": 0.5467539149145324,
+        "momentum": 0.5467539149145765,
         "volume_surge": 0.0,
         "range_position": 0.7453373105547019,
         "earnings_surprise": 0.8475937746539477
@@ -377,8 +377,8 @@
       "price_at_pick": 352.56,
       "signals": {
         "trend": 1.0,
-        "momentum": 0.6599625623485779,
-        "volume_surge": 0.6887561560306302,
+        "momentum": 0.6599625623464291,
+        "volume_surge": 0.6888381697641561,
         "range_position": 1.0,
         "earnings_surprise": -1.0
       },
@@ -392,7 +392,7 @@
       "signals": {
         "trend": 0.6809513076443081,
         "momentum": 1.0,
-        "volume_surge": 0.5409390822216475,
+        "volume_surge": 0.541238743510152,
         "range_position": 1.0,
         "earnings_surprise": -0.7834315425887795
       },
@@ -406,11 +406,11 @@
       "signals": {
         "trend": 1.0,
         "momentum": 0.730664575817648,
-        "volume_surge": -0.20358908231740225,
+        "volume_surge": -0.21063660366288092,
         "range_position": 0.9280770077566833,
-        "earnings_surprise": 0.1693769651332776
+        "earnings_surprise": 0.20121999326261183
       },
-      "composite_score": 82.7
+      "composite_score": 82.8
     },
     {
       "ticker": "CRAI",
@@ -447,9 +447,9 @@
       "price_at_pick": 32.46,
       "signals": {
         "trend": 1.0,
-        "momentum": 0.5358921872654757,
+        "momentum": 0.5358921887303458,
         "volume_surge": 0.0,
-        "range_position": 0.6994798799345734,
+        "range_position": 0.6994804751762542,
         "earnings_surprise": 0.7138148553811197
       },
       "composite_score": 82.3
@@ -461,9 +461,9 @@
       "price_at_pick": 981.87,
       "signals": {
         "trend": 1.0,
-        "momentum": 0.7658443454517476,
+        "momentum": 0.7658443457740189,
         "volume_surge": -0.0,
-        "range_position": 0.9730746781396924,
+        "range_position": 0.9730746739013232,
         "earnings_surprise": -0.4394181778087389
       },
       "composite_score": 82.1
@@ -474,8 +474,8 @@
       "sector": "Financial Services",
       "price_at_pick": 192.32,
       "signals": {
-        "trend": 0.9255421994210676,
-        "momentum": 0.5391417372033418,
+        "trend": 0.9255421573092744,
+        "momentum": 0.5391417372563068,
         "volume_surge": 0.0,
         "range_position": 1.0,
         "earnings_surprise": 0.2824697781045129
@@ -503,7 +503,7 @@
       "price_at_pick": 73.33,
       "signals": {
         "trend": 1.0,
-        "momentum": 0.7688182094185041,
+        "momentum": 0.768818209417981,
         "volume_surge": 0.0,
         "range_position": 1.0,
         "earnings_surprise": -0.5865654981419474
@@ -517,7 +517,7 @@
       "price_at_pick": 104.55,
       "signals": {
         "trend": 1.0,
-        "momentum": 0.2832444369482953,
+        "momentum": 0.2832444369483404,
         "volume_surge": 0.0,
         "range_position": 1.0,
         "earnings_surprise": null
@@ -546,7 +546,7 @@
       "signals": {
         "trend": 1.0,
         "momentum": 0.5374501367810518,
-        "volume_surge": -0.036050140626493477,
+        "volume_surge": -0.036179561803674286,
         "range_position": 0.6767230704190135,
         "earnings_surprise": null
       },
@@ -573,9 +573,9 @@
       "price_at_pick": 14.34,
       "signals": {
         "trend": 1.0,
-        "momentum": 0.1312241282482374,
-        "volume_surge": 0.33264594976170364,
-        "range_position": 0.8873306992184211,
+        "momentum": 0.13122412829763602,
+        "volume_surge": 0.3326449240208649,
+        "range_position": 0.8873307160327346,
         "earnings_surprise": null
       },
       "composite_score": 81.1
@@ -587,7 +587,7 @@
       "price_at_pick": 167.74,
       "signals": {
         "trend": 1.0,
-        "momentum": 0.8919613855202906,
+        "momentum": 0.8919613832436242,
         "volume_surge": 0.0,
         "range_position": 1.0,
         "earnings_surprise": -1.0
@@ -602,7 +602,7 @@
       "signals": {
         "trend": 1.0,
         "momentum": 0.38353154783158616,
-        "volume_surge": 0.221879139731011,
+        "volume_surge": 0.22191148877176628,
         "range_position": 0.43901326374167904,
         "earnings_surprise": 1.0
       },
@@ -621,20 +621,6 @@
         "earnings_surprise": 0.2509727373023072
       },
       "composite_score": 80.7
-    },
-    {
-      "ticker": "ASND",
-      "name": "Ascendis Pharma A/S - Ordinary Share",
-      "sector": "Healthcare",
-      "price_at_pick": 276.8,
-      "signals": {
-        "trend": 0.7554424192585533,
-        "momentum": 0.5993128016516085,
-        "volume_surge": 0.0,
-        "range_position": 0.9905647438758354,
-        "earnings_surprise": 0.38137285571060653
-      },
-      "composite_score": 80.6
     },
     {
       "ticker": "LIVN",
@@ -657,7 +643,7 @@
       "price_at_pick": 104.92,
       "signals": {
         "trend": 1.0,
-        "momentum": 0.587133015843253,
+        "momentum": 0.587133015849385,
         "volume_surge": 0.0,
         "range_position": 1.0,
         "earnings_surprise": -0.3577348066298347
@@ -712,11 +698,11 @@
       "sector": "Technology",
       "price_at_pick": 27.39,
       "signals": {
-        "trend": 0.9197186824279355,
-        "momentum": 0.8610669023036396,
+        "trend": 0.9197186634233626,
+        "momentum": 0.8610669023046746,
         "volume_surge": 0.0,
         "range_position": 1.0,
-        "earnings_surprise": -0.8429950484840466
+        "earnings_surprise": -0.8437114010771344
       },
       "composite_score": 80.3
     },
@@ -740,8 +726,8 @@
       "sector": "Consumer Cyclical",
       "price_at_pick": 8.87,
       "signals": {
-        "trend": 0.5835033573058268,
-        "momentum": 0.8509488491381095,
+        "trend": 0.5835033707896183,
+        "momentum": 0.850948849117812,
         "volume_surge": 0.0,
         "range_position": 0.8823789977309164,
         "earnings_surprise": 0.3546855510401155
@@ -763,13 +749,27 @@
       "composite_score": 79.9
     },
     {
+      "ticker": "ASND",
+      "name": "Ascendis Pharma A/S - Ordinary Share",
+      "sector": "Healthcare",
+      "price_at_pick": 276.8,
+      "signals": {
+        "trend": 0.7554424192585533,
+        "momentum": 0.5993128016516085,
+        "volume_surge": 0.0,
+        "range_position": 0.9905647438758354,
+        "earnings_surprise": 0.18014832599641767
+      },
+      "composite_score": 79.6
+    },
+    {
       "ticker": "SIRI",
       "name": "SiriusXM Holdings Inc. - Common Stock",
       "sector": "Communication Services",
       "price_at_pick": 32.51,
       "signals": {
         "trend": 1.0,
-        "momentum": 0.7297244268641749,
+        "momentum": 0.7297244268174297,
         "volume_surge": 0.0,
         "range_position": 0.9110796942762971,
         "earnings_surprise": -0.7252657911194491
@@ -810,8 +810,8 @@
       "sector": "Real Estate",
       "price_at_pick": 21.16,
       "signals": {
-        "trend": 0.7250938692637476,
-        "momentum": 0.6390355019234488,
+        "trend": 0.7250938868745207,
+        "momentum": 0.6390355019078717,
         "volume_surge": 0.0,
         "range_position": 0.749093549066574,
         "earnings_surprise": null
@@ -825,10 +825,24 @@
       "price_at_pick": 316.72,
       "signals": {
         "trend": 1.0,
-        "momentum": 0.6323932893412731,
+        "momentum": 0.6323932894006392,
         "volume_surge": 0.0,
         "range_position": 1.0,
         "earnings_surprise": -0.8548622188303515
+      },
+      "composite_score": 78.6
+    },
+    {
+      "ticker": "BMBL",
+      "name": "Bumble Inc. - common stock",
+      "sector": "Communication Services",
+      "price_at_pick": 5.98,
+      "signals": {
+        "trend": 1.0,
+        "momentum": 0.5600671044287773,
+        "volume_surge": 0.24056635176162175,
+        "range_position": 0.9829058644717488,
+        "earnings_surprise": -1.0
       },
       "composite_score": 78.6
     },
@@ -840,7 +854,7 @@
       "signals": {
         "trend": 1.0,
         "momentum": 0.7922235220222783,
-        "volume_surge": -0.06564480276580371,
+        "volume_surge": -0.06565187664183665,
         "range_position": 0.9155874367853505,
         "earnings_surprise": -1.0
       },
@@ -859,20 +873,6 @@
         "earnings_surprise": -1.0
       },
       "composite_score": 78.6
-    },
-    {
-      "ticker": "BMBL",
-      "name": "Bumble Inc. - common stock",
-      "sector": "Communication Services",
-      "price_at_pick": 5.98,
-      "signals": {
-        "trend": 1.0,
-        "momentum": 0.5600671044287773,
-        "volume_surge": 0.22712558538460229,
-        "range_position": 0.9829058644717488,
-        "earnings_surprise": -1.0
-      },
-      "composite_score": 78.5
     },
     {
       "ticker": "CROX",
@@ -896,7 +896,7 @@
       "signals": {
         "trend": 1.0,
         "momentum": 0.6284405807407067,
-        "volume_surge": 0.07515724094255471,
+        "volume_surge": 0.07882367410901277,
         "range_position": 1.0,
         "earnings_surprise": -1.0
       },
@@ -938,7 +938,7 @@
       "signals": {
         "trend": 0.6715137162418123,
         "momentum": 0.9365439647020308,
-        "volume_surge": 0.2750243400468717,
+        "volume_surge": 0.2809391537762374,
         "range_position": 0.8658242806133634,
         "earnings_surprise": -1.0
       },
@@ -966,7 +966,7 @@
       "signals": {
         "trend": 1.0,
         "momentum": 0.4590488584346949,
-        "volume_surge": -0.019151173030668378,
+        "volume_surge": -0.019191324998210302,
         "range_position": 0.908099949241346,
         "earnings_surprise": -0.4628729261992389
       },
@@ -987,16 +987,16 @@
       "composite_score": 77.4
     },
     {
-      "ticker": "COST",
-      "name": "Costco Wholesale Corporation - Common Stock",
-      "sector": "Consumer Defensive",
-      "price_at_pick": 1086.81,
+      "ticker": "GILD",
+      "name": "Gilead Sciences, Inc. - Common Stock",
+      "sector": "Healthcare",
+      "price_at_pick": 176.74,
       "signals": {
-        "trend": 0.8230831066218556,
-        "momentum": 0.7870401531080439,
+        "trend": 1.0,
+        "momentum": 0.6208766533619697,
         "volume_surge": -0.0,
-        "range_position": 0.9636753176090775,
-        "earnings_surprise": -0.9019919771469279
+        "range_position": 0.950065306399339,
+        "earnings_surprise": -1.0
       },
       "composite_score": 77.3
     }
